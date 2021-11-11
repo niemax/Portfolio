@@ -1,18 +1,32 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "Portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Portfolio",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Axel Nieminen <axel.nieminen@mac.com>",
   "dependencies": {
+    "@chakra-ui/gatsby-plugin": "^2.0.2",
+    "@chakra-ui/react": "^1.6.12",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@fontsource/open-sans": "^4.5.2",
+    "@fontsource/poppins": "^4.5.0",
+    "@fontsource/raleway": "^4.5.0",
+    "@react-icons/all-files": "^4.1.0",
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-icons": "^3.0.0",
+    "framer-motion": "^4.1.17",
     "gatsby": "^4.1.0",
     "gatsby-plugin-gatsby-cloud": "^4.1.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^2.1.0",
     "gatsby-plugin-manifest": "^4.1.0",
     "gatsby-plugin-offline": "^5.1.0",
     "gatsby-plugin-react-helmet": "^5.1.0",
     "gatsby-plugin-sharp": "^4.1.0",
     "gatsby-source-filesystem": "^4.1.0",
+    "gatsby-transformer-remark": "^5.1.0",
     "gatsby-transformer-sharp": "^4.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -35,8 +49,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "type": "git"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
