@@ -1,21 +1,12 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import {
-  Box,
-  Flex,
-  HStack,
-  VStack,
-  Button,
-  IconButton,
-  useColorMode,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { Box, Flex, IconButton, useColorMode, useColorModeValue, Center } from '@chakra-ui/react';
 import { HiOutlineMenuAlt1 as BurgerIcon, HiX } from 'react-icons/hi';
 import { WiDaySunny } from 'react-icons/wi';
 import { FaGithub, FaMoon } from 'react-icons/fa';
 
-import { StaticImage } from 'gatsby-plugin-image';
 import { NavLink } from './NavLink';
+import { Memoji } from './Memoji';
 
 interface HeaderProps {
   siteTitle: string;
@@ -26,87 +17,79 @@ const Header = ({ siteTitle }: HeaderProps) => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Flex bg={useColorModeValue('gray', 'dark')} shadow="lg" h={'8vh'} align="center">
-      <Box mx="auto">
-        <Flex display={['none', 'none', 'flex', 'flex']}>
-          <HStack spacing={14}>
-            <Box as="a" bg="green" rounded="full" p="1">
-              <Link to="/">
-                <StaticImage
-                  src="../images/memoji.png"
-                  alt="memoji "
-                  width={40}
-                  height={40}
-                  placeholder="blurred"
-                />
-              </Link>
-            </Box>
-            <NavLink />
-            <HStack spacing={5}>
-              <IconButton
-                color={'#FFD632'}
-                variant="ghost"
-                fontSize={26}
-                aria-label="toggle theme mode"
-                onClick={toggleColorMode}
-                icon={colorMode === 'light' ? <FaMoon /> : <WiDaySunny />}
-                _hover={{ bg: useColorModeValue('navLightHover', 'navDarkHover') }}
-              />
-              <IconButton
-                variant="ghost"
-                as="a"
-                fontSize={26}
-                aria-label="github icon"
-                icon={<FaGithub />}
-                _hover={{ bg: useColorModeValue('navLightHover', 'navDarkHover') }}
-              />
-            </HStack>
-          </HStack>
+    <Flex>
+      <Flex
+        pos="fixed"
+        right="0"
+        top="0"
+        left="0"
+        align="center"
+        justify="center"
+        bg={useColorModeValue('white', 'dark')}
+        shadow="lg"
+        h="5vh"
+      >
+        <Flex display={['none', 'none', 'flex', 'flex']} align="center">
+          <Link to="/">
+            <Memoji width={12} height={12} padding={1.5} />
+          </Link>
+          <NavLink fontSize={18} />
         </Flex>
         <IconButton
-          ml="8"
-          fontSize={36}
-          aria-label="Open menu"
-          icon={<BurgerIcon />}
-          display={['flex', 'flex', 'none', 'none']}
-          onClick={() => changeDisplay('flex')}
+          color={'#FFD632'}
+          variant="ghost"
+          fontSize={26}
+          aria-label="toggle theme mode"
+          onClick={toggleColorMode}
+          icon={colorMode === 'light' ? <FaMoon /> : <WiDaySunny />}
+          _hover={{ bg: useColorModeValue('navLightHover', 'navDarkHover') }}
         />
+        <IconButton
+          variant="ghost"
+          as="a"
+          fontSize={26}
+          aria-label="github icon"
+          icon={<FaGithub />}
+          _hover={{ bg: useColorModeValue('navLightHover', 'navDarkHover') }}
+          onClick={() => window.open('https://github.com/niemax')}
+        />
+      </Flex>
+      <IconButton
+        mt={2}
+        ml={5}
+        fontSize={36}
+        aria-label="Open menu"
+        icon={<BurgerIcon />}
+        display={['flex', 'flex', 'none', 'none']}
+        onClick={() => changeDisplay('flex')}
+      />
+      <Box align="center" justify="center">
         <Flex
           w="100vw"
           h="100vh"
           pos="fixed"
+          zIndex={20}
           top="0"
           left="0"
           overflowY="auto"
+          justify="center"
+          align="center"
           flexDir="column"
           bg={useColorModeValue('#F7F7F7', '#151B23')}
           display={display}
         >
-          <Flex>
-            <IconButton
-              mt={2}
-              mr={2}
-              fontSize={36}
-              aria-label="Close menu"
-              size="lg"
-              icon={<HiX />}
-              onClick={() => changeDisplay('none')}
-            />
+          <Flex flexDir="column" align="center" justify="center">
+            <NavLink fontSize={30} padding={14} />
           </Flex>
-          <VStack mt="80">
-            <Button
-              as="a"
-              variant="ghost"
-              aria-label="about"
-              my={5}
-              w="100%"
-              onClick={() => changeDisplay('none')}
-            >
-              <VStack spacing={20}>
-                <NavLink fontSize="36" />
-              </VStack>
-            </Button>
-          </VStack>
+          <IconButton
+            mt={2}
+            mr={2}
+            fontSize={36}
+            aria-label="Close menu"
+            size="lg"
+            icon={<HiX />}
+            onClick={() => changeDisplay('none')}
+          />
         </Flex>
       </Box>
     </Flex>

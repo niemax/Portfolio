@@ -1,4 +1,4 @@
-import { extendTheme } from '@chakra-ui/react';
+import { extendTheme, theme as baseTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 import { colors } from '../theme/foundations/colors';
 
@@ -47,4 +47,4 @@ const theme = {
   },
 };
 
-export default extendTheme({ ...theme, colors, components: { Heading } });
+export default extendTheme({ ...baseTheme, ...theme, colors, components: { Heading } });

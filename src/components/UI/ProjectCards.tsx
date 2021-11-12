@@ -9,13 +9,13 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.1,
     },
   },
 };
 
 const item = {
-  hidden: { opacity: 0, x: -50 },
+  hidden: { opacity: 0, x: -300 },
   show: {
     opacity: 1,
     x: 0,
@@ -31,13 +31,23 @@ interface ProjectCardsProps {
   decsription?: string;
 }
 
+/**
+ * ? Cards include: tech stack Array, name, description, overall own rating
+ * ! check the render methods of cards. Should come from a local array in ./data folder
+ */
+
 export const ProjectCards: React.FC<ProjectCardsProps> = ({ name = 'Test', tech, decsription }) => {
   return (
-    <motion.div variants={container} initial="hidden" animate="show" style={{ width: '100%' }}>
+    <motion.div
+      variants={container}
+      initial="hidden"
+      animate="show"
+      style={{ marginTop: 15, padding: 5 }}
+    >
       {[1, 2, 3].map((_, i) => (
         <motion.div variants={item} key={i}>
           <MBox
-            border="0.5px solid gray"
+            borderLeft="4px solid #00A375"
             shadow="lg"
             my={5}
             height={100}

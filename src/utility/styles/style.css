@@ -32,3 +32,10 @@
     transform: rotate(0deg);
   }
 }
+
+.lineBreak {
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  color: #000;
+}

@@ -1,24 +1,23 @@
 import React from 'react';
 import { PageScaleFade } from '../utility/styles/transitions';
-import { Heading, useColorModeValue, Flex, VStack } from '@chakra-ui/react';
+import { Heading, Flex } from '@chakra-ui/react';
 import Seo from '../components/seo';
-import { motion } from 'framer-motion';
 import { ProjectCards } from '../components/UI/ProjectCards';
 
 const Projects = () => {
   return (
-    <PageScaleFade>
-      <Flex h="100vh" py={20}>
+    <Flex>
+      <PageScaleFade>
         <Seo title="Projects" />
-        <VStack spacing={10} align="flex-start" px={12} w="full">
+        <Flex flexDir="column" px={[10, 14, 14, 14]}>
           <Heading color="green">My Work</Heading>
-          <Heading size="md" fontWeight="400">
-            Personal projects that I've written in the past year
+          <Heading size="md" mt="4">
+            Personal projects that I've written in the past year. Mainly Mobile-focused
           </Heading>
           <ProjectCards name="test" />
-        </VStack>
-      </Flex>
-    </PageScaleFade>
+        </Flex>
+      </PageScaleFade>
+    </Flex>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, useColorModeValue } from '@chakra-ui/react';
+import { Button, useColorModeValue, Box } from '@chakra-ui/react';
 import { Link } from 'gatsby';
 
 const navLinks = [
@@ -21,23 +21,27 @@ const navLinks = [
 ];
 
 interface NavLinkProps {
-  fontSize?: string;
+  fontSize?: number;
+  padding?: number;
 }
 
-export const NavLink: React.FC<NavLinkProps> = props => {
+export const NavLink: React.FC<NavLinkProps> = ({ ...props }) => {
   return (
-    <>
+    <Box px={20}>
       {navLinks.map((item, index) => (
         <Button
+          py={props.padding}
+          m={0}
           fontSize={props.fontSize}
           as="a"
           variant="ghost"
           _hover={{ bg: useColorModeValue('navLightHover', 'navDarkHover') }}
           key={index}
+          {...props}
         >
           <Link to={item.path}>{item.name}</Link>
         </Button>
       ))}
-    </>
+    </Box>
   );
 };
