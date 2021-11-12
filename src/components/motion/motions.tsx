@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Box, BoxProps } from '@chakra-ui/layout';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export const MotionBox = motion<BoxProps>(Box);
 
-export function MBox() {
+export const MBox = ({ ...props }) => {
   return (
-    <MotionBox
-      height="40px"
-      bg="yellow"
-      drag="x"
-      dragConstraints={{ left: -100, right: 100 }}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-    />
+    <AnimatePresence>
+      <MotionBox
+        height={props.height}
+        width={props.width}
+        background={props.background}
+        whileHover={{ scale: 1.07 }}
+        whileTap={{ scale: 0.9 }}
+        {...props}
+      />
+    </AnimatePresence>
   );
-}
+};

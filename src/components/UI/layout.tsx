@@ -1,7 +1,6 @@
-import React, { ReactNode } from 'react';
+import React, { Fragment, ReactNode } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-
-import { Box, useColorMode, Center, Flex } from '@chakra-ui/react';
+import { Container } from '@chakra-ui/react';
 import Header from './header';
 import { Footer } from './footer';
 
@@ -23,13 +22,13 @@ const Layout = ({ children }: LayoutProps) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
 
   return (
-    <>
+    <Fragment>
       <Header siteTitle={siteTitle} />
-      <Flex maxW={800} mx="auto" px={[20, 10, 5]} direction="column">
+      <Container maxW="container.md" p={0}>
         <main>{children}</main>
         <Footer />
-      </Flex>
-    </>
+      </Container>
+    </Fragment>
   );
 };
 

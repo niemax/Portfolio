@@ -8,10 +8,13 @@ export const Heading = {
   },
   sizes: {
     xl: {
-      fontSize: 30,
+      fontSize: '2rem',
+      fontWeight: 600,
     },
     md: {
-      fontSize: 24,
+      fontSize: '1rem',
+      fontWeight: 400,
+      letterSpacing: '0.039rem',
     },
   },
 };

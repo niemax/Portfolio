@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Box, useColorModeValue } from '@chakra-ui/react';
+import { Button, useColorModeValue } from '@chakra-ui/react';
 import { Link } from 'gatsby';
 
 const navLinks = [

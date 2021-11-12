@@ -5,7 +5,6 @@ import {
   Flex,
   HStack,
   VStack,
-  Center,
   Button,
   IconButton,
   useColorMode,
@@ -27,10 +26,10 @@ const Header = ({ siteTitle }: HeaderProps) => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Center bg={useColorModeValue('gray', 'dark')} shadow="lg" h={'6vh'} w="auto">
-      <Box w={800}>
+    <Flex bg={useColorModeValue('gray', 'dark')} shadow="lg" h={'8vh'} align="center">
+      <Box mx="auto">
         <Flex display={['none', 'none', 'flex', 'flex']}>
-          <HStack spacing={2} px={[0, 5, 5]}>
+          <HStack spacing={14}>
             <Box as="a" bg="green" rounded="full" p="1">
               <Link to="/">
                 <StaticImage
@@ -43,7 +42,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
               </Link>
             </Box>
             <NavLink />
-            <HStack position="relative" left="300">
+            <HStack spacing={5}>
               <IconButton
                 color={'#FFD632'}
                 variant="ghost"
@@ -110,7 +109,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
           </VStack>
         </Flex>
       </Box>
-    </Center>
+    </Flex>
   );
 };
 
