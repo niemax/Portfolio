@@ -39,3 +39,11 @@ export const PageScaleFade = ({ children }) => {
 
   return <ScaleFade in={isOpen}>{children}</ScaleFade>;
 };
+
+export const CardTransition = ({ children }) => {
+  return (
+    <MBox width={100} height={100} background="black" variants={variants}>
+      {children}
+    </MBox>
+  );
+};

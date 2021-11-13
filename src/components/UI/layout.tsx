@@ -24,7 +24,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <Fragment>
       <Header siteTitle={siteTitle} />
-      <Box w={['90%', '85%', '80%']} maxW={880} mx="auto" mt="28">
+      <Box w={['90%', '85%', '80%']} maxW={700} mx="auto" mt="28">
         <Box pb={10}>
           <main>{children}</main>
         </Box>

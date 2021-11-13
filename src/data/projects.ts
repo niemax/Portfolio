@@ -8,7 +8,7 @@ export const projectData = [
     tech: ['React-Native', 'Async-Storage'],
     url: 'https://github.com/niemax/Habitio',
     description:
-      'A habit tracker app that makes you be productive and challenge yourself everyday.\nWith the help of this app you get to be the best you possible and stop procrastination.',
+      'A habit tracker app that makes you be productive and challenge yourseπlf everyday.\nWith the help of this app you get to be the best you possible and stop procrastination.',
   },
   {
     name: 'GoTrain',

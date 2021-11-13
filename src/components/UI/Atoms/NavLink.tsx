@@ -14,11 +14,6 @@ const navLinks = [
     path: '/projects',
     ariaLabel: 'projects',
   },
-  {
-    name: 'Tech Stack',
-    path: '/tech-stack',
-    ariaLabel: 'tech-stack',
-  },
 ];
 
 export const NavLink: React.FC<NavLinkProps> = ({ ...props }) => {
