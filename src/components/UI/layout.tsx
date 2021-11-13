@@ -1,6 +1,6 @@
-import React, { Fragment, ReactNode } from 'react';
+import React, { ReactNode, Fragment } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Container, Center } from '@chakra-ui/react';
+import { Center, Box } from '@chakra-ui/react';
 import Header from './header';
 import { Footer } from './footer';
 
@@ -24,9 +24,12 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <Fragment>
       <Header siteTitle={siteTitle} />
-      <Center mt={40}>
-        <main>{children}</main>
-      </Center>
+      <Box w={['90%', '85%', '80%']} maxW={880} mx="auto" mt="28">
+        <Box pb={10}>
+          <main>{children}</main>
+        </Box>
+        <Footer />
+      </Box>
     </Fragment>
   );
 };

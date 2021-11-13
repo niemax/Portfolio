@@ -1,7 +1,7 @@
 import React from 'react';
-import { Heading, Stack, Center, Flex, VStack } from '@chakra-ui/react';
+import { Heading, Stack, Flex, VStack } from '@chakra-ui/react';
 import Seo from '../components/seo';
-import { PageScaleFade } from '../utility/styles/transitions';
+import { PageScaleFade } from '../components/motion/transitions';
 import { motion } from 'framer-motion';
 
 const About = () => {

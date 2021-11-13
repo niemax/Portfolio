@@ -16,23 +16,24 @@ interface footerProps {}
 
 export const Footer: React.FC<footerProps> = ({}) => {
   return (
-    <Flex h="auto">
-      <HStack spacing={10} align="center" justify="space-between" px={12}>
+    <Flex>
+      <HStack justify="space-between">
         <Heading fontWeight="300" fontSize="md">
           @ 2021, niemax dev
         </Heading>
+        <Box>
+          {socials.map((social, index) => (
+            <IconButton
+              key={index}
+              variant="ghost"
+              fontSize={22}
+              aria-label="toggle theme mode"
+              icon={<FaGithub />}
+              _hover={{ bg: useColorModeValue('navLightHover', 'navDarkHover') }}
+            />
+          ))}
+        </Box>
       </HStack>
-      {/*  {socials.map((social, index) => (
-        <IconButton
-          key={index}
-          color={'#FFD632'}
-          variant="ghost"
-          fontSize={26}
-          aria-label="toggle theme mode"
-          icon={}
-          _hover={{ bg: useColorModeValue('navLightHover', 'navDarkHover') }}
-        />
-      ))} */}
     </Flex>
   );
 };

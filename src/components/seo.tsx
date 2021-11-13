@@ -1,15 +1,9 @@
-import * as React from "react";
-import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import * as React from 'react';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
+import { SEOProps } from '../interfaces';
 
-interface SEOProps {
-  description?: string;
-  lang?: string;
-  meta?: Array<{ name: string; content: string }>;
-  title: string;
-}
-
-function Seo({ description = "", lang = "en", meta = [], title }: SEOProps) {
+function Seo({ description = '', lang = 'en', meta = [], title }: SEOProps) {
   const { site }: any = useStaticQuery(
     graphql`
       query {

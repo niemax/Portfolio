@@ -1,13 +1,7 @@
 import React from 'react';
-import { Box, Container, Heading, Stack, HStack, Center, Flex, VStack } from '@chakra-ui/react';
+import { Center } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
-
-interface MemojiProps {
-  height?: number | string;
-  width?: number | string;
-  ml?: number;
-  padding?: number;
-}
+import { MemojiProps } from '../../../interfaces';
 
 export const Memoji: React.FC<MemojiProps> = ({ ...props }) => {
   return (
@@ -19,7 +13,7 @@ export const Memoji: React.FC<MemojiProps> = ({ ...props }) => {
       ml={props.ml}
       p={props.padding}
     >
-      <StaticImage src="../images/memoji.png" alt="memoji" placeholder="blurred" />
+      <StaticImage src="../../images/memoji.png" alt="memoji" placeholder="blurred" />
     </Center>
   );
 };

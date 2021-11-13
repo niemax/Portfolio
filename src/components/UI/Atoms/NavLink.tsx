@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, useColorModeValue, Box } from '@chakra-ui/react';
 import { Link } from 'gatsby';
+import { NavLinkProps } from '../../../interfaces';
 
 const navLinks = [
   {
@@ -20,14 +21,9 @@ const navLinks = [
   },
 ];
 
-interface NavLinkProps {
-  fontSize?: number;
-  padding?: number;
-}
-
 export const NavLink: React.FC<NavLinkProps> = ({ ...props }) => {
   return (
-    <Box px={20}>
+    <Box px={[5, 10, 10, 20]}>
       {navLinks.map((item, index) => (
         <Button
           py={props.padding}

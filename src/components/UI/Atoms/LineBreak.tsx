@@ -1,12 +1,8 @@
 import React from 'react';
 import { Box, useColorModeValue } from '@chakra-ui/react';
+import { LineBreakProps } from '../../../interfaces';
 
-interface LineBreakProps {
-  width: string | number;
-  marginTop?: number;
-}
-
-export const LineBreak: React.FC<LineBreakProps> = ({ width, marginTop, ...props }) => {
+export const LineBreak: React.FC<LineBreakProps> = ({ width, marginTop = 1, ...props }) => {
   return (
     <Box
       w={width}

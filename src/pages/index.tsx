@@ -1,57 +1,51 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { Box, Heading, Flex } from '@chakra-ui/react';
+import { Box, Heading, Flex, Container, HStack } from '@chakra-ui/react';
 import Seo from '../components/seo';
-import { Memoji } from '../components/UI/Memoji';
-import { PageScaleFade } from '../utility/styles/transitions';
-import { ProjectCards } from '../components/UI/ProjectCards';
-import { LineBreak } from '../components/UI/LineBreak';
+import { Memoji } from '../components/UI/Atoms/Memoji';
+import { PageScaleFade } from '../components/motion/transitions';
+import { ProjectCards } from '../components/UI/Atoms/ProjectCards';
+import { LineBreak } from '../components/UI/Atoms/LineBreak';
 
 const IndexPage = () => {
   return (
-    <Flex>
-      <PageScaleFade>
+    <Flex direction="column" align="center">
+      <Flex direction={['column', 'column', 'row']}>
         <Seo title="Home" />
-        <Box align="center" justify="center">
-          <Memoji width={160} height={160} padding={3} />
-        </Box>
-        <Flex direction={['column', 'column', 'row']} align="center" justify="center" mt="5">
-          <Box align="self-start" w="68%">
-            <Heading color="green" mb="5">
+        <PageScaleFade>
+          <Flex direction="column" align="self-start">
+            <HStack>
+              <Box align="center" justify="center">
+                <Memoji width={140} height={140} padding={3} />
+              </Box>
+            </HStack>
+            <Heading mt="10">
               Hello{' '}
               <Box className="wave" as="span">
                 👋
               </Box>
             </Heading>
-            <LineBreak width={'7rem'} />
-            <Heading fontSize="xl" fontWeight="400">
-              I'm{' '}
-              <Box as="span" fontWeight="800" color="green">
-                Axel,{' '}
-              </Box>
-              Software developer from Helsinki, Finland. My vision is making the web accessible and
-              smooth for everyone. Love working in the Javascript ecosystem. Especially React,
-              NodeJS.
-            </Heading>
-
-            <Box mt="14">
-              <Heading fontSize="2xl" fontWeight="600">
-                See my work{' '}
-                <Link to="/projects">
-                  <Box as="a" color="green" fontWeight={800}>
-                    here
-                  </Box>
-                </Link>
+            <LineBreak width={'7rem'} mt={5} />
+            <Box>
+              <Heading size="md" fontWeight="400">
+                I'm{' '}
+                <Box as="span" fontWeight="800" color="green">
+                  Axel,{' '}
+                </Box>
+                Software developer from Helsinki, Finland. My vision is making the web accessible
+                and smooth for everyone. Love working in the Javascript ecosystem. Especially React,
+                NodeJS.
               </Heading>
             </Box>
-          </Box>
-        </Flex>
-        <Box mt="32" ml={['1.5rem', '1.5rem', '4.3rem', '4.3rem']} px={[10, 14, 20, 20]}>
-          <Heading color="green">Recent work</Heading>
-          <LineBreak width={'12rem'} marginTop={3} />
-          <ProjectCards name="Habitio" />
-        </Box>
-      </PageScaleFade>
+            <Flex mt="14"></Flex>
+            <Heading mt="14">Recent work</Heading>
+            <Box mt="4">
+              <LineBreak width="12rem" />
+            </Box>
+            <ProjectCards width="auto" name="Habitio" />
+          </Flex>
+        </PageScaleFade>
+      </Flex>
     </Flex>
   );
 };
