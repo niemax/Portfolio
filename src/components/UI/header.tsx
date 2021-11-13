@@ -16,23 +16,17 @@ const Header = ({ siteTitle }: HeaderProps) => {
   return (
     <Box>
       <Flex
-        pos="fixed"
-        right="0"
-        top="0"
-        left="0"
         align="center"
         justify="center"
         bg={useColorModeValue('white', 'dark')}
         shadow="lg"
         h="auto"
-        py={3}
+        py={4}
       >
-        <Flex display={['none', 'none', 'flex', 'flex']} align="center" px={14}>
-          <Link to="/">
-            <Memoji width={12} height={12} padding={1.5} />
-          </Link>
-          <NavLink fontSize={18} />
-        </Flex>
+        <Link to="/">
+          <Memoji width={12} height={12} padding={1.5} />
+        </Link>
+        <NavLink fontSize={18} />
         <HStack spacing={3}>
           <IconButton
             color={'#FFD632'}
