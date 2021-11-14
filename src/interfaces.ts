@@ -1,10 +1,3 @@
-export interface ProjectCardsProps {
-  name: string;
-  tech?: string[];
-  decsription?: string;
-  width?: number | string;
-}
-
 export interface SEOProps {
   description?: string;
   lang?: string;

@@ -1,19 +1,34 @@
 import React from 'react';
 import { Box, BoxProps } from '@chakra-ui/layout';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useColorModeValue } from '@chakra-ui/color-mode';
 
 export const MotionBox = motion<BoxProps>(Box);
 
-export const MBox = ({ ...props }) => {
-  return (
-    <MotionBox
-      height={props.height}
-      width={props.width}
-      background={useColorModeValue('white', 'dark')}
-      whileHover={{ scale: 1.04 }}
-      whileTap={{ scale: 0.9 }}
-      {...props}
-    />
-  );
+type Hover = {
+  scale: number;
 };
+
+interface MotionBoxProps {
+  height: number | string;
+  width: number | string;
+  animation: Hover;
+  borderLeft?: string;
+  border?: string;
+  shadow?: string;
+  my?: number;
+  py?: number;
+  p?: number;
+  rounded?: string;
+}
+
+export const MBox: React.FC<MotionBoxProps> = ({ height, width, animation, ...props }) => (
+  <MotionBox
+    height={height}
+    width={width}
+    background={useColorModeValue('white', 'dark')}
+    whileHover={animation}
+    whileTap={{ scale: 0.9 }}
+    {...props}
+  />
+);

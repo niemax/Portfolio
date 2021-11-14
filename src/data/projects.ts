@@ -16,7 +16,7 @@ export const projectData = [
     color: '#D6976A',
     tech: ['React-Native', 'Firebase', 'NodeJS', 'MongoDB'],
     language: 'Javascript',
-    url: 'https://github.com/niemax/Habitio',
+    url: 'https://github.com/niemax/GoTrain-Mobile',
     description: 'A workout app that gives you instructions and tracks your workouts.',
   },
   {
@@ -25,7 +25,7 @@ export const projectData = [
     color: '#9D6AD6',
     tech: ['React', 'Gatsby', 'GraphQL'],
     language: 'Typescript',
-    url: 'https://github.com/niemax/Habitio',
+    url: 'https://github.com/niemax/Portfolio',
     description: 'My personal portfolio made with love in Helsinki, Finland.',
   },
 ];

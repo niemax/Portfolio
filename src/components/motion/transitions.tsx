@@ -1,14 +1,35 @@
 import React, { useEffect } from 'react';
 import { useDisclosure } from '@chakra-ui/react';
-import { MBox } from './MotionBox';
 import { ScaleFade } from '@chakra-ui/react';
 
+export const skillsContainer = {
+  hidden: { opacity: 0, transition: { when: 'afterChildren' } },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      staggerDirection: -5,
+    },
+  },
+};
+
+export const skillsItem = {
+  hidden: { opacity: 0, x: -100, y: -200 },
+  show: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
 export const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.2,
     },
   },
 };
@@ -24,7 +45,9 @@ export const item = {
   },
 };
 
-export const PageScaleFade = ({ children }) => {
+interface ScaleFadeProps {}
+
+export const PageScaleFade: React.FC<ScaleFadeProps> = ({ children }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   useEffect(() => {
@@ -38,12 +61,4 @@ export const PageScaleFade = ({ children }) => {
   }, []);
 
   return <ScaleFade in={isOpen}>{children}</ScaleFade>;
-};
-
-export const CardTransition = ({ children }) => {
-  return (
-    <MBox width={100} height={100} background="black" variants={variants}>
-      {children}
-    </MBox>
-  );
 };

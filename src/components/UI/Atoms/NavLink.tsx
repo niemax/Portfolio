@@ -14,16 +14,21 @@ const navLinks = [
     path: '/projects',
     ariaLabel: 'projects',
   },
+  {
+    name: 'Skills',
+    path: '/skills',
+    ariaLabel: 'skills',
+  },
 ];
 
 export const NavLink: React.FC<NavLinkProps> = ({ ...props }) => {
   return (
-    <Box px={[5, 10, 10, 20]}>
+    <Box ml="2">
       {navLinks.map((item, index) => (
         <Button
           py={props.padding}
-          m={0}
           fontSize={props.fontSize}
+          w="auto"
           as="a"
           variant="ghost"
           _hover={{ bg: useColorModeValue('navLightHover', 'navDarkHover') }}

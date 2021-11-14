@@ -13,7 +13,7 @@ export const Memoji: React.FC<MemojiProps> = ({ ...props }) => {
       ml={props.ml}
       p={props.padding}
     >
-      <StaticImage src="../../images/memoji.png" alt="memoji" placeholder="blurred" />
+      <StaticImage src="../../../staticImages/memoji.png" alt="memoji" placeholder="blurred" />
     </Center>
   );
 };

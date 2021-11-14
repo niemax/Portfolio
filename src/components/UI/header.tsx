@@ -17,17 +17,19 @@ const Header = ({ siteTitle }: HeaderProps) => {
     <Box>
       <Flex
         align="center"
-        justify="center"
         bg={useColorModeValue('white', 'dark')}
         shadow="lg"
         h="auto"
         py={4}
+        justify="center"
       >
-        <Link to="/">
-          <Memoji width={12} height={12} padding={1.5} />
-        </Link>
-        <NavLink fontSize={18} />
-        <HStack spacing={3}>
+        <Flex display={['none', 'none', 'flex', 'flex']} align="center">
+          <Link to="/">
+            <Memoji width={12} height={12} padding={1.5} />
+          </Link>
+          <NavLink fontSize={18} />
+        </Flex>
+        <HStack spacing={5} ml={[20, 0, 0, 80]}>
           <IconButton
             color={'#FFD632'}
             variant="ghost"
@@ -40,10 +42,10 @@ const Header = ({ siteTitle }: HeaderProps) => {
           <IconButton
             variant="ghost"
             as="a"
-            fontSize={26}
+            fontSize={22}
             aria-label="github icon"
             icon={<FaGithub />}
-            _hover={{ bg: useColorModeValue('navLightHover', 'navDarkHover') }}
+            _hover={{ bg: '#6e5494' }}
             onClick={() => window.open('https://github.com/niemax')}
           />
           <IconButton

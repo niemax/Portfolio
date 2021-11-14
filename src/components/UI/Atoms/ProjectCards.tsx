@@ -1,9 +1,17 @@
-import { motion } from 'framer-motion';
 import React from 'react';
-import { Heading, Flex, Stack, Tag, IconButton, Box } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import {
+  Heading,
+  Tooltip,
+  Flex,
+  Stack,
+  Tag,
+  IconButton,
+  Box,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import { MBox } from '../../motion/MotionBox';
 import { container, item } from '../../motion/transitions';
-import { ProjectCardsProps } from '../../../interfaces';
 import { projectData } from '../../../data/projects';
 import { SiJavascript, SiTypescript } from 'react-icons/si';
 
@@ -13,13 +21,23 @@ import { SiJavascript, SiTypescript } from 'react-icons/si';
  * * Props: array of projects
  */
 
-export const ProjectCards: React.FC<ProjectCardsProps> = ({ width }) => {
+export const ProjectCards: React.FC = () => {
+  const animation = { scale: 1.04 };
   return (
     <motion.div variants={container} initial="hidden" animate="show">
       {projectData.map((i, index) => {
         return (
           <motion.div variants={item} key={index}>
-            <MBox borderLeft={`4px solid ${i.color}`} shadow="lg" my={5} rounded="md" py={1}>
+            <MBox
+              height="auto"
+              width="auto"
+              borderLeft={`4px solid ${i.color}`}
+              shadow="md"
+              my={5}
+              rounded="md"
+              py={1}
+              animation={animation}
+            >
               <Flex p={5} direction="column">
                 <Stack direction={['column', 'row', 'row', 'row']} align="center">
                   <IconButton
@@ -29,9 +47,17 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ width }) => {
                     fontSize={32}
                   />
                   <Stack mb="3" direction={['column', 'row', 'row', 'row']}>
-                    <Box as="a" fontSize="xl" onClick={() => window.open(i.url)}>
-                      {i.name}
-                    </Box>
+                    <Tooltip
+                      placement="auto"
+                      bg={useColorModeValue('black', 'white')}
+                      color={useColorModeValue('white', 'black')}
+                      aria-label="A tooltip"
+                      label="Github Link"
+                    >
+                      <Box as="a" fontSize="xl" onClick={() => window.open(i.url)}>
+                        {i.name}
+                      </Box>
+                    </Tooltip>
                     {i.tech.map((itm, idx) => (
                       <Tag key={idx} bg={i.color} p={3.7} rounded="md">
                         <Heading size="sm" color="white">
@@ -41,7 +67,9 @@ export const ProjectCards: React.FC<ProjectCardsProps> = ({ width }) => {
                     ))}
                   </Stack>
                 </Stack>
-                <Heading size="sm">{i.description}</Heading>
+                <Heading size="sm" mt="2">
+                  {i.description}
+                </Heading>
               </Flex>
             </MBox>
           </motion.div>

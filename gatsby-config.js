@@ -14,12 +14,19 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-json`,  
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `staticImages`,
+        path: `${__dirname}/src/staticImages`,
       },
     },
     {
@@ -32,7 +39,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `projects`,
+        name: `data`,
         path: `${__dirname}/src/data/`,
       },
     },
@@ -43,9 +50,8 @@ module.exports = {
         short_name: `portfolio`,
         start_url: `/`,
         background_color: `#663399`,
-        // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/staticImages/habitio.png`, // This path is relative to the root of the site.
       },
     },
   ],

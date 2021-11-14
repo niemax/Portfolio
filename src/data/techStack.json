@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Javascript",
+    "description": "Web development",
+    "link": "https://developer.mozilla.org/en-US/",
+    "type": "language",
+    "color": "#f7df1e",
+    "image": "../images/icons8-javascript-48.png"
+  },
+  {
+    "name": "Typescript",
+    "description": "Web development",
+    "link": "https://www.typescriptlang.org/",
+    "type": "language",
+    "color": "#3178c6",
+    "image": "../images/icons8-typescript-48.png"
+  },
+  {
+    "name": "Python",
+    "description": "Automation",
+    "link": "https://www.python.org/",
+    "type": "language",
+    "color": "#ffde57",
+    "image": "../images/icons8-python-48.png"
+  },
+  {
+    "name": "HTML5",
+    "description": "Web development",
+    "link": "https://reactjs.org/",
+    "color": "#e34f26",
+    "type": "development",
+    "image": "../images/icons8-html-5-48.png"
+  },
+  {
+    "name": "CSS3",
+    "description": "Web development",
+    "link": "https://www.tutorialspoint.com/css/css3_tutorial.htm",
+    "type": "development",
+    "color": "#002561",
+    "image": "../images/icons8-css3-48.png"
+  },
+  {
+    "name": "React",
+    "description": "Web development",
+    "link": "https://reactjs.org/",
+    "type": "development",
+    "color": "#00d8ff",
+    "image": "../images/icons8-react-40.png"
+  },
+  {
+    "name": "CSS3",
+    "description": "Web development",
+    "link": "https://www.tutorialspoint.com/css/css3_tutorial.htm",
+    "type": "development",
+    "color": "#e34f26",
+    "image": "../images/icons8-css3-48.png"
+  },
+  {
+    "name": "React",
+    "description": "Web development",
+    "link": "https://reactjs.org/",
+    "type": "development",
+    "image": "../images/icons8-react-40.png"
+  },
+  {
+    "name": "CSS3",
+    "description": "Web development",
+    "link": "https://www.tutorialspoint.com/css/css3_tutorial.htm",
+    "type": "development",
+    "image": "../images/icons8-css3-48.png"
+  },
+  {
+    "name": "React",
+    "description": "Web development",
+    "link": "https://reactjs.org/",
+    "type": "development",
+    "image": "../images/icons8-react-40.png"
+  }
+]

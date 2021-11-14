@@ -10,11 +10,11 @@ export const Heading = {
     },
     md: {
       fontSize: '1.3rem',
-      fontWeight: 550,
+      fontWeight: 500,
     },
     sm: {
       fontSize: '1rem',
-      fontWeight: 550,
+      fontWeight: 450,
     },
   },
 };
@@ -34,12 +34,13 @@ const theme = {
       },
       a: {
         cursor: 'pointer',
-        color: mode('black', 'white')(props),
+        color: mode('#3D3D3D', '#EAEAEA')(props),
         transition: 'color 0.15s',
         transitionTimingFunction: 'ease-out',
-        fontWeight: '500',
+        fontWeight: 500,
         _hover: {
           color: mode('black', 'white')(props),
+          fontWeight: 800,
         },
       },
     }),
