@@ -2,45 +2,79 @@ import React from 'react';
 import { PageScaleFade } from '../components/motion/transitions';
 import { motion } from 'framer-motion';
 import { skillsContainer, skillsItem } from '../components/motion/transitions';
+import { BsLightningCharge } from 'react-icons/bs';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
-import { Box, HStack, useColorModeValue, Heading, SimpleGrid } from '@chakra-ui/react';
+import {
+  Box,
+  HStack,
+  VStack,
+  useColorModeValue,
+  Heading,
+  SimpleGrid,
+  Icon,
+} from '@chakra-ui/react';
 import { MBox } from '../components/motion/MotionBox';
 import { graphql } from 'gatsby';
 import { LineBreak } from '../components/UI/Atoms/LineBreak';
 
-interface SkillsProps {}
-
-const Skills: React.FC<SkillsProps> = ({ data }: any) => {
+const Skills = ({ data }: any) => {
   const skills = data?.allTechStackJson?.edges;
 
   return (
     <Box>
       <PageScaleFade>
         <Box mt="3" w={[null, null, '70%']} mx="auto">
-          <Heading>Skills</Heading>
-          <LineBreak w="4.8rem" />
-          <Heading size="md">Languages & technologies I'm familiar with.</Heading>
-          <Box mt="10">
+          <Box align="center">
+            <Heading>Skills</Heading>
+            <LineBreak w="4.8rem" />
+          </Box>
+          <Heading size="md">Languages, technologies, and tools I'm familiar with.</Heading>
+          <Box mt="8">
             <motion.div variants={skillsContainer} initial="hidden" animate="show">
-              <SimpleGrid columns={[1, 2, 2, 2]} spacingX={6} spacingY={6}>
-                {skills.map(({ node }) => (
-                  <motion.div variants={skillsItem} key={node.name}>
-                    <MBox
-                      rounded="lg"
-                      height={16}
-                      width="auto"
-                      p={2}
-                      animation={{ y: -6.25 }}
-                      shadow={useColorModeValue('md', 'xl')}
-                      borderLeft={`4px solid ${node.color}`}
-                    >
-                      <HStack>
-                        <img alt="tech" src={node.image.childImageSharp.fixed.src} />
-                        <Heading size="md">{node.name}</Heading>
-                      </HStack>
-                    </MBox>
-                  </motion.div>
-                ))}
+              <SimpleGrid columns={[1, 2, 2, 2]} spacingX={6} spacingY={5}>
+                {skills.map(({ node }) => {
+                  console.log(node.image.childImageSharp.fixed.src);
+                  const image = getImage(node.image.childImageSharp.fixed.src);
+                  return (
+                    <motion.div variants={skillsItem} key={node.name}>
+                      <MBox
+                        rounded="lg"
+                        height={16}
+                        p={2}
+                        animation={{ y: -6.25 }}
+                        shadow={useColorModeValue('md', 'xl')}
+                        borderLeft={`4px solid ${node.color}`}
+                      >
+                        <HStack>
+                          <Box
+                            bg={useColorModeValue('navLightHover', 'navDarkHover')}
+                            rounded="lg"
+                            p={1}
+                          >
+                            <img
+                              alt="tech"
+                              src={node.image.childImageSharp.fixed.src}
+                              width={25}
+                              height={25}
+                            />
+                          </Box>
+                          <VStack>
+                            <Box as="a" onClick={() => window.open(`${node.link}`)}>
+                              <Heading size="md" fontWeight={600} _hover={{ color: node.color }}>
+                                {node.name}
+                              </Heading>
+                              <Box>
+                                <Heading size="sm" mt="1" color="grey">
+                                  {node.description}
+                                </Heading>
+                              </Box>
+                            </Box>
+                          </VStack>
+                        </HStack>
+                      </MBox>
+                    </motion.div>
+                  );
+                })}
               </SimpleGrid>
             </motion.div>
           </Box>

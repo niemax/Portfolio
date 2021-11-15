@@ -13,10 +13,8 @@ const IndexPage = () => {
         <Flex direction={['column', 'column', 'row']}>
           <Seo title="Home" />
           <Flex direction="column" align="self-start">
-            <HStack>
-              <Box align="center" justify="center">
-                <Memoji width={140} height={140} padding={3} />
-              </Box>
+            <HStack align="center" justify="center">
+              <Memoji width={140} height={140} padding={3} />
             </HStack>
             <Introduction />
             <Recents />

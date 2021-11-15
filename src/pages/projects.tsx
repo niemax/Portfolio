@@ -13,9 +13,9 @@ const Projects = () => {
         <Flex flexDir="column" px={[10, 14, 14, 14]}>
           <Box>
             <Heading>My Work</Heading>
-            <LineBreak width={'7rem'} />
+            <LineBreak width={'9rem'} />
             <Heading size="md" mt="4">
-              Personal projects that I've written in the past year. Mainly Mobile-focused
+              Personal projects that I've written.
             </Heading>
             <ProjectCards />
           </Box>

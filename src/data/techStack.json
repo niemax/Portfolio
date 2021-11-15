@@ -25,7 +25,7 @@
   },
   {
     "name": "HTML5",
-    "description": "Web development",
+    "description": "Web Layout",
     "link": "https://reactjs.org/",
     "color": "#e34f26",
     "type": "development",
@@ -33,11 +33,19 @@
   },
   {
     "name": "CSS3",
-    "description": "Web development",
+    "description": "Web Styling",
     "link": "https://www.tutorialspoint.com/css/css3_tutorial.htm",
     "type": "development",
     "color": "#002561",
     "image": "../images/icons8-css3-48.png"
+  },
+  {
+    "name": "NodeJs",
+    "description": "Web development",
+    "link": "https://nodejs.org/en/",
+    "type": "Backend",
+    "color": "#6cc24a",
+    "image": "../images/icons8-nodejs-144.png"
   },
   {
     "name": "React",
@@ -48,32 +56,83 @@
     "image": "../images/icons8-react-40.png"
   },
   {
-    "name": "CSS3",
-    "description": "Web development",
-    "link": "https://www.tutorialspoint.com/css/css3_tutorial.htm",
+    "name": "React-Native",
+    "description": "Mobile development",
+    "link": "https://reactnative.dev",
     "type": "development",
-    "color": "#e34f26",
-    "image": "../images/icons8-css3-48.png"
-  },
-  {
-    "name": "React",
-    "description": "Web development",
-    "link": "https://reactjs.org/",
-    "type": "development",
+    "color": "#00d8ff",
     "image": "../images/icons8-react-40.png"
   },
   {
-    "name": "CSS3",
-    "description": "Web development",
-    "link": "https://www.tutorialspoint.com/css/css3_tutorial.htm",
+    "name": "Redux",
+    "description": "State Management",
+    "link": "https://redux.js.org",
     "type": "development",
-    "image": "../images/icons8-css3-48.png"
+    "color": "#764abc",
+    "image": "../images/icons8-redux-144.png"
   },
   {
-    "name": "React",
-    "description": "Web development",
-    "link": "https://reactjs.org/",
+    "name": "GatsbyJs",
+    "description": "Web Development",
+    "link": "https://www.gatsbyjs.com/",
+    "type": "framework",
+    "color": "#663399",
+    "image": "../images/icons8-gatsbyjs-144.png"
+  },
+  {
+    "name": "Graphql",
+    "description": "Query Language",
+    "link": "https://graphql.org/",
     "type": "development",
-    "image": "../images/icons8-react-40.png"
+    "color": "#e10098",
+    "image": "../images/icons8-graphql-144.png"
+  },
+  {
+    "name": "VsCode",
+    "description": "My favorite IDE",
+    "link": "https://code.visualstudio.com",
+    "type": "tools",
+    "color": "#00d8ff",
+    "image": "../images/icons8-visual-studio-2019-48.png"
+  },
+  {
+    "name": "Firebase",
+    "description": "SaaS",
+    "link": "https://firebase.google.com/",
+    "type": "Database",
+    "color": "#fbbc05",
+    "image": "../images/icons8-firebase-48.png"
+  },
+  {
+    "name": "MongoDB",
+    "description": "Development",
+    "link": "https://www.mongodb.com/",
+    "type": "Database",
+    "color": "#589636",
+    "image": "../images/icons8-mongodb-48.png"
+  },
+  {
+    "name": "Heroku",
+    "description": "Development",
+    "link": "https://www.heroku.com/#",
+    "type": "DevOps",
+    "color": "#c9c3e6",
+    "image": "../images/icons8-heroku-48.png"
+  },
+  {
+    "name": "Figma",
+    "description": "Web Design",
+    "link": "https://www.figma.com",
+    "type": "Web Design",
+    "color": "#0cb9c1",
+    "image": "../images/icons8-figma-48.png"
+  },
+  {
+    "name": "Postman",
+    "description": "API Design",
+    "link": "https://www.postman.com",
+    "type": "tools",
+    "color": "#ef5b25",
+    "image": "../images/icons8-postman-api-64.png"
   }
 ]
