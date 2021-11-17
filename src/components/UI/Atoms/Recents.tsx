@@ -3,10 +3,10 @@ import { Box, Heading } from '@chakra-ui/react';
 import { LineBreak } from './LineBreak';
 import { ProjectCards } from './ProjectCards';
 import { graphql, useStaticQuery } from 'gatsby';
-import { AllProjectsJson } from '../../../interfaces';
+import { AllProjectsJson } from '../../../types';
 
 export const Recents = () => {
-  const { allProjectsJson }: any = useStaticQuery<AllProjectsJson>(
+  const { allProjectsJson } = useStaticQuery<AllProjectsJson>(
     graphql`
       query {
         allProjectsJson {
@@ -34,7 +34,6 @@ export const Recents = () => {
   );
 
   const mapped = allProjectsJson.edges?.filter(({ node }: any) => node.name.startsWith('P'));
-
   return (
     <>
       <Heading mt="20">Recent work</Heading>

@@ -2,8 +2,7 @@ import React from 'react';
 import { PageScaleFade } from '../components/motion/transitions';
 import { motion } from 'framer-motion';
 import { skillsContainer, skillsItem } from '../components/motion/transitions';
-import { BsLightningCharge } from 'react-icons/bs';
-import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
+import { getImage } from 'gatsby-plugin-image';
 import { Box, HStack, VStack, useColorModeValue, Heading, SimpleGrid } from '@chakra-ui/react';
 import { MBox } from '../components/motion/MotionBox';
 import { graphql } from 'gatsby';
@@ -26,7 +25,7 @@ const Skills = ({ data }: any) => {
           <Box mt="8">
             <motion.div variants={skillsContainer} initial="hidden" animate="show">
               <SimpleGrid columns={[1, 2, 2, 2]} spacingX={6} spacingY={5}>
-                {skills.map(({ node }) => {
+                {skills.map(({ node }: any) => {
                   const image = getImage(node.image.childImageSharp);
                   return (
                     <motion.div variants={skillsItem} key={node.name}>
@@ -53,7 +52,11 @@ const Skills = ({ data }: any) => {
                           </Box>
                           <VStack>
                             <Box as="a" onClick={() => window.open(`${node.link}`)}>
-                              <Heading size="md" fontWeight={600} _hover={{ color: node.color }}>
+                              <Heading
+                                fontSize="xl"
+                                fontWeight={600}
+                                _hover={{ color: node.color }}
+                              >
                                 {node.name}
                               </Heading>
                               <Box>
@@ -77,8 +80,8 @@ const Skills = ({ data }: any) => {
   );
 };
 
-export const query = graphql`
-  query SkillsQuery {
+export const _query = graphql`
+  query {
     allTechStackJson {
       edges {
         node {

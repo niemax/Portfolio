@@ -1,7 +1,8 @@
 import React, { ReactNode, Fragment } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Center, Box } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import Header from './header';
+import { PageScaleFade } from '../components/motion/transitions';
 import { Footer } from './footer';
 
 interface LayoutProps {

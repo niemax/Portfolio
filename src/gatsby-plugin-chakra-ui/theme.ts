@@ -9,7 +9,7 @@ export const Heading = {
       fontWeight: 800,
     },
     md: {
-      fontSize: '1.5rem',
+      fontSize: '1.4rem',
       fontWeight: 400,
     },
     sm: {
@@ -30,7 +30,6 @@ const theme = {
       body: {
         color: mode('#383838', 'white')(props),
         bg: mode('#F7F7F7', '#151B23')(props),
-        height: '100vh',
         margin: 0,
       },
       a: {

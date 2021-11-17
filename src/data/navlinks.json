@@ -1,0 +1,17 @@
+[
+  {
+    "name": "About",
+    "path": "/about",
+    "ariaLabel": "about"
+  },
+  {
+    "name": "Projects",
+    "path": "/projects",
+    "ariaLabel": "projects"
+  },
+  {
+    "name": "Skills",
+    "path": "/skills",
+    "ariaLabel": "skills"
+  }
+]

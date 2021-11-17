@@ -5,7 +5,7 @@ import Seo from '../components/seo';
 import { ProjectCards } from '../components/UI/Atoms/ProjectCards';
 import { LineBreak } from '../components/UI/Atoms/LineBreak';
 import { graphql, useStaticQuery } from 'gatsby';
-import { AllProjectsJson } from '../interfaces';
+import { AllProjectsJson } from '../types';
 
 const Projects = () => {
   const data = useStaticQuery<AllProjectsJson>(

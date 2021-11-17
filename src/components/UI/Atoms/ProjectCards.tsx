@@ -15,58 +15,56 @@ export const ProjectCards = ({ data }: any) => {
 
   return (
     <motion.div variants={container} initial="hidden" animate="show">
-      {data?.map(({ node }, index) => {
-        return (
-          <motion.div variants={item} key={index}>
-            <Box as="a" onClick={() => window.open(`${node.url}`)}>
-              <MBox
-                height="auto"
-                width="auto"
-                borderLeft={`4px solid ${node.color}`}
-                shadow="md"
-                my={5}
-                rounded="md"
-                py={1}
-                animation={animation}
-              >
-                <Flex p={5} direction="column">
-                  <Stack direction={['column', 'row', 'row', 'row']} align="center">
-                    <img
-                      alt={node.language}
-                      src={node.icon.childImageSharp.fixed.src}
-                      width={35}
-                      height={35}
-                    />
-                    <Stack mb="3" direction={['column', 'row', 'row', 'row']}>
-                      <Tooltip
-                        placement="auto"
-                        bg={useColorModeValue('black', 'white')}
-                        color={useColorModeValue('white', 'black')}
-                        aria-label="A tooltip"
-                        label="Github Link"
-                      >
-                        <Box as="a" fontSize="xl" onClick={() => window.open(node.url)}>
-                          {node.name}
-                        </Box>
-                      </Tooltip>
-                      {node.tech.map((itm, idx) => (
-                        <Tag key={idx} bg={node.color} p={3.7} rounded="md">
-                          <Heading size="sm" color="white">
-                            {itm}
-                          </Heading>
-                        </Tag>
-                      ))}
-                    </Stack>
+      {data?.map(({ node }: any, index: string) => (
+        <motion.div variants={item} key={index}>
+          <Box as="a" onClick={() => window.open(`${node.url}`)}>
+            <MBox
+              height="auto"
+              width="auto"
+              borderLeft={`4px solid ${node.color}`}
+              shadow="md"
+              my={5}
+              rounded="md"
+              py={1}
+              animation={animation}
+            >
+              <Flex p={5} direction="column">
+                <Stack direction={['column', 'row', 'row', 'row']} align="center">
+                  <img
+                    alt={node.language}
+                    src={node.icon.childImageSharp.fixed.src}
+                    width={35}
+                    height={35}
+                  />
+                  <Stack mb="3" direction={['column', 'row', 'row', 'row']}>
+                    <Tooltip
+                      placement="auto"
+                      bg={useColorModeValue('black', 'white')}
+                      color={useColorModeValue('white', 'black')}
+                      aria-label="A tooltip"
+                      label="Github Link"
+                    >
+                      <Box as="a" fontSize="xl" onClick={() => window.open(node.url)}>
+                        {node.name}
+                      </Box>
+                    </Tooltip>
+                    {node.tech.map((itm, idx) => (
+                      <Tag key={idx} bg={node.color} p={3.7} rounded="md">
+                        <Heading size="sm" color="white">
+                          {itm}
+                        </Heading>
+                      </Tag>
+                    ))}
                   </Stack>
-                  <Heading size="sm" mt="2">
-                    {node.description}
-                  </Heading>
-                </Flex>
-              </MBox>
-            </Box>
-          </motion.div>
-        );
-      })}
+                </Stack>
+                <Heading size="sm" mt="2">
+                  {node.description}
+                </Heading>
+              </Flex>
+            </MBox>
+          </Box>
+        </motion.div>
+      ))}
     </motion.div>
   );
 };

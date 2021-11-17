@@ -7,7 +7,7 @@
     "icon": "../images/icons8-javascript-48.png",
     "tech": ["React-Native", "Async-Storage"],
     "url": "https://github.com/niemax/Habitio",
-    "description": "A habit tracker app that makes you be productive and challenge yourseπlf everyday.\nWith the help of this app you get to be the best you possible and stop procrastination."
+    "description": "A habit tracker app that makes you be productive and challenge yourself everyday.\nWith the help of this app you get to be the best you possible and stop procrastination."
   },
   {
     "name": "GoTrain",
@@ -17,7 +17,7 @@
     "language": "Javascript",
     "icon": "../images/icons8-javascript-48.png",
     "url": "https://github.com/niemax/GoTrain-Mobile",
-    "description": "A workout app that gives you instructions and tracks your workouts."
+    "description": "A workout app that gives you instructions and tracks your workouts. Has a set of pre-defined workouts."
   },
   {
     "name": "Portfolio",
