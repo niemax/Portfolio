@@ -1,38 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  Heading,
-  Tooltip,
-  Flex,
-  Stack,
-  Tag,
-  IconButton,
-  Box,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { Heading, Tooltip, Flex, Stack, Tag, Box, useColorModeValue } from '@chakra-ui/react';
 import { MBox } from '../../motion/MotionBox';
 import { container, item } from '../../motion/transitions';
-import { projectData } from '../../../data/projects';
-import { SiJavascript, SiTypescript } from 'react-icons/si';
 
 /**
  * ? Cards include: tech stack Array, name, description, overall own rating
- * ! check the render methods of cards. Should come from a local array in ./data folder
+ * ! check the render methods of cards. Should come from a local json array in ./data folder
  * * Props: array of projects
  */
 
-export const ProjectCards: React.FC = () => {
+export const ProjectCards = ({ data }: any) => {
   const animation = { scale: 1.04 };
+
   return (
     <motion.div variants={container} initial="hidden" animate="show">
-      {projectData.map((i, index) => {
+      {data?.map(({ node }, index) => {
         return (
           <motion.div variants={item} key={index}>
-            <Box as="a" onClick={() => window.open(`${i.url}`)}>
+            <Box as="a" onClick={() => window.open(`${node.url}`)}>
               <MBox
                 height="auto"
                 width="auto"
-                borderLeft={`4px solid ${i.color}`}
+                borderLeft={`4px solid ${node.color}`}
                 shadow="md"
                 my={5}
                 rounded="md"
@@ -41,11 +31,11 @@ export const ProjectCards: React.FC = () => {
               >
                 <Flex p={5} direction="column">
                   <Stack direction={['column', 'row', 'row', 'row']} align="center">
-                    <IconButton
-                      aria-label="language"
-                      icon={index !== 2 ? <SiJavascript /> : <SiTypescript />}
-                      color={i.languageColor}
-                      fontSize={32}
+                    <img
+                      alt={node.language}
+                      src={node.icon.childImageSharp.fixed.src}
+                      width={35}
+                      height={35}
                     />
                     <Stack mb="3" direction={['column', 'row', 'row', 'row']}>
                       <Tooltip
@@ -55,12 +45,12 @@ export const ProjectCards: React.FC = () => {
                         aria-label="A tooltip"
                         label="Github Link"
                       >
-                        <Box as="a" fontSize="xl" onClick={() => window.open(i.url)}>
-                          {i.name}
+                        <Box as="a" fontSize="xl" onClick={() => window.open(node.url)}>
+                          {node.name}
                         </Box>
                       </Tooltip>
-                      {i.tech.map((itm, idx) => (
-                        <Tag key={idx} bg={i.color} p={3.7} rounded="md">
+                      {node.tech.map((itm, idx) => (
+                        <Tag key={idx} bg={node.color} p={3.7} rounded="md">
                           <Heading size="sm" color="white">
                             {itm}
                           </Heading>
@@ -69,7 +59,7 @@ export const ProjectCards: React.FC = () => {
                     </Stack>
                   </Stack>
                   <Heading size="sm" mt="2">
-                    {i.description}
+                    {node.description}
                   </Heading>
                 </Flex>
               </MBox>

@@ -8,6 +8,7 @@ export interface SEOProps {
 export interface LineBreakProps {
   width: string | number;
   marginTop?: number;
+  mb?: number;
 }
 
 export interface MemojiProps {
@@ -24,4 +25,21 @@ export interface NavLinkProps {
 
 export interface HeaderProps {
   siteTitle: string;
+}
+
+export interface AllProjectsJson {
+  allProjectsJson: {
+    edges: {
+      node: {
+        name: string;
+        color: string;
+        languageColor: string;
+        language: string;
+        icon: string;
+        tech: number[];
+        url: string;
+        description: string;
+      };
+    };
+  };
 }

@@ -40,7 +40,7 @@ export const Socials: React.FC = () => {
         aria-label="linkedin link"
         icon={<FaLinkedin />}
         _hover={{ bg: '#0077b5' }}
-        onClick={() => window.open('https://www.linkedin.com/')}
+        onClick={() => window.open('https://www.linkedin.com/in/axel-nieminen-06a580196/')}
       />
       <IconButton
         as="a"

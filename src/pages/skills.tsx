@@ -4,18 +4,11 @@ import { motion } from 'framer-motion';
 import { skillsContainer, skillsItem } from '../components/motion/transitions';
 import { BsLightningCharge } from 'react-icons/bs';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
-import {
-  Box,
-  HStack,
-  VStack,
-  useColorModeValue,
-  Heading,
-  SimpleGrid,
-  Icon,
-} from '@chakra-ui/react';
+import { Box, HStack, VStack, useColorModeValue, Heading, SimpleGrid } from '@chakra-ui/react';
 import { MBox } from '../components/motion/MotionBox';
 import { graphql } from 'gatsby';
 import { LineBreak } from '../components/UI/Atoms/LineBreak';
+import Seo from '../components/seo';
 
 const Skills = ({ data }: any) => {
   const skills = data?.allTechStackJson?.edges;
@@ -23,18 +16,18 @@ const Skills = ({ data }: any) => {
   return (
     <Box>
       <PageScaleFade>
+        <Seo title="Skills" />
         <Box mt="3" w={[null, null, '70%']} mx="auto">
           <Box align="center">
             <Heading>Skills</Heading>
-            <LineBreak w="4.8rem" />
+            <LineBreak width="5rem" />
           </Box>
           <Heading size="md">Languages, technologies, and tools I'm familiar with.</Heading>
           <Box mt="8">
             <motion.div variants={skillsContainer} initial="hidden" animate="show">
               <SimpleGrid columns={[1, 2, 2, 2]} spacingX={6} spacingY={5}>
                 {skills.map(({ node }) => {
-                  console.log(node.image.childImageSharp.fixed.src);
-                  const image = getImage(node.image.childImageSharp.fixed.src);
+                  const image = getImage(node.image.childImageSharp);
                   return (
                     <motion.div variants={skillsItem} key={node.name}>
                       <MBox
@@ -52,7 +45,7 @@ const Skills = ({ data }: any) => {
                             p={1}
                           >
                             <img
-                              alt="tech"
+                              alt={node.name}
                               src={node.image.childImageSharp.fixed.src}
                               width={25}
                               height={25}

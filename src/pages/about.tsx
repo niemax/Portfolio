@@ -1,43 +1,32 @@
 import React from 'react';
-import { Heading, Stack, Flex, VStack } from '@chakra-ui/react';
+import { Heading, Box, Flex, VStack } from '@chakra-ui/react';
 import Seo from '../components/seo';
 import { PageScaleFade } from '../components/motion/transitions';
 import { motion } from 'framer-motion';
+import { LineBreak } from '../components/UI/Atoms/LineBreak';
 
 const About = () => {
   return (
     <PageScaleFade>
-      <motion.div layout>
-        <Flex
-          h="100vh"
-          py={10}
-          align="flex-start"
-          justifyContent={['center', 'center', 'flex-start']}
-        >
+      <motion.div>
+        <Flex direction="column" align="center" px={[0, 0, 14, 14]}>
           <Seo title="About" />
-          <Stack px={12}>
+          <Box>
             <section>
-              <VStack align="self-start" justify="center">
-                <Heading color="green">About me</Heading>
-                <Heading size="md">
-                  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
-                  a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
-                  looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum
-                  passage, and going through the cites of the word in classical literature,
-                  discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-                  1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by
-                  Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very
-                  popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor
-                  sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem
-                  Ipsum used since the 1500s is reproduced below for those interested. Sections
-                  1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-                  reproduced in their exact original form, accompanied by English versions from the
-                  1914 translation by H. Rackham.
-                </Heading>
-              </VStack>
+              <Heading>About me</Heading>
+              <LineBreak width="10em" />
+              <Heading size="md">
+                Jumped into the world of Information Technology in 2019 based on personal interests
+                whilst looking for something I am passionate about. Ever since it has been the one
+                thing that I'm super passionate about and want to improve myself at a never-ending
+                pace. Always looking for new creative ways to provide accessible and smooth software
+                for all kinds of people. Love working as a team and taking into account everyones'
+                vision. Really hard trying to learn clean code principles. No prior experience in
+                the field, looking for my first job to prove my skills. Portfolio in the making as
+                you are reading this. (nearly done).
+              </Heading>
             </section>
-          </Stack>
+          </Box>
         </Flex>
       </motion.div>
     </PageScaleFade>

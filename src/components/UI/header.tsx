@@ -29,11 +29,11 @@ const Header = ({ siteTitle }: HeaderProps) => {
           </Link>
           <NavLink fontSize={18} />
         </Flex>
-        <HStack spacing={5} ml={[20, 0, 0, 80]}>
+        <HStack spacing={1} ml={[40, 40, 0, 80]}>
           <IconButton
             color={'#FFD632'}
             variant="ghost"
-            fontSize={26}
+            fontSize={colorMode === 'light' ? 18 : 24}
             aria-label="toggle theme mode"
             onClick={toggleColorMode}
             icon={colorMode === 'light' ? <FaMoon /> : <WiDaySunny />}
@@ -75,7 +75,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
           display={display}
         >
           <Flex flexDir="column" align="center" justify="center">
-            <NavLink fontSize={30} padding={14} />
+            <NavLink fontSize={30} padding={14} onClick={() => changeDisplay('none')} />
           </Flex>
           <IconButton
             mt={2}

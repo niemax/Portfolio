@@ -30,6 +30,7 @@ export const NavLink: React.FC<NavLinkProps> = ({ ...props }) => {
           fontSize={props.fontSize}
           w="auto"
           as="a"
+          mx={1}
           variant="ghost"
           _hover={{ bg: useColorModeValue('navLightHover', 'navDarkHover') }}
           key={index}

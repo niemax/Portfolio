@@ -97,23 +97,23 @@
   },
   {
     "name": "Firebase",
-    "description": "SaaS",
+    "description": "Database / SaaS",
     "link": "https://firebase.google.com/",
-    "type": "Database",
+    "type": "Database / SaaS",
     "color": "#fbbc05",
     "image": "../images/icons8-firebase-48.png"
   },
   {
     "name": "MongoDB",
-    "description": "Development",
+    "description": "Database",
     "link": "https://www.mongodb.com/",
-    "type": "Database",
+    "type": "Web Development",
     "color": "#589636",
     "image": "../images/icons8-mongodb-48.png"
   },
   {
     "name": "Heroku",
-    "description": "Development",
+    "description": "DevOps",
     "link": "https://www.heroku.com/#",
     "type": "DevOps",
     "color": "#c9c3e6",

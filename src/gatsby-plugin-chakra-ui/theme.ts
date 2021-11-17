@@ -5,29 +5,30 @@ import { colors } from '../theme/foundations/colors';
 export const Heading = {
   sizes: {
     xl: {
-      fontSize: '2rem',
-      fontWeight: 600,
+      fontSize: '2.3rem',
+      fontWeight: 800,
     },
     md: {
-      fontSize: '1.3rem',
-      fontWeight: 500,
+      fontSize: '1.5rem',
+      fontWeight: 400,
     },
     sm: {
       fontSize: '1rem',
       fontWeight: 450,
+      color: 'grey',
     },
   },
 };
 
 const theme = {
   fonts: {
-    heading: 'poppins',
     body: 'poppins',
+    heading: 'poppins',
   },
   styles: {
     global: props => ({
       body: {
-        color: mode('#3D3D3D', '#EAEAEA')(props),
+        color: mode('#383838', 'white')(props),
         bg: mode('#F7F7F7', '#151B23')(props),
         height: '100vh',
         margin: 0,
