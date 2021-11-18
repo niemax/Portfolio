@@ -6,7 +6,7 @@ interface StoryProps {}
 
 export const Story: React.FC<StoryProps> = ({}) => {
   return (
-    <Box>
+    <>
       <Heading>What's my story?</Heading>
       <LineBreak width="17rem" mb={5} />
       <Heading size="md">
@@ -16,6 +16,6 @@ export const Story: React.FC<StoryProps> = ({}) => {
         software for all kinds of people. Love working as a team and taking into account everyones'
         vision. Also constantly trying to better myself on clean code principles.
       </Heading>
-    </Box>
+    </>
   );
 };

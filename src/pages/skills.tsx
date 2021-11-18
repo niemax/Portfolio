@@ -1,13 +1,13 @@
-import React from 'react';
-import { PageScaleFade } from '../components/motion/transitions';
-import { motion } from 'framer-motion';
-import { skillsContainer, skillsItem } from '../components/motion/transitions';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { Box, HStack, VStack, useColorModeValue, Heading, SimpleGrid } from '@chakra-ui/react';
-import { MBox } from '../components/motion/MotionBox';
-import { graphql } from 'gatsby';
-import { LineBreak } from '../components/UI/Atoms/LineBreak';
-import Seo from '../components/seo';
+import React from "react";
+import { PageScaleFade } from "../components/motion/transitions";
+import { motion } from "framer-motion";
+import { skillsContainer, skillsItem } from "../components/motion/transitions";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Box, HStack, VStack, useColorModeValue, Heading, SimpleGrid } from "@chakra-ui/react";
+import { MBox } from "../components/motion/MotionBox";
+import { graphql } from "gatsby";
+import { LineBreak } from "../components/UI/Atoms/LineBreak";
+import Seo from "../components/seo";
 
 const Skills = ({ data }: any) => {
   const skills = data?.allTechStackJson?.edges;
@@ -16,8 +16,8 @@ const Skills = ({ data }: any) => {
     <Box>
       <PageScaleFade>
         <Seo title="Skills" />
-        <Box mt="3" w={[null, null, '70%']} mx="auto">
-          <Box align="center">
+        <Box mt="3" w={[null, null, "70%"]} mx="auto">
+          <Box align="center" justify="center">
             <Heading>Skills</Heading>
             <LineBreak width="5rem" />
           </Box>
@@ -34,13 +34,13 @@ const Skills = ({ data }: any) => {
                         height={16}
                         p={2}
                         animation={{ y: -6.25 }}
-                        shadow={useColorModeValue('md', 'xl')}
-                        _hover={{ cursor: 'pointer' }}
+                        shadow={useColorModeValue("md", "xl")}
+                        _hover={{ cursor: "pointer" }}
                         borderLeft={`4px solid ${node.color}`}
                       >
                         <HStack>
                           <Box
-                            bg={useColorModeValue('navLightHover', 'navDarkHover')}
+                            bg={useColorModeValue("navLightHover", "navDarkHover")}
                             rounded="lg"
                             p={1}
                           >
