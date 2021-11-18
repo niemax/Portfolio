@@ -24,10 +24,8 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <Fragment>
       <Header siteTitle={siteTitle} />
-      <main className="main">
-        {children}
-        <Footer />
-      </main>
+      <main className="main">{children}</main>
+      <Footer />
     </Fragment>
   );
 };

@@ -8,16 +8,14 @@ import { Education } from "../components/UI/Atoms/Education";
 const About = () => {
   return (
     <PageScaleFade>
-      <Flex direction="column" align="center" px={[0, 0, 14, 14]}>
-        <Seo title="About" />
-        <Box>
-          <section>
-            <Story />
-          </section>
-          <section>
-            <Education />
-          </section>
-        </Box>
+      <Seo title="About" />
+      <Flex px={[2, 10, 14, 14]} direction="column">
+        <section>
+          <Story />
+        </section>
+        <section>
+          <Education />
+        </section>
       </Flex>
     </PageScaleFade>
   );
