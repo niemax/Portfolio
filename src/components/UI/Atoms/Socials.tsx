@@ -13,6 +13,7 @@ export const Socials: React.FC = () => {
         variant="ghost"
         aria-label="Github Link"
         icon={<FaGithub />}
+        color="#6e5494"
         _hover={{ bg: "#6e5494" }}
         onClick={() => windowOpen("https://github.com/niemax")}
       />
@@ -31,6 +32,7 @@ export const Socials: React.FC = () => {
         fontSize={20}
         aria-label="stackoverflow link"
         icon={<FaStackOverflow />}
+        color="#f48024"
         _hover={{ bg: "#f48024" }}
         onClick={() => windowOpen("https://stackoverflow.com/users/13197952/niemax")}
       />
@@ -40,6 +42,7 @@ export const Socials: React.FC = () => {
         fontSize={20}
         aria-label="linkedin link"
         icon={<FaLinkedin />}
+        color="#0077b5"
         _hover={{ bg: "#0077b5" }}
         onClick={() => windowOpen("https://www.linkedin.com/in/axel-nieminen-06a580196/")}
       />
@@ -49,7 +52,7 @@ export const Socials: React.FC = () => {
         fontSize={20}
         aria-label="mail link"
         icon={<ImMail />}
-        _hover={{ bg: "red" }}
+        _hover={{ bg: "cyan" }}
         onClick={() => windowOpen("mailto:axel.nieminen@mac.com")}
       />
     </HStack>

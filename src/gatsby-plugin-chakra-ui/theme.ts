@@ -29,7 +29,7 @@ const theme = {
     global: props => ({
       body: {
         color: mode("#000", "#ffff")(props),
-        bg: mode("#F7F7F7", "#213049")(props),
+        bg: mode("#F7F7F7", "#1B2330")(props),
         margin: 0,
       },
       a: {

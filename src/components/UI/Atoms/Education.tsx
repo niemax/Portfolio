@@ -8,7 +8,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 export const Education = () => {
   return (
-    <Box mt={28}>
+    <Box mt={14}>
       <Heading>Education</Heading>
       <LineBreak width="9rem" mb={5} marginTop={2} />
       <motion.div variants={container} initial="hidden" animate="show">

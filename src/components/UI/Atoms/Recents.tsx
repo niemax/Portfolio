@@ -34,8 +34,8 @@ export const Recents = () => {
   const mapped = allProjectsJson.edges?.filter(({ node }: any) => node.name.startsWith("P"));
   return (
     <>
-      <Heading mt="20">Recent work</Heading>
-      <LineBreak width="11rem" mb={2} />
+      <Heading mt={20}>Recent work</Heading>
+      <LineBreak width="11rem" mb={1} />
       <Box w="100%">
         <ProjectCards data={mapped} />
       </Box>
