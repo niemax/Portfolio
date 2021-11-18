@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, useColorModeValue, Box } from '@chakra-ui/react';
+import { Button, useColorModeValue } from '@chakra-ui/react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { NavLinkProps } from '../../../interfaces';
 
@@ -33,7 +33,7 @@ export const NavLink = ({ ...props }: NavLinkProps) => {
   };
 
   return (
-    <Box ml="2">
+    <>
       {allNavlinksJson?.edges?.map(({ node }) => (
         <Button
           key={node.name}
@@ -42,13 +42,13 @@ export const NavLink = ({ ...props }: NavLinkProps) => {
           w="auto"
           as="a"
           mx={1}
-          variant="outlined"
+          variant="ghost"
           _hover={{ bg: useColorModeValue('navLightHover', 'navDarkHover') }}
           {...props}
         >
           <Link to={node.path}>{node.name}</Link>
         </Button>
       ))}
-    </Box>
+    </>
   );
 };

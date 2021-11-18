@@ -1,9 +1,9 @@
-import React from 'react';
-import { Box, Heading } from '@chakra-ui/react';
-import { LineBreak } from './LineBreak';
-import { ProjectCards } from './ProjectCards';
-import { graphql, useStaticQuery } from 'gatsby';
-import { AllProjectsJson } from '../../../types';
+import React from "react";
+import { Box, Heading } from "@chakra-ui/react";
+import { LineBreak } from "./LineBreak";
+import { ProjectCards } from "./ProjectCards";
+import { graphql, useStaticQuery } from "gatsby";
+import { AllProjectsJson } from "../../../types";
 
 export const Recents = () => {
   const { allProjectsJson } = useStaticQuery<AllProjectsJson>(
@@ -21,9 +21,7 @@ export const Recents = () => {
               url
               icon {
                 childImageSharp {
-                  fixed {
-                    src
-                  }
+                  gatsbyImageData(layout: FIXED, quality: 50, height: 30, width: 30)
                 }
               }
             }
@@ -33,11 +31,11 @@ export const Recents = () => {
     `
   );
 
-  const mapped = allProjectsJson.edges?.filter(({ node }: any) => node.name.startsWith('P'));
+  const mapped = allProjectsJson.edges?.filter(({ node }: any) => node.name.startsWith("P"));
   return (
     <>
       <Heading mt="20">Recent work</Heading>
-      <LineBreak width="14rem" mb={2} />
+      <LineBreak width="12.5rem" mb={2} />
       <Box w="100%">
         <ProjectCards data={mapped} />
       </Box>

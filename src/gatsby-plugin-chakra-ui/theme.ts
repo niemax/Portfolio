@@ -5,7 +5,7 @@ import { colors } from '../theme/foundations/colors';
 export const Heading = {
   sizes: {
     xl: {
-      fontSize: '2.3rem',
+      fontSize: '2rem',
       fontWeight: 800,
     },
     md: {

@@ -2,7 +2,7 @@ import React from 'react';
 import { PageScaleFade } from '../components/motion/transitions';
 import { motion } from 'framer-motion';
 import { skillsContainer, skillsItem } from '../components/motion/transitions';
-import { getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Box, HStack, VStack, useColorModeValue, Heading, SimpleGrid } from '@chakra-ui/react';
 import { MBox } from '../components/motion/MotionBox';
 import { graphql } from 'gatsby';
@@ -35,6 +35,7 @@ const Skills = ({ data }: any) => {
                         p={2}
                         animation={{ y: -6.25 }}
                         shadow={useColorModeValue('md', 'xl')}
+                        _hover={{ cursor: 'pointer' }}
                         borderLeft={`4px solid ${node.color}`}
                       >
                         <HStack>
@@ -43,20 +44,15 @@ const Skills = ({ data }: any) => {
                             rounded="lg"
                             p={1}
                           >
-                            <img
-                              alt={node.name}
-                              src={node.image.childImageSharp.fixed.src}
-                              width={25}
-                              height={25}
-                            />
+                            <GatsbyImage alt={node.name} image={image} height={50} width={50} />
                           </Box>
                           <VStack>
-                            <Box as="a" onClick={() => window.open(`${node.link}`)}>
-                              <Heading
-                                fontSize="xl"
-                                fontWeight={600}
-                                _hover={{ color: node.color }}
-                              >
+                            <Box
+                              as="a"
+                              onClick={() => window.open(`${node.link}`)}
+                              _hover={{ color: node.color }}
+                            >
+                              <Heading fontSize="xl" fontWeight={600}>
                                 {node.name}
                               </Heading>
                               <Box>
@@ -85,17 +81,14 @@ export const _query = graphql`
     allTechStackJson {
       edges {
         node {
+          color
           description
-          id
+          link
           name
           type
-          link
-          color
           image {
             childImageSharp {
-              fixed {
-                src
-              }
+              gatsbyImageData(layout: FIXED, quality: 50, height: 30, width: 30)
             }
           }
         }

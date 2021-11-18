@@ -12,7 +12,7 @@ export const Introduction: React.FC<IntroductionProps> = ({}) => (
         👋
       </Box>
     </Heading>
-    <LineBreak width={'7rem'} marginTop={5} />
+    <LineBreak width={'6rem'} marginTop={2} />
     <Box>
       <Heading size="md">
         I'm{' '}

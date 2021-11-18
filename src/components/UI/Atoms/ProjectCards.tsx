@@ -1,8 +1,20 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Heading, Tooltip, Flex, Stack, Tag, Box, useColorModeValue } from '@chakra-ui/react';
-import { MBox } from '../../motion/MotionBox';
-import { container, item } from '../../motion/transitions';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Heading,
+  Tooltip,
+  Flex,
+  Stack,
+  Tag,
+  TagLabel,
+  Box,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import { MBox } from "../../motion/MotionBox";
+import { container, item } from "../../motion/transitions";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { getTagColor } from "../../../utility/helpers/getTagColor";
+import { windowOpen } from "../../../utility/helpers/windowOpen";
 
 /**
  * ? Cards include: tech stack Array, name, description, overall own rating
@@ -15,56 +27,52 @@ export const ProjectCards = ({ data }: any) => {
 
   return (
     <motion.div variants={container} initial="hidden" animate="show">
-      {data?.map(({ node }: any, index: string) => (
-        <motion.div variants={item} key={index}>
-          <Box as="a" onClick={() => window.open(`${node.url}`)}>
-            <MBox
-              height="auto"
-              width="auto"
-              borderLeft={`4px solid ${node.color}`}
-              shadow="md"
-              my={5}
-              rounded="md"
-              py={1}
-              animation={animation}
-            >
-              <Flex p={5} direction="column">
-                <Stack direction={['column', 'row', 'row', 'row']} align="center">
-                  <img
-                    alt={node.language}
-                    src={node.icon.childImageSharp.fixed.src}
-                    width={35}
-                    height={35}
-                  />
-                  <Stack mb="3" direction={['column', 'row', 'row', 'row']}>
-                    <Tooltip
-                      placement="auto"
-                      bg={useColorModeValue('black', 'white')}
-                      color={useColorModeValue('white', 'black')}
-                      aria-label="A tooltip"
-                      label="Github Link"
-                    >
-                      <Box as="a" fontSize="xl" onClick={() => window.open(node.url)}>
-                        {node.name}
-                      </Box>
-                    </Tooltip>
-                    {node.tech.map((itm, idx) => (
-                      <Tag key={idx} bg={node.color} p={3.7} rounded="md">
-                        <Heading size="sm" color="white">
-                          {itm}
-                        </Heading>
-                      </Tag>
-                    ))}
+      {data.map(({ node }: any) => {
+        const image = getImage(node?.icon?.childImageSharp);
+        return (
+          <motion.div variants={item} key={node.name}>
+            <Box as="a" onClick={() => windowOpen(`${node.url}`)}>
+              <MBox
+                height="auto"
+                width="auto"
+                borderLeft={`2px solid ${node.languageColor}`}
+                shadow="md"
+                my={5}
+                rounded="md"
+                py={1}
+                animation={animation}
+              >
+                <Flex p={5} direction="column">
+                  <Stack direction={["column", "row", "row", "row"]} align="center">
+                    <GatsbyImage alt={node.language} image={image} />
+                    <Stack mb="3" direction={["column", "row", "row", "row"]}>
+                      <Tooltip
+                        placement="auto"
+                        bg={useColorModeValue("black", "white")}
+                        color={useColorModeValue("white", "black")}
+                        aria-label="A tooltip"
+                        label="Github Link"
+                      >
+                        <Box as="a" fontSize="xl" onClick={() => windowOpen(node.url)}>
+                          {node.name}
+                        </Box>
+                      </Tooltip>
+                      {node.tech.map((itm: any, idx: string) => (
+                        <Tag key={idx} rounded="md" size="md" variant="subtle">
+                          <TagLabel color={getTagColor(itm)}>{itm}</TagLabel>
+                        </Tag>
+                      ))}
+                    </Stack>
                   </Stack>
-                </Stack>
-                <Heading size="sm" mt="2">
-                  {node.description}
-                </Heading>
-              </Flex>
-            </MBox>
-          </Box>
-        </motion.div>
-      ))}
+                  <Heading size="sm" mt="2">
+                    {node.description}
+                  </Heading>
+                </Flex>
+              </MBox>
+            </Box>
+          </motion.div>
+        );
+      })}
     </motion.div>
   );
 };

@@ -1,9 +1,8 @@
-import React, { ReactNode, Fragment } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import { Box } from '@chakra-ui/react';
-import Header from './header';
-import { PageScaleFade } from '../components/motion/transitions';
-import { Footer } from './footer';
+import React, { ReactNode, Fragment } from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { Box } from "@chakra-ui/react";
+import Header from "./header";
+import { Footer } from "./footer";
 
 interface LayoutProps {
   children: ReactNode;
@@ -25,7 +24,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <Fragment>
       <Header siteTitle={siteTitle} />
-      <Box w={['90%', '85%', '80%']} maxW={840} mx="auto" mt={20}>
+      <Box w={["90%", "85%", "80%"]} maxW={840} mx="auto" mt={20}>
         <Box pb={10}>
           <main>{children}</main>
         </Box>
