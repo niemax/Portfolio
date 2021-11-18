@@ -23,12 +23,16 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <Fragment>
-      <Header siteTitle={siteTitle} />
+      <nav>
+        <Header siteTitle={siteTitle} />
+      </nav>
       <Box w={["90%", "85%", "80%"]} maxW={840} mx="auto" mt={20}>
         <Box pb={10}>
           <main>{children}</main>
           <Box mt="20">
-            <Footer />
+            <footer>
+              <Footer />
+            </footer>
           </Box>
         </Box>
       </Box>
