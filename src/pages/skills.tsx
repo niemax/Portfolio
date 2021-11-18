@@ -37,7 +37,7 @@ const Skills = ({ data }: any) => {
                         animation={{ y: -6.25 }}
                         shadow={useColorModeValue("md", "xl")}
                         _hover={{ cursor: "pointer" }}
-                        borderLeft={`4px solid ${node.color}`}
+                        borderLeft={`2px solid ${node.color}`}
                       >
                         <HStack>
                           <Box

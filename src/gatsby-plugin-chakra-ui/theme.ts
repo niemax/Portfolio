@@ -6,7 +6,7 @@ export const Heading = {
   sizes: {
     xl: {
       fontSize: "1.8rem",
-      fontWeight: 800,
+      fontWeight: 500,
     },
     md: {
       fontSize: "1.3rem",
@@ -44,6 +44,11 @@ const theme = {
         },
       },
     }),
+  },
+  components: {
+    Button: {
+      baseStyle: {},
+    },
   },
 };
 

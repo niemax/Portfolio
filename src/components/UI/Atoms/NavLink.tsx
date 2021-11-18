@@ -1,9 +1,10 @@
-import React from 'react';
-import { Button, useColorModeValue } from '@chakra-ui/react';
-import { graphql, Link, useStaticQuery } from 'gatsby';
-import { NavLinkProps } from '../../../interfaces';
+import React from "react";
+import { Button, useColorModeValue, Link as ChakraLink } from "@chakra-ui/react";
+import { graphql, Link, useStaticQuery } from "gatsby";
+import { NavLinkProps } from "../../../interfaces";
 
 export const NavLink = ({ ...props }: NavLinkProps) => {
+  const [isActive, setIsActive] = React.useState<boolean | number>(false);
   const { allNavlinksJson } = useStaticQuery<AllNavlinksJson>(
     graphql`
       query {
@@ -34,16 +35,18 @@ export const NavLink = ({ ...props }: NavLinkProps) => {
 
   return (
     <>
-      {allNavlinksJson?.edges?.map(({ node }) => (
+      {allNavlinksJson?.edges?.map(({ node }, index) => (
         <Button
           key={node.name}
           py={props.padding}
           fontSize={props.fontSize}
           w="auto"
-          as="a"
+          isActive={isActive === index}
+          bg={isActive === index && "gray"}
           mx={1}
           variant="ghost"
-          _hover={{ bg: useColorModeValue('navLightHover', 'navDarkHover') }}
+          onClick={() => setIsActive(index)}
+          _hover={{ bg: useColorModeValue("navLightHover", "navDarkHover") }}
           {...props}
         >
           <Link to={node.path}>{node.name}</Link>

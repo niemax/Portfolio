@@ -19,9 +19,10 @@ export const Introduction: React.FC<IntroductionProps> = ({}) => (
         <Box as="span" fontWeight="800" color="green">
           Axel,{" "}
         </Box>
-        Software Developer from Helsinki. My vision is to make the web accessible and enjoyable for
-        everyone. Love working in the Javascript ecosystem - especially React (Gatsby, NextJS) &
-        NodeJS. Always up for challenges and learning new technologies.
+        Software Developer and student from Helsinki. My vision is to make the web accessible and
+        enjoyable for everyone. Love working in the <strong>JavaScript</strong> ecosystem -
+        especially <strong>React & NodeJS.</strong> Always up for challenges and learning new
+        technologies.
       </Heading>
     </Box>
   </>

@@ -35,7 +35,7 @@ export const ProjectCards = ({ data }: any) => {
               <MBox
                 height="auto"
                 width="auto"
-                borderLeft={`3px solid ${node.languageColor}`}
+                /*  borderLeft={`3px solid ${node.languageColor}`} */
                 shadow="md"
                 my={5}
                 rounded="md"
@@ -47,7 +47,7 @@ export const ProjectCards = ({ data }: any) => {
                     <GatsbyImage alt={node.language} image={image} />
                     <Stack mb="3" direction={["column", "row", "row", "row"]}>
                       <Tooltip
-                        placement="auto"
+                        placement="top"
                         bg={useColorModeValue("black", "white")}
                         color={useColorModeValue("white", "black")}
                         aria-label="A tooltip"
