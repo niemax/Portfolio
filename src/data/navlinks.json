@@ -1,5 +1,10 @@
 [
   {
+    "name": "Home",
+    "path": "/",
+    "ariaLabel": "home"
+  },
+  {
     "name": "About",
     "path": "/about",
     "ariaLabel": "about"

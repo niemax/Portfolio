@@ -37,7 +37,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
           </Link>
           <NavLink fontSize={18} />
         </Flex>
-        <HStack ml={[20, 80, 32, 80]}>
+        <HStack ml={[20, 80, 64, 56]}>
           <Tooltip
             placement="auto"
             bg={useColorModeValue("black", "white")}
