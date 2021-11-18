@@ -30,7 +30,7 @@ module.exports = {
       },
     },
     {
-      resolve: '@chakra-ui/gatsby-plugin',
+      resolve: "@chakra-ui/gatsby-plugin",
       options: {
         resetCSS: true,
         isUsingColorMode: true,
@@ -50,7 +50,6 @@ module.exports = {
         short_name: `portfolio`,
         start_url: `/`,
         background_color: `green`,
-        display: `minimal-ui`,
         icon: `src/staticImages/memoji.png`, // This path is relative to the root of the site.
       },
     },

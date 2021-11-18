@@ -22,7 +22,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Box>
+    <Box as="nav">
       <Flex
         align="center"
         bg={useColorModeValue("white", "dark")}

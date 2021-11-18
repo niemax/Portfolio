@@ -31,7 +31,7 @@ export const Education = () => {
                 bg={useColorModeValue("navLightHover", "navDarkHover")}
               >
                 <StaticImage
-                  src="../images/315f6f8c-0795-46b7-9c87-9f69a44a9d81.png"
+                  src="../../../images/315f6f8c-0795-46b7-9c87-9f69a44a9d81.png"
                   alt="education logo"
                   placeholder="blurred"
                   width={110}
