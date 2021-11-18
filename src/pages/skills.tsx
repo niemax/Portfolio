@@ -31,8 +31,9 @@ const Skills = ({ data }: any) => {
                     <motion.div variants={skillsItem} key={node.name}>
                       <MBox
                         rounded="lg"
-                        height={16}
-                        p={2}
+                        height={20}
+                        px={2}
+                        py={3}
                         animation={{ y: -6.25 }}
                         shadow={useColorModeValue("md", "xl")}
                         _hover={{ cursor: "pointer" }}
@@ -52,7 +53,7 @@ const Skills = ({ data }: any) => {
                               onClick={() => window.open(`${node.link}`)}
                               _hover={{ color: node.color }}
                             >
-                              <Heading fontSize="xl" fontWeight={600}>
+                              <Heading fontSize={18} fontWeight={400} mt={2}>
                                 {node.name}
                               </Heading>
                               <Box>

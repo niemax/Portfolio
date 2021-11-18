@@ -35,7 +35,7 @@ export const Recents = () => {
   return (
     <>
       <Heading mt="20">Recent work</Heading>
-      <LineBreak width="12.5rem" mb={2} />
+      <LineBreak width="11rem" mb={2} />
       <Box w="100%">
         <ProjectCards data={mapped} />
       </Box>

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Center } from '@chakra-ui/react';
-import { StaticImage } from 'gatsby-plugin-image';
-import { MemojiProps } from '../../../interfaces';
+import React from "react";
+import { Center } from "@chakra-ui/react";
+import { StaticImage } from "gatsby-plugin-image";
+import { MemojiProps } from "../../../interfaces";
 
 export const Memoji: React.FC<MemojiProps> = ({ ...props }) => {
   return (

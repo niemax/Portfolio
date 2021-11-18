@@ -35,7 +35,7 @@ export const ProjectCards = ({ data }: any) => {
               <MBox
                 height="auto"
                 width="auto"
-                borderLeft={`2px solid ${node.languageColor}`}
+                borderLeft={`3px solid ${node.languageColor}`}
                 shadow="md"
                 my={5}
                 rounded="md"

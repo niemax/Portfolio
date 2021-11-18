@@ -8,18 +8,18 @@ import { StaticImage } from "gatsby-plugin-image";
 
 export const Education = () => {
   return (
-    <Box mt="20">
+    <Box mt={28}>
       <Heading>Education</Heading>
-      <LineBreak width="11rem" />
+      <LineBreak width="9rem" mb={5} marginTop={2} />
       <motion.div variants={container} initial="hidden" animate="show">
         <motion.div variants={item}>
           <MBox
             height="auto"
-            width="100%"
             rounded="md"
             animation={{ scale: 1.02 }}
             shadow="md"
             py={2}
+            width="auto"
           >
             <HStack align="center" spacing={4} p={2}>
               <Box

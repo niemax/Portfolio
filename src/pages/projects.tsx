@@ -23,7 +23,7 @@ const Projects = () => {
               url
               icon {
                 childImageSharp {
-                  gatsbyImageData(layout: FIXED, quality: 50, height: 30, width: 30)
+                  gatsbyImageData(layout: FIXED, quality: 50, height: 40, width: 40)
                 }
               }
             }
@@ -39,7 +39,7 @@ const Projects = () => {
         <Flex px={[2, 10, 14, 14]}>
           <Box>
             <Heading>My Work</Heading>
-            <LineBreak width="9rem" mb={6} marginTop={2} />
+            <LineBreak width="8rem" mb={6} marginTop={2} />
             <Heading size="md">Personal projects that I've written.</Heading>
             <ProjectCards data={allProjectsJson?.edges} />
           </Box>
