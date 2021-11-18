@@ -19,7 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
     }
   `);
 
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const siteTitle = data.site.siteMetadata?.title;
 
   return (
     <Fragment>
