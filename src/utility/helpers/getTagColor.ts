@@ -18,6 +18,8 @@ export const getTagColor = (tech: string): string => {
       return (color = "#e10098");
     case "AsyncStorage":
       return (color = "#ef5b25");
+    case "ChakraUI":
+      return (color = "#319795");
   }
 
   return color;

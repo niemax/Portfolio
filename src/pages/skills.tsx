@@ -20,8 +20,8 @@ const Skills = ({ data }: any) => {
           <Box align="center" justify="center">
             <Heading>Skills</Heading>
             <LineBreak width="5rem" />
+            <Heading size="md">Languages, technologies, and tools I'm familiar with.</Heading>
           </Box>
-          <Heading size="md">Languages, technologies, and tools I'm familiar with.</Heading>
           <Box mt="8">
             <motion.div variants={skillsContainer} initial="hidden" animate="show">
               <SimpleGrid columns={[1, 2, 2, 2]} spacingX={6} spacingY={4}>
@@ -53,7 +53,7 @@ const Skills = ({ data }: any) => {
                               onClick={() => window.open(`${node.link}`)}
                               _hover={{ color: node.color }}
                             >
-                              <Heading fontSize={18} fontWeight={400} mt={2}>
+                              <Heading fontSize={18} fontWeight={500} mt={2}>
                                 {node.name}
                               </Heading>
                               <Box>

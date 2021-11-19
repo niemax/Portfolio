@@ -23,7 +23,7 @@
     "name": "Portfolio",
     "languageColor": "#3178c6",
     "color": "#9D6AD6",
-    "tech": ["React", "Gatsby", "Graphql"],
+    "tech": ["React", "Gatsby", "Graphql", "ChakraUI"],
     "language": "Typescript",
     "icon": "../images/icons8-typescript-48.png",
     "url": "https://github.com/niemax/Portfolio",

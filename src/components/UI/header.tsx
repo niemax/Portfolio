@@ -39,7 +39,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
           <NavLink fontSize={18} />
         </Flex>
 
-        <HStack ml={[20, 80, 60, 72]}>
+        <HStack ml={[40, 80, 60, 72]} justify="space-between">
           <Tooltip
             placement="auto"
             bg={useColorModeValue("black", "white")}
@@ -94,7 +94,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
             <IconButton
               mt={2}
               fontSize={36}
-              mb={3}
+              mb={20}
               aria-label="Close menu"
               size="lg"
               icon={<HiX />}
