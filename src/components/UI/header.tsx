@@ -32,13 +32,14 @@ const Header = ({ siteTitle }: HeaderProps) => {
         py={4}
         justify="center"
       >
-        <Flex display={["none", "none", "flex", "flex"]} align="center">
+        <Flex display={["none", "none", "flex", "flex"]}>
           <Link to="/">
             <Memoji width={10} height={10} padding={1.5} />
           </Link>
           <NavLink fontSize={18} />
         </Flex>
-        <HStack ml={[20, 80, 64, 56]}>
+
+        <HStack ml={[20, 80, 60, 72]}>
           <Tooltip
             placement="auto"
             bg={useColorModeValue("black", "white")}
