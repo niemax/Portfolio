@@ -40,7 +40,7 @@ export const ProjectCards = ({ data }: any) => {
                 my={5}
                 rounded="md"
                 py={1}
-                animation={animation}
+                animation={{ scale: 1.04 }}
               >
                 <Flex p={5} direction="column">
                   <Stack direction={["column", "row", "row", "row"]} align="center">

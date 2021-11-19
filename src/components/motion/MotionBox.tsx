@@ -5,20 +5,24 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 
 export const MotionBox = motion<BoxProps>(Box);
 
-type Hover = {
+type Scale = {
   scale: number;
+};
+
+type Y = {
+  y: number;
 };
 
 interface MBoxProps {
   height: number | string;
   width: number | string;
-  animation?: Hover;
+  animation?: Scale | Y;
   borderLeft?: string;
   border?: string;
   shadow?: string;
   my?: number;
   py?: number;
-  p?: number;
+  px?: number;
   rounded?: string;
   children: ReactNode;
 }

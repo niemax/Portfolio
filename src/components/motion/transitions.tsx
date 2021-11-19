@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import { useDisclosure } from '@chakra-ui/react';
-import { ScaleFade } from '@chakra-ui/react';
+import React, { useEffect } from "react";
+import { useDisclosure } from "@chakra-ui/react";
+import { ScaleFade } from "@chakra-ui/react";
 
 export const skillsContainer = {
-  hidden: { opacity: 0, transition: { when: 'afterChildren' } },
+  hidden: { opacity: 0, transition: { when: "afterChildren" } },
   show: {
     opacity: 1,
     transition: {
@@ -45,14 +45,12 @@ export const item = {
   },
 };
 
-interface ScaleFadeProps {}
-
-export const PageScaleFade: React.FC<ScaleFadeProps> = ({ children }) => {
+export const PageScaleFade: React.FC = ({ children }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      onToggle(true);
+      onToggle(!onToggle);
     }, 400);
 
     return () => {

@@ -16,6 +16,7 @@ import { FaGithub, FaMoon } from "react-icons/fa";
 import { NavLink } from "../UI/Atoms/NavLink";
 import { Memoji } from "../UI/Atoms/Memoji";
 import { HeaderProps } from "../../interfaces";
+import { windowOpen } from "../../utility/helpers/windowOpen";
 
 const Header = ({ siteTitle }: HeaderProps) => {
   const [display, changeDisplay] = React.useState<string>("none");
@@ -58,16 +59,16 @@ const Header = ({ siteTitle }: HeaderProps) => {
           <IconButton
             variant="ghost"
             as="a"
-            fontSize={22}
+            fontSize={20}
             aria-label="github icon"
             icon={<FaGithub />}
             _hover={{ bg: "#6e5494" }}
-            onClick={() => window.open("https://github.com/niemax")}
+            onClick={() => windowOpen("https://github.com/niemax")}
           />
           <IconButton
             mt={2}
             ml={5}
-            fontSize={36}
+            fontSize={28}
             aria-label="Open menu"
             icon={<BurgerIcon />}
             display={["flex", "flex", "none", "none"]}
@@ -85,22 +86,23 @@ const Header = ({ siteTitle }: HeaderProps) => {
             overflowY="auto"
             justify="center"
             align="center"
-            flexDir="column"
+            direction="column"
             bg={useColorModeValue("#F7F7F7", "#151B23")}
             display={display}
           >
-            <Flex flexDir="column" align="center" justify="center">
-              <NavLink fontSize={30} padding={14} onClick={() => changeDisplay("none")} />
-            </Flex>
             <IconButton
               mt={2}
-              mr={2}
               fontSize={36}
+              mb={3}
               aria-label="Close menu"
               size="lg"
               icon={<HiX />}
               onClick={() => changeDisplay("none")}
             />
+            <Link to="/" onClick={() => changeDisplay("none")}>
+              <Memoji width={20} height={20} padding={1.5} />
+            </Link>
+            <NavLink fontSize={28} padding={14} onClick={() => changeDisplay("none")} />
           </Flex>
         </Box>
       </Flex>

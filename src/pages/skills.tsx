@@ -24,19 +24,19 @@ const Skills = ({ data }: any) => {
           <Heading size="md">Languages, technologies, and tools I'm familiar with.</Heading>
           <Box mt="8">
             <motion.div variants={skillsContainer} initial="hidden" animate="show">
-              <SimpleGrid columns={[1, 2, 2, 2]} spacingX={6} spacingY={5}>
+              <SimpleGrid columns={[1, 2, 2, 2]} spacingX={6} spacingY={4}>
                 {skills.map(({ node }: any) => {
                   const image = getImage(node.image.childImageSharp);
                   return (
                     <motion.div variants={skillsItem} key={node.name}>
                       <MBox
-                        rounded="lg"
+                        width="auto"
                         height={20}
+                        rounded="lg"
                         px={2}
                         py={3}
                         animation={{ y: -6.25 }}
                         shadow={useColorModeValue("md", "xl")}
-                        _hover={{ cursor: "pointer" }}
                         borderLeft={`2px solid ${node.color}`}
                       >
                         <HStack>
