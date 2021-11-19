@@ -40,7 +40,7 @@ const Projects = () => {
           <Box>
             <Heading>My Work</Heading>
             <LineBreak width="8rem" mb={6} marginTop={2} />
-            <Heading size="md">Personal projects that I've written.</Heading>
+            <Heading size="md">Some of my personal projects</Heading>
             <ProjectCards data={allProjectsJson?.edges} />
           </Box>
         </Flex>
