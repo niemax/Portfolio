@@ -31,7 +31,7 @@ export const ProjectCards = ({ data }: any) => {
         const image = getImage(node?.icon?.childImageSharp);
         return (
           <motion.div variants={item} key={node.name}>
-            <Box as="a" onClick={() => windowOpen(`${node.url}`)} align="center" justify="center">
+            <Box onClick={() => windowOpen(`${node.url}`)}>
               <MBox
                 height="auto"
                 width="auto"
