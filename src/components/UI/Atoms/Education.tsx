@@ -10,12 +10,13 @@ export const Education = () => {
   return (
     <Box mt={14}>
       <Heading>Education</Heading>
-      <LineBreak width="9rem" mb={5} marginTop={2} />
+      <LineBreak width="8rem" mb={5} marginTop={2} />
       <motion.div variants={container} initial="hidden" animate="show">
         <motion.div variants={item}>
           <MBox
             height="auto"
             rounded="md"
+            border={useColorModeValue("", `1px solid #2A404B`)}
             animation={{ scale: 1.02 }}
             shadow="md"
             py={2}

@@ -10,7 +10,7 @@ export const Heading = {
     },
     md: {
       fontSize: "1.3rem",
-      fontWeight: 300,
+      fontWeight: 500,
     },
     sm: {
       fontSize: "1rem",
@@ -22,14 +22,14 @@ export const Heading = {
 
 const theme = {
   fonts: {
-    body: "poppins",
-    heading: "poppins",
+    body: "Oxygen",
+    heading: "Oxygen",
   },
   styles: {
     global: props => ({
       body: {
         color: mode("#000", "#ffff")(props),
-        bg: mode("#F7F7F7", "#1C222A")(props),
+        bg: mode("#F7F7F7", "#131B1F")(props),
         margin: 0,
       },
       a: {

@@ -19,7 +19,7 @@ const Skills = ({ data }: any) => {
         <Box mt="3" w={[null, null, "70%"]} mx="auto">
           <Box align="center" justify="center">
             <Heading>Skills</Heading>
-            <LineBreak width="5rem" />
+            <LineBreak width="4rem" />
             <Heading size="md">Languages, technologies, and tools I'm familiar with.</Heading>
           </Box>
           <Box mt="8">
@@ -36,8 +36,8 @@ const Skills = ({ data }: any) => {
                         px={2}
                         py={3}
                         animation={{ y: -6.25 }}
-                        shadow={useColorModeValue("md", "xl")}
-                        borderLeft={`2px solid ${node.color}`}
+                        shadow={useColorModeValue("lg", "xl")}
+                        border={useColorModeValue("", `1px solid #2A404B`)}
                       >
                         <HStack>
                           <Box

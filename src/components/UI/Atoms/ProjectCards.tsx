@@ -35,10 +35,10 @@ export const ProjectCards = ({ data }: any) => {
               <MBox
                 height="auto"
                 width="auto"
-                /*  borderLeft={`3px solid ${node.languageColor}`} */
+                border={useColorModeValue("", `1px solid #2A404B`)}
                 shadow="md"
                 my={5}
-                rounded="md"
+                rounded="lg"
                 py={1}
                 animation={{ scale: 1.04 }}
               >

@@ -1,6 +1,6 @@
 import React from "react";
 import { PageScaleFade } from "../components/motion/transitions";
-import { Heading, Flex, Box } from "@chakra-ui/react";
+import { Heading, Flex, Box, HStack } from "@chakra-ui/react";
 import Seo from "../components/seo";
 import { ProjectCards } from "../components/UI/Atoms/ProjectCards";
 import { LineBreak } from "../components/UI/Atoms/LineBreak";
@@ -39,7 +39,7 @@ const Projects = () => {
         <Flex px={[2, 10, 14, 14]}>
           <Box>
             <Heading>My Work</Heading>
-            <LineBreak width="8rem" mb={6} marginTop={2} />
+            <LineBreak width="7rem" mb={6} marginTop={2} />
             <Heading size="md">Some of my personal projects</Heading>
             <ProjectCards data={allProjectsJson?.edges} />
           </Box>
