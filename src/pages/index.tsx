@@ -15,8 +15,9 @@ const IndexPage = () => {
     const timeout = setTimeout(() => {
       toast({
         position: "bottom-left",
+        duration: 8000,
         render: () => (
-          <Box color={useColorModeValue("black", "white")} bg="boxes" p={3} rounded="lg">
+          <Box color={useColorModeValue("black", "white")} bg="cyan" p={3} rounded="lg">
             <HStack>
               <MdCheckCircle fontSize={24} />
               <Heading size="sm">Thanks for tuning in!</Heading>
