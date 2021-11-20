@@ -20,6 +20,16 @@
     "description": "A workout app that gives you instructions and tracks your workouts. Has a set of pre-defined workouts."
   },
   {
+    "name": "GoTrain-API",
+    "languageColor": "#f7df1e",
+    "color": "#EE7676",
+    "tech": ["NodeJs", "MongoDB", "Express"],
+    "language": "Javascript",
+    "icon": "../images/icons8-javascript-48.png",
+    "url": "https://github.com/niemax/GoTrain-API",
+    "description": "A Rest API for my workout app built with NodeJs and MongoDB storing all the pre-defined workouts."
+  },
+  {
     "name": "Portfolio",
     "languageColor": "#3178c6",
     "color": "#9D6AD6",

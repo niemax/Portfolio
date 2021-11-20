@@ -20,6 +20,8 @@ export const getTagColor = (tech: string): string => {
       return (color = "#ef5b25");
     case "ChakraUI":
       return (color = "#319795");
+    case "NodeJs":
+      return (color = "#6cc24a");
   }
 
   return color;
