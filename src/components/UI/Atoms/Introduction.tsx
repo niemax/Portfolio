@@ -2,9 +2,7 @@ import React from "react";
 import { Box, Heading } from "@chakra-ui/react";
 import { LineBreak } from "./LineBreak";
 
-interface IntroductionProps {}
-
-export const Introduction: React.FC<IntroductionProps> = ({}) => (
+export const Introduction: React.FC = () => (
   <>
     <Heading mt="10">
       Hello{" "}

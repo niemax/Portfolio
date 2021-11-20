@@ -35,10 +35,9 @@ export const ProjectCards = ({ data }: any) => {
               <MBox
                 height="auto"
                 width="auto"
-                border={useColorModeValue("", `1px solid #2A404B`)}
+                border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
                 shadow="md"
                 my={5}
-                rounded="lg"
                 py={1}
                 animation={{ scale: 1.04 }}
               >
@@ -58,7 +57,7 @@ export const ProjectCards = ({ data }: any) => {
                         </Box>
                       </Tooltip>
                       {node.tech.map((itm: any, idx: string) => (
-                        <Tag key={idx} rounded="md" size="md" variant="subtle">
+                        <Tag key={idx} rounded="md" size="sm" variant="subtle">
                           <TagLabel color={getTagColor(itm)}>{itm}</TagLabel>
                         </Tag>
                       ))}

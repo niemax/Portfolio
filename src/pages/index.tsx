@@ -1,10 +1,12 @@
 import * as React from "react";
-import { Flex, HStack, useToast } from "@chakra-ui/react";
+import { Flex, HStack, Heading, useToast, Box, useColorModeValue } from "@chakra-ui/react";
 import Seo from "../components/seo";
 import { Memoji } from "../components/UI/Atoms/Memoji";
 import { PageScaleFade } from "../components/motion/transitions";
 import { Introduction } from "../components/UI/Atoms/Introduction";
 import { Recents } from "../components/UI/Atoms/Recents";
+import { MdCheckCircle } from "react-icons/md";
+import { windowOpen } from "../utility/helpers/windowOpen";
 
 const IndexPage = () => {
   const toast = useToast();
@@ -12,13 +14,22 @@ const IndexPage = () => {
   React.useEffect(() => {
     const timeout = setTimeout(() => {
       toast({
-        title: "Thanks for tuning in!",
-        description:
-          "If you have any questions, just hit me up at linkedIn: https://www.linkedin.com/in/axel-nieminen-06a580196/",
-        isClosable: true,
-        duration: 9000,
-        variant: "solid",
         position: "bottom-left",
+        render: () => (
+          <Box color={useColorModeValue("black", "white")} bg="boxes" p={3} rounded="lg">
+            <HStack>
+              <MdCheckCircle fontSize={24} />
+              <Heading size="sm">Thanks for tuning in!</Heading>
+            </HStack>
+            <Heading size="sm">If you have any questions, just hit me up on linkedIn!</Heading>
+            <Box
+              as="a"
+              onClick={() => windowOpen("https://www.linkedin.com/in/axel-nieminen-06a580196/")}
+            >
+              <Heading size="sm">https://www.linkedin.com/in/axel-nieminen-06a580196/</Heading>
+            </Box>
+          </Box>
+        ),
       });
     }, 3000);
 

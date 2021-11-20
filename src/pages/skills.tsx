@@ -7,6 +7,7 @@ import { Box, HStack, VStack, useColorModeValue, Heading, SimpleGrid } from "@ch
 import { MBox } from "../components/motion/MotionBox";
 import { graphql } from "gatsby";
 import { LineBreak } from "../components/UI/Atoms/LineBreak";
+import { FaChartPie } from "react-icons/fa";
 import Seo from "../components/seo";
 
 const Skills = ({ data }: any) => {
@@ -18,8 +19,11 @@ const Skills = ({ data }: any) => {
         <Seo title="Skills" />
         <Box mt="3" w={[null, null, "70%"]} mx="auto">
           <Box align="center" justify="center">
-            <Heading>Skills</Heading>
-            <LineBreak width="4rem" />
+            <HStack align="center" justify="center">
+              <Heading>Skills</Heading>
+              <FaChartPie fontSize={28} />
+            </HStack>
+            <LineBreak width="6rem" />
             <Heading size="md">Languages, technologies, and tools I'm familiar with.</Heading>
           </Box>
           <Box mt="8">
@@ -32,12 +36,11 @@ const Skills = ({ data }: any) => {
                       <MBox
                         width="auto"
                         height={20}
-                        rounded="lg"
                         px={2}
                         py={3}
                         animation={{ y: -6.25 }}
                         shadow={useColorModeValue("lg", "xl")}
-                        border={useColorModeValue("", `1px solid #2A404B`)}
+                        border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
                       >
                         <HStack>
                           <Box

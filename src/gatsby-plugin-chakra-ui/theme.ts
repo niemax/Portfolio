@@ -29,8 +29,7 @@ const theme = {
     global: props => ({
       body: {
         color: mode("#000", "#ffff")(props),
-        bg: mode("#F7F7F7", "#131B1F")(props),
-        margin: 0,
+        bg: mode("#fff", "#131B1F")(props),
       },
       a: {
         cursor: "pointer",

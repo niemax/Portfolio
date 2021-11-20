@@ -1,21 +1,33 @@
 import React from "react";
-import { Heading, Box, VStack, HStack, useColorModeValue, Tag, TagLabel } from "@chakra-ui/react";
+import {
+  Heading,
+  Box,
+  Stack,
+  VStack,
+  HStack,
+  useColorModeValue,
+  Tag,
+  TagLabel,
+} from "@chakra-ui/react";
 import { LineBreak } from "./LineBreak";
 import { motion } from "framer-motion";
-import { container, item } from "../../motion/transitions";
+import { fromDownToUp, fromDownToUpItem } from "../../motion/transitions";
 import { MBox } from "../../motion/MotionBox";
 import { StaticImage } from "gatsby-plugin-image";
+import { FaGraduationCap } from "react-icons/fa";
 
 export const Education = () => {
   return (
     <Box mt={14}>
-      <Heading>Education</Heading>
+      <HStack>
+        <Heading>Education</Heading>
+        <FaGraduationCap fontSize={32} />
+      </HStack>
       <LineBreak width="8rem" mb={5} marginTop={2} />
-      <motion.div variants={container} initial="hidden" animate="show">
-        <motion.div variants={item}>
+      <motion.div variants={fromDownToUp} initial="hidden" animate="show">
+        <motion.div variants={fromDownToUpItem}>
           <MBox
             height="auto"
-            rounded="md"
             border={useColorModeValue("", `1px solid #2A404B`)}
             animation={{ scale: 1.02 }}
             shadow="md"
@@ -35,6 +47,7 @@ export const Education = () => {
                   src="../../../images/315f6f8c-0795-46b7-9c87-9f69a44a9d81.png"
                   alt="education logo"
                   placeholder="blurred"
+                  layout="fixed"
                   width={110}
                   height={110}
                 />
@@ -45,7 +58,7 @@ export const Education = () => {
                 </Heading>
                 <Heading size="sm">ICT and Digital Services</Heading>
                 <Heading size="sm">2020 - present</Heading>
-                <HStack>
+                <Stack direction={["column", "column", "row", "row"]}>
                   <Tag colorScheme="cyan" rounded="md" size="sm" variant="subtle">
                     <TagLabel>ICT</TagLabel>
                   </Tag>
@@ -55,7 +68,7 @@ export const Education = () => {
                   <Tag colorScheme="cyan" rounded="md" size="sm" variant="subtle">
                     <TagLabel>Entrepreneurship</TagLabel>
                   </Tag>
-                </HStack>
+                </Stack>
               </VStack>
             </HStack>
           </MBox>

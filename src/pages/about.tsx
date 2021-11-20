@@ -4,6 +4,7 @@ import Seo from "../components/seo";
 import { PageScaleFade } from "../components/motion/transitions";
 import { Story } from "../components/UI/Atoms/Story";
 import { Education } from "../components/UI/Atoms/Education";
+import { Likings } from "../components/UI/Likings";
 
 const About = () => {
   return (
@@ -12,6 +13,9 @@ const About = () => {
       <Flex px={[2, 10, 14, 14]} direction="column">
         <section>
           <Story />
+        </section>
+        <section>
+          <Likings />
         </section>
         <section>
           <Education />

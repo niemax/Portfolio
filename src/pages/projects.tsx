@@ -36,7 +36,7 @@ const Projects = () => {
     <Flex>
       <PageScaleFade>
         <Seo title="Projects" />
-        <Flex px={[2, 10, 14, 14]}>
+        <Flex px={[0, 0, 14, 14]}>
           <Box>
             <Heading>My Work</Heading>
             <LineBreak width="7rem" mb={6} marginTop={2} />

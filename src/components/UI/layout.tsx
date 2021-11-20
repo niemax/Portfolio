@@ -1,6 +1,5 @@
 import React, { ReactNode, Fragment } from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { Box } from "@chakra-ui/react";
 import Header from "./header";
 import { Footer } from "./footer";
 
