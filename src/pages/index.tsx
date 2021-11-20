@@ -16,6 +16,7 @@ const IndexPage = () => {
       toast({
         position: "bottom-left",
         duration: 8000,
+        isClosable: true,
         render: () => (
           <Box color={useColorModeValue("black", "white")} bg="cyan" p={3} rounded="lg">
             <HStack>

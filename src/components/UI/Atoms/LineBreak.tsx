@@ -6,7 +6,7 @@ export const LineBreak: React.FC<LineBreakProps> = ({ width, marginTop = 3, mb =
   return (
     <Box
       w={width}
-      h="0.07rem"
+      h="0.01rem"
       mt={marginTop}
       bg={useColorModeValue("navLightHover", "rgba(206, 206, 206, 0.72)")}
       mb={mb}

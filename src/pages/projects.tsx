@@ -39,8 +39,9 @@ const Projects = () => {
         <Flex px={[0, 0, 14, 14]}>
           <Box>
             <Heading>My Work</Heading>
-            <LineBreak width="7rem" mb={6} marginTop={2} />
-            <Heading size="md">Some of my personal projects</Heading>
+            <Heading size="md" mt={4} mb={6}>
+              Some of my personal projects
+            </Heading>
             <ProjectCards data={allProjectsJson?.edges} />
           </Box>
         </Flex>

@@ -4,13 +4,12 @@ import { LineBreak } from "./LineBreak";
 
 export const Introduction: React.FC = () => (
   <>
-    <Heading mt="10">
+    <Heading mt={10} mb={5}>
       Hello{" "}
       <Box className="wave" as="span">
         👋
       </Box>
     </Heading>
-    <LineBreak width={"6rem"} marginTop={2} />
     <Box>
       <Heading size="md">
         I'm{" "}

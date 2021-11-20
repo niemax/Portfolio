@@ -6,7 +6,7 @@ export const Heading = {
   sizes: {
     xl: {
       fontSize: "1.8rem",
-      fontWeight: 600,
+      fontWeight: 700,
     },
     md: {
       fontSize: "1.3rem",

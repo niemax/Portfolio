@@ -19,11 +19,10 @@ import { FaGraduationCap } from "react-icons/fa";
 export const Education = () => {
   return (
     <Box mt={14}>
-      <HStack>
+      <HStack mb={5}>
         <Heading>Education</Heading>
         <FaGraduationCap fontSize={32} />
       </HStack>
-      <LineBreak width="8rem" mb={5} marginTop={2} />
       <motion.div variants={fromDownToUp} initial="hidden" animate="show">
         <motion.div variants={fromDownToUpItem}>
           <MBox

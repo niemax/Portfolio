@@ -23,8 +23,9 @@ const Skills = ({ data }: any) => {
               <Heading>Skills</Heading>
               <FaChartPie fontSize={28} />
             </HStack>
-            <LineBreak width="6rem" />
-            <Heading size="md">Languages, technologies, and tools I'm familiar with.</Heading>
+            <Heading size="md" mt={4}>
+              Languages, technologies, and tools I'm familiar with.
+            </Heading>
           </Box>
           <Box mt="8">
             <motion.div variants={skillsContainer} initial="hidden" animate="show">
