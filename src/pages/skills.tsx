@@ -57,7 +57,7 @@ const Skills = ({ data }: any) => {
                               onClick={() => window.open(`${node.link}`)}
                               _hover={{ color: node.color }}
                             >
-                              <Heading fontSize={18} fontWeight={500} mt={2}>
+                              <Heading size="md" fontSize={18} fontWeight={500} mt={2}>
                                 {node.name}
                               </Heading>
                               <Box>

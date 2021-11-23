@@ -41,8 +41,6 @@ export const NavLink = ({ ...props }: NavLinkProps) => {
           py={props.padding}
           fontSize={props.fontSize}
           w="auto"
-          isActive={isActive === index}
-          bg={isActive === index && "gray"}
           mx={1}
           variant="ghost"
           onClick={() => setIsActive(index)}

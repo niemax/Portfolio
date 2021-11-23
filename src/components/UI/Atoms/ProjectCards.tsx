@@ -22,56 +22,52 @@ import { windowOpen } from "../../../utility/helpers/windowOpen";
  * * Props: array of projects
  */
 
-export const ProjectCards = ({ data }: any) => {
-  const animation = { scale: 1.04 };
-
-  return (
-    <motion.div variants={container} initial="hidden" animate="show">
-      {data.map(({ node }: any) => {
-        const image = getImage(node?.icon?.childImageSharp);
-        return (
-          <motion.div variants={item} key={node.name}>
-            <Box onClick={() => windowOpen(`${node.url}`)}>
-              <MBox
-                height="auto"
-                width="auto"
-                border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
-                shadow="md"
-                my={5}
-                py={1}
-                animation={{ scale: 1.04 }}
-              >
-                <Flex p={5} direction="column">
-                  <Stack direction={["column", "row", "row", "row"]} align="center">
-                    <GatsbyImage alt={node.language} image={image} />
-                    <Stack mb="3" direction={["column", "row", "row", "row"]}>
-                      <Tooltip
-                        placement="top"
-                        bg={useColorModeValue("black", "white")}
-                        color={useColorModeValue("white", "black")}
-                        aria-label="A tooltip"
-                        label="Github Link"
-                      >
-                        <Box as="a" fontSize="xl" onClick={() => windowOpen(node.url)}>
-                          {node.name}
-                        </Box>
-                      </Tooltip>
-                      {node.tech.map((itm: any, idx: string) => (
-                        <Tag key={idx} rounded="md" size="sm" colorScheme="cyan" variant="subtle">
-                          <TagLabel color={getTagColor(itm)}>{itm}</TagLabel>
-                        </Tag>
-                      ))}
-                    </Stack>
+export const ProjectCards = ({ data }: any) => (
+  <motion.div variants={container} initial="hidden" animate="show">
+    {data.map(({ node }: any) => {
+      const image = getImage(node?.icon?.childImageSharp);
+      return (
+        <motion.div variants={item} key={node.name}>
+          <Box onClick={() => windowOpen(`${node.url}`)}>
+            <MBox
+              height="auto"
+              width="auto"
+              border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
+              shadow="md"
+              my={5}
+              py={1}
+              animation={{ scale: 1.04 }}
+            >
+              <Flex p={5} direction="column">
+                <Stack direction={["column", "row", "row", "row"]} align="center">
+                  <GatsbyImage alt={node.language} image={image} />
+                  <Stack mb="3" direction={["column", "row", "row", "row"]}>
+                    <Tooltip
+                      placement="top"
+                      bg={useColorModeValue("black", "white")}
+                      color={useColorModeValue("white", "black")}
+                      aria-label="A tooltip"
+                      label="Github Link"
+                    >
+                      <Box as="a" fontSize="xl" onClick={() => windowOpen(node.url)}>
+                        {node.name}
+                      </Box>
+                    </Tooltip>
+                    {node.tech.map((itm: any, idx: string) => (
+                      <Tag key={idx} rounded="md" size="sm" colorScheme="cyan" variant="subtle">
+                        <TagLabel color={getTagColor(itm)}>{itm}</TagLabel>
+                      </Tag>
+                    ))}
                   </Stack>
-                  <Heading size="sm" mt="2">
-                    {node.description}
-                  </Heading>
-                </Flex>
-              </MBox>
-            </Box>
-          </motion.div>
-        );
-      })}
-    </motion.div>
-  );
-};
+                </Stack>
+                <Heading size="sm" mt="2">
+                  {node.description}
+                </Heading>
+              </Flex>
+            </MBox>
+          </Box>
+        </motion.div>
+      );
+    })}
+  </motion.div>
+);

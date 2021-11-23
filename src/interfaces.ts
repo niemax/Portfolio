@@ -23,7 +23,3 @@ export interface NavLinkProps {
   padding?: number;
   onClick?: () => void;
 }
-
-export interface HeaderProps {
-  siteTitle: string;
-}

@@ -7,6 +7,11 @@ export const Heading = {
     xl: {
       fontSize: "1.8rem",
       fontWeight: 700,
+      textDecoration: "underline",
+      textUnderlineOffset: 8,
+      textDecorationColor: "grey",
+      textDecorationThickness: "0.1rem",
+      marginBottom: 2,
     },
     md: {
       fontSize: "1.3rem",
@@ -37,10 +42,6 @@ const theme = {
         transition: "color 0.15s",
         transitionTimingFunction: "ease-out",
         fontWeight: 500,
-        _hover: {
-          color: mode("black", "white")(props),
-          fontWeight: 800,
-        },
       },
     }),
   },

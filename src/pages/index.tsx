@@ -9,7 +9,7 @@ import { MdCheckCircle } from "react-icons/md";
 import { windowOpen } from "../utility/helpers/windowOpen";
 
 const IndexPage = () => {
-  const toast = useToast();
+  /*   const toast = useToast();
 
   React.useEffect(() => {
     const timeout = setTimeout(() => {
@@ -38,7 +38,7 @@ const IndexPage = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  return (
+ */ return (
     <Flex direction="column" align="center" px={[0, 0, 0, 14]}>
       <PageScaleFade>
         <Seo title="Home" />
