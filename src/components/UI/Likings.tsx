@@ -12,7 +12,7 @@ export const Likings = () => (
         <List spacing={3}>
           <ListItem>
             <ListIcon as={MdCheckCircle} color="green" fontSize={22} />
-            Forest Walks 🌲 🌲 🌲
+            Forests 🌲 🌲 🌲
           </ListItem>
           <ListItem>
             <ListIcon as={MdCheckCircle} color="green" fontSize={22} />
