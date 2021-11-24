@@ -6,7 +6,7 @@ export const Heading = {
   sizes: {
     xl: {
       fontSize: "1.8rem",
-      fontWeight: 700,
+      fontWeight: 500,
       textDecoration: "underline",
       textUnderlineOffset: 8,
       textDecorationColor: "grey",
@@ -15,7 +15,7 @@ export const Heading = {
     },
     md: {
       fontSize: "1.3rem",
-      fontWeight: 500,
+      fontWeight: 300,
     },
     sm: {
       fontSize: "1rem",
@@ -27,14 +27,14 @@ export const Heading = {
 
 const theme = {
   fonts: {
-    body: "Oxygen",
-    heading: "Oxygen",
+    body: "M PLUS Rounded 1c",
+    heading: "M PLUS Rounded 1c",
   },
   styles: {
     global: props => ({
       body: {
         color: mode("#000", "#ffff")(props),
-        bg: mode("#fff", "#131B1F")(props),
+        bg: mode("#FCF6E7", "#131B1F")(props),
       },
       a: {
         cursor: "pointer",

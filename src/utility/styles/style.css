@@ -50,11 +50,8 @@ body {
 .main {
   display: flex;
   flex-direction: column;
-  max-width: 860px;
+  max-width: 880px;
   margin: auto;
-  padding: 24px;
-  margin-top: 60px;
-}
-
-.nav {
+  margin-top: 120px;
+  padding: 10px;
 }
