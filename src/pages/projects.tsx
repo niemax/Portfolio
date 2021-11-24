@@ -36,7 +36,7 @@ const Projects = () => {
     <Flex>
       <PageScaleFade>
         <Seo title="Projects" />
-        <Flex px={[0, 0, 14, 14]}>
+        <Flex px={[2, 6, 14, 14]}>
           <Box>
             <Heading>My Work</Heading>
             <Heading size="md" mt={4} mb={6}>

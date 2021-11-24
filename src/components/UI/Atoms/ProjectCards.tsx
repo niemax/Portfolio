@@ -54,7 +54,7 @@ export const ProjectCards = ({ data }: any) => (
                       </Box>
                     </Tooltip>
                     {node.tech.map((itm: any, idx: string) => (
-                      <Tag key={idx} rounded="md" size="sm" colorScheme="cyan" variant="subtle">
+                      <Tag key={idx} rounded="md" size="sm" colorScheme="teal" variant="subtle">
                         <TagLabel color={getTagColor(itm)}>{itm}</TagLabel>
                       </Tag>
                     ))}

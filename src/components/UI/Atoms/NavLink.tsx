@@ -47,7 +47,15 @@ export const NavLink = ({ ...props }: NavLinkProps) => {
           _hover={{ bg: useColorModeValue("navLightHover", "navDarkHover") }}
           {...props}
         >
-          <Link to={node.path}>{node.name}</Link>
+          <Link
+            activeStyle={{
+              color: "#A6ED8E",
+              fontWeight: 600,
+            }}
+            to={node.path}
+          >
+            {node.name}
+          </Link>
         </Button>
       ))}
     </Box>

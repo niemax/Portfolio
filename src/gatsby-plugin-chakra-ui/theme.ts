@@ -5,12 +5,12 @@ import { colors } from "../theme/foundations/colors";
 export const Heading = {
   sizes: {
     xl: {
-      fontSize: "1.8rem",
+      fontSize: "1.9rem",
       fontWeight: 500,
       textDecoration: "underline",
       textUnderlineOffset: 8,
       textDecorationColor: "grey",
-      textDecorationThickness: "0.1rem",
+      textDecorationThickness: "0.2rem",
       marginBottom: 2,
     },
     md: {

@@ -7,7 +7,7 @@ import { Introduction } from "../components/UI/Atoms/Introduction";
 import { Recents } from "../components/UI/Atoms/Recents";
 
 const IndexPage = () => (
-  <Flex direction="column" align="center" px={[0, 14, 14, 14]}>
+  <Flex direction="column" align="center" px={[2, 14, 14, 14]}>
     <PageScaleFade>
       <Seo title="Home" />
       <Flex direction={["column", "column", "row"]}>

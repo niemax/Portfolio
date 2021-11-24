@@ -5,7 +5,7 @@ import { LineBreak } from "./LineBreak";
 export const Introduction: React.FC = () => (
   <>
     <Heading mt={10} mb={5}>
-      Hello{" "}
+      Hello
       <Box className="wave" as="span">
         👋
       </Box>
@@ -18,8 +18,8 @@ export const Introduction: React.FC = () => (
         </Box>
         Software Developer and student from Helsinki. My vision is to make the web accessible and
         enjoyable for everyone. Love working in the <strong>JavaScript</strong> ecosystem -
-        especially <strong>React & NodeJS.</strong> Always up for challenges and learning new
-        technologies.
+        especially <strong>React & NodeJS.</strong> Always up for challenges and eager to learn from
+        better programmers.
       </Heading>
     </Box>
   </>
