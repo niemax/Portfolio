@@ -17,7 +17,7 @@
     "language": "Javascript",
     "icon": "../images/icons8-javascript-48.png",
     "url": "https://github.com/niemax/GoTrain-Mobile",
-    "description": "A workout app that gives you instructions and tracks your workouts. Has a set of pre-defined workouts."
+    "description": "A workout app that gives you instructions and tracks your workouts. Has a set of pre-defined workouts. My first ever React app for a school project."
   },
   {
     "name": "GoTrain-API",
