@@ -35,7 +35,14 @@ const Header = () => {
       css={{ backdropFilter: "blur(10px)" }}
       zIndex={1}
     >
-      <Container display="flex" p={2} maxW="container.md" align="center" justify="space-between">
+      <Container
+        display="flex"
+        px={[6, 14, 6, 4]}
+        py={2}
+        maxW="container.md"
+        align="center"
+        justify="space-between"
+      >
         <Stack
           direction={{ base: "column", md: "row" }}
           display={{ base: "none", md: "flex" }}

@@ -34,25 +34,29 @@ export const ProjectCards = ({ data }: any) => (
               width="auto"
               border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
               shadow="md"
-              my={5}
+              my={4}
               py={1}
               animation={{ scale: 1.04 }}
             >
-              <Flex p={5} direction="column">
-                <Stack direction={["column", "row", "row", "row"]} align="center">
+              <Flex p={4} direction="column">
+                <Stack
+                  direction={["column", "row", "row", "row"]}
+                  align="center"
+                  justify="baseline"
+                >
                   <GatsbyImage alt={node.language} image={image} />
-                  <Stack mb="3" direction={["column", "row", "row", "row"]}>
-                    <Tooltip
-                      placement="top"
-                      bg={useColorModeValue("black", "white")}
-                      color={useColorModeValue("white", "black")}
-                      aria-label="A tooltip"
-                      label="Github Link"
-                    >
-                      <Box as="a" fontSize="xl" onClick={() => windowOpen(node.url)}>
-                        {node.name}
-                      </Box>
-                    </Tooltip>
+                  <Tooltip
+                    placement="top"
+                    bg={useColorModeValue("black", "white")}
+                    color={useColorModeValue("white", "black")}
+                    aria-label="A tooltip"
+                    label="Github Link"
+                  >
+                    <Box as="a" fontSize="xl" onClick={() => windowOpen(node.url)}>
+                      {node.name}
+                    </Box>
+                  </Tooltip>
+                  <Stack direction="row">
                     {node.tech.map((itm: any, idx: string) => (
                       <Tag key={idx} rounded="md" size="sm" colorScheme="teal" variant="subtle">
                         <TagLabel color={getTagColor(itm)}>{itm}</TagLabel>
@@ -60,7 +64,7 @@ export const ProjectCards = ({ data }: any) => (
                     ))}
                   </Stack>
                 </Stack>
-                <Heading size="sm" mt="2">
+                <Heading size="sm" mt="1">
                   {node.description}
                 </Heading>
               </Flex>

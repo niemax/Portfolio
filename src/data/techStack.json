@@ -40,6 +40,14 @@
     "image": "../images/icons8-css3-48.png"
   },
   {
+    "name": "Sass",
+    "description": "Web Styling",
+    "link": "https://sass-lang.com/",
+    "type": "development",
+    "color": "#f06292",
+    "image": "../images/icons8-sass-144.png"
+  },
+  {
     "name": "NodeJs",
     "description": "Web development",
     "link": "https://nodejs.org/en/",
