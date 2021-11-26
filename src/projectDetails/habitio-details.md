@@ -71,6 +71,3 @@ you got it.
 the time of reminder, delete the reminder, etc...
 
 <br>
-
-You can also add notes where you can write down about your previous completion, future goals or
-something else.
