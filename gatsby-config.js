@@ -32,7 +32,6 @@ module.exports = {
     {
       resolve: "@chakra-ui/gatsby-plugin",
       options: {
-        resetCSS: true,
         isUsingColorMode: true,
       },
     },
@@ -41,6 +40,19 @@ module.exports = {
       options: {
         name: `data`,
         path: `${__dirname}/src/data/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projectDetails`,
+        path: `${__dirname}/src/projectDetails`,
       },
     },
     {

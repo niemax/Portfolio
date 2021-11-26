@@ -15,6 +15,7 @@ import { container, item } from "../../motion/transitions";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { getTagColor } from "../../../utility/helpers/getTagColor";
 import { windowOpen } from "../../../utility/helpers/windowOpen";
+import { Link } from "gatsby";
 
 /**
  * ? Cards include: tech stack Array, name, description, overall own rating
@@ -22,13 +23,18 @@ import { windowOpen } from "../../../utility/helpers/windowOpen";
  * * Props: array of projects
  */
 
-export const ProjectCards = ({ data }: any) => (
+interface ProjectCardProps {
+  data: any[];
+  slug: string;
+}
+
+export const ProjectCards = (props: ProjectCardProps) => (
   <motion.div variants={container} initial="hidden" animate="show">
-    {data.map(({ node }: any) => {
+    {props.data.map(({ node }: any) => {
       const image = getImage(node?.icon?.childImageSharp);
       return (
         <motion.div variants={item} key={node.name}>
-          <Box onClick={() => windowOpen(`${node.url}`)}>
+          <Link to={props.slug !== "" ? `${props.slug}/${node.slug}` : node.slug}>
             <MBox
               height="auto"
               width="auto"
@@ -69,7 +75,7 @@ export const ProjectCards = ({ data }: any) => (
                 </Heading>
               </Flex>
             </MBox>
-          </Box>
+          </Link>
         </motion.div>
       );
     })}

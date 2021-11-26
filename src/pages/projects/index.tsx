@@ -1,11 +1,10 @@
 import React from "react";
-import { PageScaleFade } from "../components/motion/transitions";
+import { PageScaleFade } from "../../components/motion/transitions";
 import { Heading, Flex, Box, HStack } from "@chakra-ui/react";
-import Seo from "../components/seo";
-import { ProjectCards } from "../components/UI/Atoms/ProjectCards";
-import { LineBreak } from "../components/UI/Atoms/LineBreak";
+import Seo from "../../components/seo";
+import { ProjectCards } from "../../components/UI/Atoms/ProjectCards";
 import { graphql, useStaticQuery } from "gatsby";
-import { AllProjectsJson } from "../types";
+import { AllProjectsJson } from "../../types";
 
 const Projects = () => {
   const { allProjectsJson } = useStaticQuery<AllProjectsJson>(
@@ -21,6 +20,7 @@ const Projects = () => {
               name
               tech
               url
+              slug
               icon {
                 childImageSharp {
                   gatsbyImageData(layout: FIXED, quality: 50, height: 40, width: 40)
@@ -42,7 +42,7 @@ const Projects = () => {
             <Heading size="md" mt={4} mb={6}>
               Some of my personal projects
             </Heading>
-            <ProjectCards data={allProjectsJson?.edges} />
+            <ProjectCards data={allProjectsJson.edges} slug="" />
           </Box>
         </Flex>
       </PageScaleFade>

@@ -20,7 +20,7 @@ export const skillsItem = {
     x: 0,
     y: 0,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
     },
   },
 };
@@ -78,7 +78,7 @@ export const container = {
 };
 
 export const item = {
-  hidden: { opacity: 0, x: -100 },
+  hidden: { opacity: 0 },
   show: {
     opacity: 1,
     x: 0,

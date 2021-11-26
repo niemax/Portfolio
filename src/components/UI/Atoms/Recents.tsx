@@ -19,6 +19,7 @@ export const Recents = () => {
               name
               tech
               url
+              slug
               icon {
                 childImageSharp {
                   gatsbyImageData(layout: FIXED, quality: 50, height: 30, width: 30)
@@ -31,12 +32,13 @@ export const Recents = () => {
     `
   );
 
-  const mapped = allProjectsJson.edges?.filter(({ node }: any) => node.name.startsWith("P"));
+  const mapped = allProjectsJson.edges.filter(({ node }: any) => node.name.startsWith("P"));
+
   return (
     <>
       <Heading mt={20}>Recent work</Heading>
       <Box w="100%">
-        <ProjectCards data={mapped} />
+        <ProjectCards data={mapped} slug="/projects" />
       </Box>
     </>
   );
