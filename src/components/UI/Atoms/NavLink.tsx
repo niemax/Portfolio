@@ -35,7 +35,7 @@ export const NavLink = ({ ...props }: NavLinkProps) => {
 
   return (
     <Box ml={1}>
-      {allNavlinksJson?.edges?.map(({ node }, index) => (
+      {allNavlinksJson.edges?.map(({ node }, index) => (
         <Button
           key={node.name}
           py={props.padding}
@@ -44,12 +44,12 @@ export const NavLink = ({ ...props }: NavLinkProps) => {
           mx={1}
           variant="ghost"
           onClick={() => setIsActive(index)}
-          _hover={{ bg: useColorModeValue("navLightHover", "navDarkHover") }}
+          _hover={{ bg: useColorModeValue("navLightHover", "boxes") }}
           {...props}
         >
           <Link
             activeStyle={{
-              color: "#A6ED8E",
+              color: "#76B39D",
               fontWeight: 600,
             }}
             to={node.path}

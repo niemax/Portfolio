@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import {
   Box,
   Stack,
+  HStack,
   IconButton,
   useColorMode,
   useColorModeValue,
@@ -37,7 +38,7 @@ const Header = () => {
     >
       <Container
         display="flex"
-        px={[6, 14, 6, 4]}
+        px={[6, 14, 6, 2]}
         py={2}
         maxW="container.md"
         align="center"
@@ -62,7 +63,7 @@ const Header = () => {
             <Memoji width={10} height={10} padding={1.5} />
           </Link>
         </Box>
-        <Box flex={1} align="right">
+        <HStack align="right" spacing={2}>
           <Tooltip
             placement="auto"
             bg={useColorModeValue("black", "white")}
@@ -77,7 +78,7 @@ const Header = () => {
               aria-label="toggle theme mode"
               onClick={toggleColorMode}
               icon={colorMode === "light" ? <FaMoon /> : <WiDaySunny />}
-              _hover={{ bg: useColorModeValue("navLightHover", "navDarkHover") }}
+              _hover={{ bg: useColorModeValue("navLightHover", "boxes") }}
             />
           </Tooltip>
           <IconButton
@@ -103,7 +104,7 @@ const Header = () => {
               </MenuList>
             </Menu>
           </Box>
-        </Box>
+        </HStack>
       </Container>
     </Box>
   );

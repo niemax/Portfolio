@@ -21,7 +21,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
     <Flex px={[4, 14, 14, 14]} direction="column">
       <Seo title={frontmatter.title} />
       <PageScaleFade>
-        <Box align="center" bg={"green"} py={6} rounded="xl" shadow="md">
+        <Box align="center" bg={"green"} py={6} rounded="lg" shadow="md">
           <AspectRatio maxW={640} ratio={1}>
             <iframe
               src={frontmatter.videoURL}
@@ -37,12 +37,15 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
           <HStack justify="space-between" align="center" mb={6}>
             <HStack>
               <Heading fontWeight="700">{frontmatter.title}</Heading>
-              <Heading size="sm" ml={2}>
-                - 1 min read
+              {/* Change this hardcoded value to dynamic */}
+              <Heading size="sm" ml={2} color="green">
+                - 3 min read
               </Heading>
             </HStack>
             <HStack>
-              <Heading size="sm">Project Link</Heading>
+              <Heading size="sm" color="green">
+                Project Link
+              </Heading>
               <IconButton
                 as="a"
                 fontSize={26}

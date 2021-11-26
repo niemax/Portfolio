@@ -33,8 +33,8 @@ const theme = {
   styles: {
     global: props => ({
       body: {
-        color: mode("#000", "#ffff")(props),
-        bg: mode("#FCF6E7", "#131B1F")(props),
+        color: mode("#534436", "#ffff")(props),
+        bg: mode("#F9F8EB", "#131B1F")(props),
         overflowX: "hidden",
       },
       a: {
@@ -47,9 +47,7 @@ const theme = {
     }),
   },
   components: {
-    Button: {
-      baseStyle: {},
-    },
+    Button: {},
   },
 };
 

@@ -58,13 +58,13 @@ export const Education = () => {
                 <Heading size="sm">ICT and Digital Services</Heading>
                 <Heading size="sm">2020 - present</Heading>
                 <Stack direction={["column", "column", "row", "row"]}>
-                  <Tag colorScheme="teal" rounded="md" size="sm" variant="subtle">
+                  <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
                     <TagLabel>ICT</TagLabel>
                   </Tag>
-                  <Tag colorScheme="teal" rounded="md" size="sm" variant="subtle">
+                  <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
                     <TagLabel>Programming</TagLabel>
                   </Tag>
-                  <Tag colorScheme="teal" rounded="md" size="sm" variant="subtle">
+                  <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
                     <TagLabel>Entrepreneurship</TagLabel>
                   </Tag>
                 </Stack>

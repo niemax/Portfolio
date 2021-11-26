@@ -10,7 +10,7 @@ import { FaChartPie } from "react-icons/fa";
 import Seo from "../components/seo";
 
 const Skills = ({ data }: any) => {
-  const skills = data?.allTechStackJson?.edges;
+  const skills = data.allTechStackJson.edges;
 
   return (
     <PageScaleFade>
@@ -18,7 +18,7 @@ const Skills = ({ data }: any) => {
       <Box mt="3" w={[null, null, "70%"]} mx="auto" px={[4, 6, 0, 0]}>
         <Box align="center" justify="center">
           <HStack align="center" justify="center">
-            <Heading>Skills</Heading>
+            <Heading>Tech Stack</Heading>
             <FaChartPie fontSize={28} />
           </HStack>
           <Heading size="md" mt={4}>
