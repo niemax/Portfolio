@@ -74,3 +74,5 @@ the time of reminder, delete the reminder, etc...
 
 You can also add notes where you can write down about your previous completion, future goals or
 something else.
+
+-Axel ❤
