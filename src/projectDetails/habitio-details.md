@@ -65,4 +65,4 @@ videoURL: https://player.vimeo.com/video/650316576?h=9b8c4c3cc9&amp;badge=0&amp;
 
 <br>
 
-### You can also add **_notes_** where you can write down about your previous completion, future goals or something else.
+### You can also add notes where you can write down about your previous completion, future goals or something else.
