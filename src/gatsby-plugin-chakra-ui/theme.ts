@@ -35,6 +35,7 @@ const theme = {
       body: {
         color: mode("#000", "#ffff")(props),
         bg: mode("#FCF6E7", "#131B1F")(props),
+        overflowX: "hidden",
       },
       a: {
         cursor: "pointer",
