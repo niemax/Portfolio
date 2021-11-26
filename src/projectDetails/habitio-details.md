@@ -41,7 +41,7 @@ videoURL: https://player.vimeo.com/video/650316576?h=9b8c4c3cc9&amp;badge=0&amp;
 
 <br>
 
-### <strong>Easy</strong>, just download the app (not published yet) from App Store or Google Play Store. Not account creationg needed, since the app only stores info on the device.
+### **_Easy_**, just download the app (not published yet) from App Store or Google Play Store. Not account creationg needed, since the app only stores info on the device.
 
 <br>
 
