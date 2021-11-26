@@ -33,8 +33,8 @@ const Projects = () => {
     `
   );
   return (
-    <Flex>
-      <PageScaleFade>
+    <PageScaleFade>
+      <Flex direction="column" align="center">
         <Seo title="Projects" />
         <Flex px={[2, 6, 14, 14]}>
           <Box>
@@ -45,8 +45,8 @@ const Projects = () => {
             <ProjectCards data={allProjectsJson.edges} slug="" />
           </Box>
         </Flex>
-      </PageScaleFade>
-    </Flex>
+      </Flex>
+    </PageScaleFade>
   );
 };
 
