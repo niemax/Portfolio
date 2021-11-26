@@ -46,7 +46,7 @@ account creationg needed, since the app only stores info on the device.
 
 <br>
 
-**_Start habit creation_** You have two choices - choose from pre-defined habits withing different
+**_Start habit creation._** You have two choices - choose from pre-defined habits withing different
 categories, or create your own.
 
 <br>
@@ -71,3 +71,6 @@ you got it.
 the time of reminder, delete the reminder, etc...
 
 <br>
+
+You can also add notes where you can write down about your previous completion, future goals or
+something else.
