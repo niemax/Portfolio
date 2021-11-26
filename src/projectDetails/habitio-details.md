@@ -26,8 +26,6 @@ videoURL: https://player.vimeo.com/video/650316576?h=9b8c4c3cc9&amp;badge=0&amp;
 2. Stopping procrastination
 3. Increased energy levels
 
-</ul>
-
 <br>
 
 # **_Tech Stack_**
