@@ -41,28 +41,36 @@ videoURL: https://player.vimeo.com/video/650316576?h=9b8c4c3cc9&amp;badge=0&amp;
 
 <br>
 
-### **_Easy_**, just download the app (not published yet) from App Store or Google Play Store. Not account creationg needed, since the app only stores info on the device.
+**_Easy_**, just download the app (not published yet) from App Store or Google Play Store. Not
+account creationg needed, since the app only stores info on the device.
 
 <br>
 
-### **_Start habit creation._** You have two choices - choose from pre-defined habits withing different categories, or create your own.
+**_Start habit creation_** You have two choices - choose from pre-defined habits withing different
+categories, or create your own.
 
 <br>
 
-### **_Configure_** the options such as description or color. You can get the habit to be done only once on a specific date, or you can add a goal for it. Configure the amount of days you want to complete it on. You can also choose from different units such as hours, pages, bottles - those are good for different kind of habits.
+**_Configure_** the options such as description or color. You can get the habit to be done only once
+on a specific date, or you can add a goal for it. Configure the amount of days you want to complete
+it on. You can also choose from different units such as hours, pages, bottles - those are good for
+different kind of habits.
 
 <br>
 
-### If you wish to set an end date and complete the habit as a routine between a specific time-window, you got it.
+If you wish to set an end date and complete the habit as a routine between a specific time-window,
+you got it.
 
 <br>
 
-### **_Set a timer_** to notificate you daily on a specific time.
+**_Set a timer_** to notificate you daily on a specific time.
 
 <br>
 
-### **_Track_** your progress and edit the habit whenever you feel like it - change the color, change the time of reminder, delete the reminder, etc...
+**_Track_** your progress and edit the habit whenever you feel like it - change the color, change
+the time of reminder, delete the reminder, etc...
 
 <br>
 
-### You can also add notes where you can write down about your previous completion, future goals or something else.
+You can also add notes where you can write down about your previous completion, future goals or
+something else.
