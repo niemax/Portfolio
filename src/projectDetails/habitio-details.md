@@ -6,13 +6,13 @@ gitHubLink: "https://github.com/niemax/Habitio"
 videoURL: https://player.vimeo.com/video/650316576?h=9b8c4c3cc9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479
 ---
 
-# **_What is Habitio?_**
+# **_What is Habitio?_** 📱
 
 ### Habitio is an app that makes you the best version of yourself. It makes you productive and therefore more balanced. Habitio makes it easy to control daily flow.
 
 <br>
 
-# **_Why build something like this?_**
+# **_Why build something like this?_** 👷
 
 ### It's easy and often tempting to be lazy when you shouldn't. But in order to be productive daily it certainly helps if you have someone or something to keep you motivated. This app with its notifications and progress tracking will keep you motivated. When you are productive, you get a lot more done and feel better overall. Even the small little things matter.
 
@@ -28,7 +28,7 @@ videoURL: https://player.vimeo.com/video/650316576?h=9b8c4c3cc9&amp;badge=0&amp;
 
 <br>
 
-# **_Tech Stack_**
+# **_Tech Stack_** ⚡
 
 1. React-Native / Expo
 2. Persistent storage with AsyncStorage
@@ -37,7 +37,7 @@ videoURL: https://player.vimeo.com/video/650316576?h=9b8c4c3cc9&amp;badge=0&amp;
 
 <br>
 
-# **_How does it work?_**
+# **_How does it work?_** 🤔
 
 <br>
 
@@ -63,7 +63,7 @@ you got it.
 
 <br>
 
-**_Set a timer_** to notificate you daily on a specific time.
+**_Set a timer_** to notificate you daily on a specific time. ⏰
 
 <br>
 
