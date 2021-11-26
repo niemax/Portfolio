@@ -35,8 +35,12 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
         <Box mt={8} w="100%" h={"0.1rem"} bg="grey" />
         <Box mt={10}>
           <HStack justify="space-between" align="center" mb={6}>
-            <Heading fontWeight="700">{frontmatter.title}</Heading>
-            <Heading size="sm">1 min read</Heading>
+            <HStack>
+              <Heading fontWeight="700">{frontmatter.title}</Heading>
+              <Heading size="sm" ml={2}>
+                - 1 min read
+              </Heading>
+            </HStack>
             <HStack>
               <Heading size="sm">Project Link</Heading>
               <IconButton
