@@ -25,6 +25,7 @@ export const Heading = {
     xs: {
       fontSize: "0.910rem",
       fontWeight: 450,
+      color: "grey",
     },
   },
 };
