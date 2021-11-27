@@ -34,7 +34,7 @@ export const ProjectCards = (props: ProjectCardProps) => {
   return (
     <motion.div variants={container} initial="hidden" animate="show">
       {props.data.map(({ node }: any) => {
-        const image = getImage(node?.icon?.childImageSharp);
+        const image = getImage(node.icon?.childImageSharp);
         return (
           <motion.div variants={item} key={node.name}>
             <Link to={resolvePathToSlug(props.slug, node.slug)}>
