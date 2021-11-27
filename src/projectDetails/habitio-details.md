@@ -16,6 +16,8 @@ videoURL: https://player.vimeo.com/video/650316576?h=9b8c4c3cc9&amp;badge=0&amp;
 
 # **_Why build something like this?_** 👷
 
+<br>
+
 ### It's easy and often tempting to be lazy when you shouldn't. But to be productive daily, it certainly helps if you have someone or something to keep you motivated. This app with its notifications and progress tracking will keep you motivated. When you are productive, you get a lot more done and feel better overall. Even the small little things matter.
 
 <br>
@@ -31,6 +33,8 @@ videoURL: https://player.vimeo.com/video/650316576?h=9b8c4c3cc9&amp;badge=0&amp;
 <br>
 
 # **_Tech Stack_** ⚡
+
+<br>
 
 1. React-Native / Expo
 2. Persistent storage with AsyncStorage
