@@ -9,7 +9,6 @@ import {
   Tag,
   TagLabel,
 } from "@chakra-ui/react";
-import { LineBreak } from "./LineBreak";
 import { motion } from "framer-motion";
 import { fromDownToUp, fromDownToUpItem } from "../../motion/transitions";
 import { MBox } from "../../motion/MotionBox";

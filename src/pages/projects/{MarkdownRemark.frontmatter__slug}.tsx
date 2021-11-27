@@ -38,7 +38,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
             <HStack>
               <Heading fontWeight="700">{frontmatter.title}</Heading>
               {/* Change this hardcoded value to dynamic */}
-              <Heading size="sm" ml={2} color="green">
+              <Heading size="xs" ml={2} color="green">
                 - {frontmatter.readTime} min read
               </Heading>
             </HStack>

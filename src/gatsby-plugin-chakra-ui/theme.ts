@@ -23,7 +23,7 @@ export const Heading = {
       color: "grey",
     },
     xs: {
-      fontSize: "0.930rem",
+      fontSize: "0.910rem",
       fontWeight: 450,
     },
   },
