@@ -2,6 +2,7 @@
 title: "Habitio"
 slug: habitio-details
 date: "2021-08-01"
+readTime: 3
 gitHubLink: "https://github.com/niemax/Habitio"
 videoURL: https://player.vimeo.com/video/650316576?h=9b8c4c3cc9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479
 ---

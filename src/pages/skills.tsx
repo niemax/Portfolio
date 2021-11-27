@@ -3,7 +3,16 @@ import { PageScaleFade } from "../components/motion/transitions";
 import { motion } from "framer-motion";
 import { skillsContainer, skillsItem } from "../components/motion/transitions";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { Box, HStack, VStack, useColorModeValue, Heading, SimpleGrid } from "@chakra-ui/react";
+import {
+  Box,
+  HStack,
+  VStack,
+  useColorModeValue,
+  Heading,
+  SimpleGrid,
+  Tag,
+  TagLabel,
+} from "@chakra-ui/react";
 import { MBox } from "../components/motion/MotionBox";
 import { graphql } from "gatsby";
 import { FaChartPie } from "react-icons/fa";
@@ -25,6 +34,7 @@ const Skills = ({ data }: any) => {
             Languages, technologies, and tools I'm familiar with.
           </Heading>
         </Box>
+
         <Box mt="8">
           <motion.div variants={skillsContainer} initial="hidden" animate="show">
             <SimpleGrid columns={[1, 2, 2, 2]} spacingX={6} spacingY={4}>
@@ -36,7 +46,7 @@ const Skills = ({ data }: any) => {
                       width="auto"
                       height={20}
                       px={2}
-                      py={3}
+                      py={2}
                       animation={{ y: -6.25 }}
                       shadow={useColorModeValue("lg", "xl")}
                       border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
@@ -58,11 +68,9 @@ const Skills = ({ data }: any) => {
                             <Heading size="md" fontSize={18} fontWeight={500} mt={2}>
                               {node.name}
                             </Heading>
-                            <Box>
-                              <Heading size="sm" mt="1" color="grey">
-                                {node.description}
-                              </Heading>
-                            </Box>
+                            <Heading size="xs" mt={1}>
+                              {node.description}
+                            </Heading>
                           </Box>
                         </VStack>
                       </HStack>

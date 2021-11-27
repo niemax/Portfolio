@@ -1,36 +1,36 @@
 import React from "react";
 import { graphql } from "gatsby";
-import {
-  Flex,
-  HStack,
-  Heading,
-  Box,
-  AspectRatio,
-  IconButton,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Flex, Center, HStack, Heading, Box, AspectRatio, IconButton } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import Seo from "../../components/seo";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { windowOpen } from "../../utility/helpers/windowOpen";
 import { PageScaleFade } from "../../components/motion/transitions";
 
 function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
   const { frontmatter, html } = markdownRemark;
+  const image = getImage(frontmatter.image?.childImageSharp);
 
   return (
-    <Flex px={[4, 14, 14, 14]} direction="column">
+    <Flex px={[4, 14, 14, 14]}>
       <Seo title={frontmatter.title} />
       <PageScaleFade>
-        <Box align="center" bg={"green"} py={6} rounded="lg" shadow="md">
-          <AspectRatio maxW={640} ratio={1}>
-            <iframe
-              src={frontmatter.videoURL}
-              loading="lazy"
-              webkitallowfullscreen={true}
-              mozallowfullscreen={true}
-              allowFullScreen={true}
-            />
-          </AspectRatio>
+        {frontmatter.videoURL !== "" && (
+          <Box align="center" bg="green" py={6} rounded="lg" shadow="md">
+            <AspectRatio maxW={640} ratio={1}>
+              <iframe
+                src={frontmatter.videoURL}
+                loading="lazy"
+                webkitallowfullscreen={true}
+                mozallowfullscreen={true}
+                allowFullScreen={true}
+              />
+            </AspectRatio>
+          </Box>
+        )}
+
+        <Box>
+          <GatsbyImage alt={frontmatter.title} image={image} />
         </Box>
         <Box mt={8} w="100%" h={"0.1rem"} bg="grey" />
         <Box mt={10}>
@@ -39,7 +39,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
               <Heading fontWeight="700">{frontmatter.title}</Heading>
               {/* Change this hardcoded value to dynamic */}
               <Heading size="sm" ml={2} color="green">
-                - 3 min read
+                - {frontmatter.readTime} min read
               </Heading>
             </HStack>
             <HStack>
@@ -69,10 +69,22 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title
-        date
         videoURL
+        title
+        slug
+        readTime
         gitHubLink
+        image {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 80
+              layout: CONSTRAINED
+              placeholder: BLURRED
+              width: 700
+              height: 700
+            )
+          }
+        }
       }
     }
   }

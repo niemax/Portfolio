@@ -5,6 +5,8 @@
     "link": "https://developer.mozilla.org/en-US/",
     "type": "language",
     "color": "#f7df1e",
+    "scheme": "yellow",
+    "backgroundColor": "rgba(247, 223, 30, 0.4)",
     "image": "../images/icons8-javascript-48.png"
   },
   {
@@ -13,6 +15,7 @@
     "link": "https://www.typescriptlang.org/",
     "type": "language",
     "color": "#3178c6",
+    "scheme": "blue",
     "image": "../images/icons8-typescript-48.png"
   },
   {
@@ -21,6 +24,7 @@
     "link": "https://www.python.org/",
     "type": "language",
     "color": "#ffde57",
+    "scheme": "yellow",
     "image": "../images/icons8-python-48.png"
   },
   {
@@ -28,6 +32,7 @@
     "description": "Web Layout",
     "link": "https://reactjs.org/",
     "color": "#e34f26",
+    "scheme": "orange",
     "type": "development",
     "image": "../images/icons8-html-5-48.png"
   },
@@ -37,6 +42,7 @@
     "link": "https://www.tutorialspoint.com/css/css3_tutorial.htm",
     "type": "development",
     "color": "#002561",
+    "scheme": "blue",
     "image": "../images/icons8-css3-48.png"
   },
   {
@@ -45,6 +51,7 @@
     "link": "https://sass-lang.com/",
     "type": "development",
     "color": "#f06292",
+    "scheme": "pink",
     "image": "../images/icons8-sass-144.png"
   },
   {
@@ -53,6 +60,7 @@
     "link": "https://nodejs.org/en/",
     "type": "Backend",
     "color": "#6cc24a",
+    "scheme": "green",
     "image": "../images/icons8-nodejs-144.png"
   },
   {
@@ -61,6 +69,7 @@
     "link": "https://reactjs.org/",
     "type": "development",
     "color": "#00d8ff",
+    "scheme": "teal",
     "image": "../images/icons8-react-40.png"
   },
   {
@@ -69,6 +78,7 @@
     "link": "https://reactnative.dev",
     "type": "development",
     "color": "#00d8ff",
+    "scheme": "teal",
     "image": "../images/icons8-react-40.png"
   },
   {
@@ -77,6 +87,7 @@
     "link": "https://redux.js.org",
     "type": "development",
     "color": "#764abc",
+    "scheme": "purple",
     "image": "../images/icons8-redux-144.png"
   },
   {
@@ -85,6 +96,7 @@
     "link": "https://www.gatsbyjs.com/",
     "type": "framework",
     "color": "#663399",
+    "scheme": "purple",
     "image": "../images/icons8-gatsbyjs-144.png"
   },
   {
@@ -93,6 +105,7 @@
     "link": "https://graphql.org/",
     "type": "development",
     "color": "#e10098",
+    "scheme": "pink",
     "image": "../images/icons8-graphql-144.png"
   },
   {
@@ -101,6 +114,7 @@
     "link": "https://code.visualstudio.com",
     "type": "tools",
     "color": "#00d8ff",
+    "scheme": "purple",
     "image": "../images/icons8-visual-studio-2019-48.png"
   },
   {
@@ -109,6 +123,7 @@
     "link": "https://firebase.google.com/",
     "type": "Database / SaaS",
     "color": "#fbbc05",
+    "scheme": "orange",
     "image": "../images/icons8-firebase-48.png"
   },
   {
@@ -117,6 +132,7 @@
     "link": "https://www.mongodb.com/",
     "type": "Web Development",
     "color": "#589636",
+    "scheme": "green",
     "image": "../images/icons8-mongodb-48.png"
   },
   {
@@ -125,6 +141,7 @@
     "link": "https://www.heroku.com/#",
     "type": "DevOps",
     "color": "#c9c3e6",
+    "scheme": "telegram",
     "image": "../images/icons8-heroku-48.png"
   },
   {
@@ -133,6 +150,7 @@
     "link": "https://www.figma.com",
     "type": "Web Design",
     "color": "#0cb9c1",
+    "scheme": "twitter",
     "image": "../images/icons8-figma-48.png"
   },
   {
@@ -141,6 +159,7 @@
     "link": "https://www.postman.com",
     "type": "tools",
     "color": "#ef5b25",
+    "scheme": "orange",
     "image": "../images/icons8-postman-api-64.png"
   }
 ]

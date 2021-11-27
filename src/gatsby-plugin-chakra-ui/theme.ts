@@ -22,6 +22,10 @@ export const Heading = {
       fontWeight: 450,
       color: "grey",
     },
+    xs: {
+      fontSize: "0.930rem",
+      fontWeight: 450,
+    },
   },
 };
 
@@ -33,7 +37,7 @@ const theme = {
   styles: {
     global: props => ({
       body: {
-        color: mode("#534436", "#ffff")(props),
+        color: mode("534436", "#ffff")(props),
         bg: mode("#F9F8EB", "#131B1F")(props),
         overflowX: "hidden",
       },
