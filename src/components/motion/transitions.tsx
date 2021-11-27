@@ -14,13 +14,11 @@ export const skillsContainer = {
 };
 
 export const skillsItem = {
-  hidden: { opacity: 0, x: -100, y: -200 },
+  hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    x: 0,
-    y: 0,
     transition: {
-      duration: 0.2,
+      duration: 0.1,
     },
   },
 };
@@ -36,7 +34,7 @@ export const fromDownToUp = {
 };
 
 export const fromDownToUpItem = {
-  hidden: { opacity: 0, y: 500 },
+  hidden: { opacity: 0, y: 200 },
   show: {
     opacity: 1,
     y: 0,
@@ -57,7 +55,7 @@ export const otherTransition = {
 };
 
 export const otherItem = {
-  hidden: { opacity: 0, x: 300 },
+  hidden: { opacity: 0, x: 100 },
   show: {
     opacity: 1,
     x: 0,

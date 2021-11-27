@@ -17,12 +17,6 @@ import { getTagColor } from "../../../utility/helpers/getTagColor";
 import { windowOpen } from "../../../utility/helpers/windowOpen";
 import { Link } from "gatsby";
 
-/**
- * ? Cards include: tech stack Array, name, description, overall own rating
- * ! check the render methods of cards. Should come from a local json array in ./data folder
- * * Props: array of projects
- */
-
 interface ProjectCardProps {
   data: any[];
   slug: string;
