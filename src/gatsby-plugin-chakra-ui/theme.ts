@@ -51,8 +51,11 @@ const theme = {
       },
     }),
   },
-  components: {
-    Button: {},
+};
+
+const Tag = {
+  baseStyle: {
+    colorScheme: "#76B39D",
   },
 };
 
@@ -66,5 +69,5 @@ export default extendTheme({
   ...theme,
   ...themeConf,
   colors,
-  components: { Heading },
+  components: { Heading, Tag },
 });
