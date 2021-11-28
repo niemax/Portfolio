@@ -54,7 +54,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
               </Heading>
             </VStack>
             <Stack direction="row" mt={3}>
-              {frontmatter.techStack.map((itm: any, idx: string) => (
+              {frontmatter.techStack?.map((itm: any, idx: string) => (
                 <Tag key={idx} rounded="md" size="sm" colorScheme="whatsapp" variant="subtle">
                   <TagLabel color={getTagColor(itm)}>{itm}</TagLabel>
                 </Tag>
