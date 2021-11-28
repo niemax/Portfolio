@@ -11,6 +11,8 @@ import {
   IconButton,
   Tag,
   TagLabel,
+  Wrap,
+  WrapItem,
 } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import Seo from "../../components/seo";
@@ -24,12 +26,12 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
   const image = getImage(frontmatter.image?.childImageSharp);
 
   return (
-    <Flex px={[4, 14, 14, 14]}>
-      <Seo title={frontmatter.title} />
+    <Flex px={[0, 14, 14, 14]} align="center">
       <PageScaleFade>
+        <Seo title={frontmatter.title} />
         {frontmatter.videoURL !== "" && (
           <Box align="center" bg="green" py={6} rounded="lg" shadow="md">
-            <AspectRatio maxW={640} ratio={1} mx="auto">
+            <AspectRatio maxW={640} ratio={1}>
               <iframe
                 src={frontmatter.videoURL}
                 loading="lazy"
@@ -53,13 +55,15 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
                 {frontmatter.readTime} min read
               </Heading>
             </VStack>
-            <Stack direction="row" mt={3}>
+            <Wrap>
               {frontmatter.techStack?.map((itm: any, idx: string) => (
-                <Tag key={idx} rounded="md" size="sm" colorScheme="whatsapp" variant="subtle">
-                  <TagLabel color={getTagColor(itm)}>{itm}</TagLabel>
-                </Tag>
+                <WrapItem>
+                  <Tag key={idx} rounded="md" size="sm" colorScheme="whatsapp" variant="subtle">
+                    <TagLabel color={getTagColor(itm)}>{itm}</TagLabel>
+                  </Tag>
+                </WrapItem>
               ))}
-            </Stack>
+            </Wrap>
             <HStack>
               <Heading size="sm" color="green">
                 Project Link
