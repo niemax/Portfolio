@@ -1,11 +1,23 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Flex, Center, HStack, Heading, Box, AspectRatio, IconButton } from "@chakra-ui/react";
+import {
+  Flex,
+  Stack,
+  VStack,
+  HStack,
+  Heading,
+  Box,
+  AspectRatio,
+  IconButton,
+  Tag,
+  TagLabel,
+} from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import Seo from "../../components/seo";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { windowOpen } from "../../utility/helpers/windowOpen";
 import { PageScaleFade } from "../../components/motion/transitions";
+import { getTagColor } from "../../utility/helpers/getTagColor";
 
 function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
   const { frontmatter, html } = markdownRemark;
@@ -17,7 +29,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
       <PageScaleFade>
         {frontmatter.videoURL !== "" && (
           <Box align="center" bg="green" py={6} rounded="lg" shadow="md">
-            <AspectRatio maxW={640} ratio={1}>
+            <AspectRatio maxW={640} ratio={1} mx="auto">
               <iframe
                 src={frontmatter.videoURL}
                 loading="lazy"
@@ -34,14 +46,20 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
         </Box>
         <Box mt={8} w="100%" h={"0.1rem"} bg="grey" />
         <Box mt={10}>
+          <Heading fontWeight="700">{frontmatter.title}</Heading>
           <HStack justify="space-between" align="center" mb={6}>
-            <HStack>
-              <Heading fontWeight="700">{frontmatter.title}</Heading>
-              {/* Change this hardcoded value to dynamic */}
-              <Heading size="xs" ml={2} color="green">
-                - {frontmatter.readTime} min read
+            <VStack>
+              <Heading size="xs" color="green">
+                {frontmatter.readTime} min read
               </Heading>
-            </HStack>
+            </VStack>
+            <Stack direction="row" mt={3}>
+              {frontmatter.techStack.map((itm: any, idx: string) => (
+                <Tag key={idx} rounded="md" size="sm" colorScheme="whatsapp" variant="subtle">
+                  <TagLabel color={getTagColor(itm)}>{itm}</TagLabel>
+                </Tag>
+              ))}
+            </Stack>
             <HStack>
               <Heading size="sm" color="green">
                 Project Link
@@ -74,6 +92,7 @@ export const pageQuery = graphql`
         slug
         readTime
         gitHubLink
+        techStack
         image {
           childImageSharp {
             gatsbyImageData(

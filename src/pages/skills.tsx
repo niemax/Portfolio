@@ -98,7 +98,13 @@ export const _query = graphql`
           type
           image {
             childImageSharp {
-              gatsbyImageData(layout: FIXED, quality: 50, height: 30, width: 30)
+              gatsbyImageData(
+                layout: FIXED
+                quality: 50
+                height: 30
+                width: 30
+                placeholder: BLURRED
+              )
             }
           }
         }

@@ -6,11 +6,11 @@ export const Heading = {
   sizes: {
     xl: {
       fontSize: "1.9rem",
-      fontWeight: 500,
+      fontWeight: 700,
       textDecoration: "underline",
-      textUnderlineOffset: 8,
+      textUnderlineOffset: 10,
       textDecorationColor: "grey",
-      textDecorationThickness: "3px",
+      textDecorationThickness: "2px",
       marginBottom: 2,
     },
     md: {
@@ -38,7 +38,7 @@ const theme = {
   styles: {
     global: props => ({
       body: {
-        color: mode("534436", "#ffff")(props),
+        color: mode("#534436", "#ffff")(props),
         bg: mode("#F9F8EB", "#131B1F")(props),
         overflowX: "hidden",
       },

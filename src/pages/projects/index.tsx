@@ -23,7 +23,13 @@ const Projects = () => {
               slug
               icon {
                 childImageSharp {
-                  gatsbyImageData(layout: FIXED, quality: 50, height: 40, width: 40)
+                  gatsbyImageData(
+                    layout: FIXED
+                    quality: 50
+                    height: 40
+                    width: 40
+                    placeholder: BLURRED
+                  )
                 }
               }
             }
