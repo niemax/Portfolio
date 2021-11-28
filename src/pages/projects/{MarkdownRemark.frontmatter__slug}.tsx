@@ -58,7 +58,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
             <Wrap>
               {frontmatter.techStack?.map((itm: any, idx: string) => (
                 <WrapItem>
-                  <Tag key={idx} rounded="md" size="sm" colorScheme="whatsapp" variant="subtle">
+                  <Tag key={idx} rounded="md" size="sm" colorScheme="teal" variant="subtle">
                     <TagLabel color={getTagColor(itm)}>{itm}</TagLabel>
                   </Tag>
                 </WrapItem>
