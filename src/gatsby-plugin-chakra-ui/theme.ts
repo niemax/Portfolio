@@ -1,4 +1,4 @@
-import { extendTheme, theme as baseTheme } from "@chakra-ui/react";
+import { extendTheme, theme as baseTheme, ThemeConfig } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 import { colors } from "../theme/foundations/colors";
 
@@ -56,4 +56,15 @@ const theme = {
   },
 };
 
-export default extendTheme({ ...baseTheme, ...theme, colors, components: { Heading } });
+const themeConf: ThemeConfig = {
+  useSystemColorMode: true,
+  initialColorMode: "system",
+};
+
+export default extendTheme({
+  ...baseTheme,
+  ...theme,
+  ...themeConf,
+  colors,
+  components: { Heading },
+});
