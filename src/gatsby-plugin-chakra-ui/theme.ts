@@ -61,7 +61,7 @@ const Tag = {
 
 const themeConf: ThemeConfig = {
   useSystemColorMode: true,
-  initialColorMode: "system",
+  initialColorMode: "dark",
 };
 
 export default extendTheme({

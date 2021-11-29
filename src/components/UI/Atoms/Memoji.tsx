@@ -1,9 +1,9 @@
 import React from "react";
 import { Center } from "@chakra-ui/react";
 import { StaticImage } from "gatsby-plugin-image";
-import { MemojiProps } from "../../../interfaces";
+import { IMemojiProps } from "../../../interfaces";
 
-export const Memoji = ({ ...props }: MemojiProps) => {
+export const Memoji = (props: IMemojiProps) => {
   return (
     <Center
       bg="green"

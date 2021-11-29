@@ -1,9 +1,9 @@
 import React from "react";
 import { Button, useColorModeValue, Box } from "@chakra-ui/react";
 import { graphql, Link, useStaticQuery } from "gatsby";
-import { NavLinkProps } from "../../../interfaces";
+import { INavLinkProps } from "../../../interfaces";
 
-export const NavLink = ({ ...props }: NavLinkProps) => {
+export const NavLink = ({ ...props }: INavLinkProps) => {
   const [isActive, setIsActive] = React.useState<boolean | number>(false);
   const { allNavlinksJson } = useStaticQuery<AllNavlinksJson>(
     graphql`

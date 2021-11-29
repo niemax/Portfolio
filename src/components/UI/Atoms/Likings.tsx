@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Heading, List, ListItem, ListIcon } from "@chakra-ui/react";
 import { MdCheckCircle } from "react-icons/md";
 import { motion } from "framer-motion";
-import { otherItem, otherTransition } from "../motion/transitions";
+import { otherItem, otherTransition } from "../../motion/transitions";
 
 export const Likings = () => (
   <Box mt="10" mb="4">
@@ -12,7 +12,7 @@ export const Likings = () => (
         <List spacing={3}>
           <ListItem>
             <ListIcon as={MdCheckCircle} color="#155E63" fontSize={22} />
-            Forests 🌲 🌲 🌲
+            Forests 🌲
           </ListItem>
           <ListItem>
             <ListIcon as={MdCheckCircle} color="#155E63" fontSize={22} />

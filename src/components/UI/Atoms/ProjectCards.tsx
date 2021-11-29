@@ -17,12 +17,14 @@ import { getTagColor } from "../../../utility/helpers/getTagColor";
 import { windowOpen } from "../../../utility/helpers/windowOpen";
 import { Link } from "gatsby";
 
-interface ProjectCardProps {
+interface IProjectCardProps {
   data: any[];
   slug: string;
 }
 
-export const ProjectCards = (props: ProjectCardProps) => {
+export const ProjectCards = (props: IProjectCardProps) => {
+  // if user clicks from recents box at homepage, then the slug is /projects/SLUG_NAME
+  // if user comes from projects page, slug is only the SLUG_NAME
   const resolvePathToSlug = (slugFromProps: string, slugFromMap: string) => {
     if (slugFromProps !== "") {
       return `${slugFromProps}/${slugFromMap}`;

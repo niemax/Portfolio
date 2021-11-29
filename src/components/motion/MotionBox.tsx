@@ -13,7 +13,7 @@ type Y = {
   y: number;
 };
 
-interface MBoxProps {
+interface IMBoxProps {
   height: number | string;
   width: number | string;
   animation?: Scale | Y;
@@ -25,7 +25,7 @@ interface MBoxProps {
   children: ReactNode;
 }
 
-export const MBox = ({ height, width, animation, children, ...props }: MBoxProps) => (
+export const MBox = ({ height, width, animation, children, ...props }: IMBoxProps) => (
   <MotionBox
     height={height}
     width={width}

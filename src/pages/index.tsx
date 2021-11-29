@@ -22,14 +22,14 @@ const IndexPage = () => (
       <Seo title="Home" />
       <Flex direction={["column", "column", "row"]}>
         <Flex direction="column" align="self-start">
-          <HStack align="center" justify="center">
-            <Memoji width={140} height={140} padding={3} />
+          <HStack align="center" justify="center" mx="auto">
+            <Memoji width={150} height={150} padding={3} />
           </HStack>
           <section>
             <Introduction />
             <Box
               bg={useColorModeValue("#F2F2F0", "boxes")}
-              borderLeft="3px solid #76B39D"
+              borderLeft="3px solid #155E63"
               rounded="md"
               shadow="sm"
               mt={20}

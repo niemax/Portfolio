@@ -2,7 +2,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import {
   Flex,
-  Stack,
   VStack,
   HStack,
   Heading,
@@ -48,13 +47,11 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
         </Box>
         <Box mt={8} w="100%" h={"0.1rem"} bg="grey" />
         <Box mt={10}>
-          <Heading fontWeight="700">{frontmatter.title}</Heading>
-          <HStack justify="space-between" align="center" mb={6}>
-            <VStack>
-              <Heading size="xs" color="green">
-                {frontmatter.readTime} min read
-              </Heading>
-            </VStack>
+          <Heading size="xs" color="grey">
+            {frontmatter.date}
+          </Heading>
+          <HStack mt={3}>
+            <Heading fontWeight="700">{frontmatter.title}</Heading>
             <Wrap>
               {frontmatter.techStack?.map((itm: any, idx: string) => (
                 <WrapItem>
@@ -64,6 +61,14 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
                 </WrapItem>
               ))}
             </Wrap>
+          </HStack>
+          <HStack justify="space-between" align="center" mb={6}>
+            <HStack>
+              <Heading size="xs" color="green">
+                {frontmatter.readTime} min read
+              </Heading>
+            </HStack>
+
             <HStack>
               <Heading size="sm" color="green">
                 Project Link
@@ -94,6 +99,7 @@ export const pageQuery = graphql`
         videoURL
         title
         slug
+        date
         readTime
         gitHubLink
         techStack

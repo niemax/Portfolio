@@ -1,7 +1,7 @@
 ---
 title: "Habitio"
 slug: habitio-details
-date: "2021-08-01"
+date: "26.11.2021"
 readTime: 3
 gitHubLink: "https://github.com/niemax/Habitio"
 techStack: ["React-Native", "AsyncStorage"]
@@ -24,7 +24,7 @@ videoURL: https://player.vimeo.com/video/650316576?h=9b8c4c3cc9&amp;badge=0&amp;
 
 <br>
 
-# **_With Habitio I have achieved many benefits, such as:_**
+# **With Habitio I have achieved many benefits, such as:**
 
 <br>
 
@@ -34,7 +34,7 @@ videoURL: https://player.vimeo.com/video/650316576?h=9b8c4c3cc9&amp;badge=0&amp;
 
 <br>
 
-# **_Tech Stack_** ⚡
+# **Tech Stack** ⚡
 
 <br>
 
@@ -45,21 +45,21 @@ videoURL: https://player.vimeo.com/video/650316576?h=9b8c4c3cc9&amp;badge=0&amp;
 
 <br>
 
-# **_How does it work?_** 🤔
+# **How does it work?** 🤔
 
 <br>
 
-**_Easy_**, just download the app (not published yet) from App Store or Google Play Store. No
-account creation is needed since the app only stores information on the device.
+**Easy**, just download the app (not published yet) from App Store or Google Play Store. No account
+creation is needed since the app only stores information on the device.
 
 <br>
 
-**_Start habit creation._** You have two choices - choose from pre-defined habits within different
+**Start habit creation.** You have two choices - choose from pre-defined habits within different
 categories, or create your own.
 
 <br>
 
-**_Configure_** the options such as description or color. You can get the habit to be done only once
+**Configure** the options such as description or color. You can get the habit to be done only once
 on a specific date, or you can add a goal for it. Configure the number of days you want to complete
 it on. You can also choose from different units such as hours, pages, bottles - those are good for
 different kinds of habits.
@@ -71,12 +71,12 @@ you got it.
 
 <br>
 
-**_Set a timer_** to notificate you daily at a specific time. ⏰
+**Set a timer** to notificate you daily at a specific time. ⏰
 
 <br>
 
-**_Track_** your progress and edit the habit whenever you feel like it - change the color, change
-the time of the reminder, delete the reminder, etc...
+**Track** your progress and edit the habit whenever you feel like it - change the color, change the
+time of the reminder, delete the reminder, etc...
 
 <br>
 
