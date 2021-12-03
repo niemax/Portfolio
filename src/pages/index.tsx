@@ -29,22 +29,21 @@ const IndexPage = () => (
             <Introduction />
             <Box
               bg={useColorModeValue("#F2F2F0", "boxes")}
-              borderLeft="3px solid #155E63"
+              borderLeft="3px solid #"
               rounded="md"
               shadow="sm"
               mt={20}
               h="auto"
               p={3}
             >
-              <Heading fontSize={20} textDecor="none" color="#155E63">
+              <Heading fontSize={20} textDecor="none" color="#457b9d">
                 Features in this version
               </Heading>
-              <HStack>
-                <UnorderedList>
-                  <ListItem>
+              <UnorderedList>
+                <ListItem>
+                  <HStack>
                     <Link to="/projects">
                       <Heading
-                        as="a"
                         size="xs"
                         color={useColorModeValue("#534436", "#fff")}
                         textDecor="none"
@@ -53,12 +52,29 @@ const IndexPage = () => (
                         Project details in projects page
                       </Heading>
                     </Link>
-                  </ListItem>
-                </UnorderedList>
-                <Badge colorScheme="teal" variant="subtle">
-                  New
-                </Badge>
-              </HStack>
+                    <Badge colorScheme="teal" variant="subtle">
+                      New
+                    </Badge>
+                  </HStack>
+                </ListItem>
+                <ListItem>
+                  <HStack>
+                    <Link to="/skills">
+                      <Heading
+                        size="xs"
+                        color={useColorModeValue("#534436", "#fff")}
+                        textDecor="none"
+                        _hover={{ color: "green" }}
+                      >
+                        Skill levels as hearts in Skills page
+                      </Heading>
+                    </Link>
+                    <Badge colorScheme="teal" variant="subtle">
+                      New
+                    </Badge>
+                  </HStack>
+                </ListItem>
+              </UnorderedList>
             </Box>
             <Recents />
           </section>

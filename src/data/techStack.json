@@ -6,7 +6,7 @@
     "type": "language",
     "color": "#f7df1e",
     "scheme": "yellow",
-    "backgroundColor": "rgba(247, 223, 30, 0.4)",
+    "hearts": 3,
     "image": "../images/icons8-javascript-48.png"
   },
   {
@@ -16,6 +16,7 @@
     "type": "language",
     "color": "#3178c6",
     "scheme": "blue",
+    "hearts": 3,
     "image": "../images/icons8-typescript-48.png"
   },
   {
@@ -25,6 +26,7 @@
     "type": "language",
     "color": "#ffde57",
     "scheme": "yellow",
+    "hearts": 1,
     "image": "../images/icons8-python-48.png"
   },
   {
@@ -34,6 +36,7 @@
     "color": "#e34f26",
     "scheme": "orange",
     "type": "development",
+    "hearts": 3,
     "image": "../images/icons8-html-5-48.png"
   },
   {
@@ -43,6 +46,7 @@
     "type": "development",
     "color": "#002561",
     "scheme": "blue",
+    "hearts": 3,
     "image": "../images/icons8-css3-48.png"
   },
   {
@@ -52,6 +56,7 @@
     "type": "development",
     "color": "#f06292",
     "scheme": "pink",
+    "hearts": 2,
     "image": "../images/icons8-sass-144.png"
   },
   {
@@ -61,6 +66,7 @@
     "type": "Backend",
     "color": "#6cc24a",
     "scheme": "green",
+    "hearts": 2,
     "image": "../images/icons8-nodejs-144.png"
   },
   {
@@ -70,6 +76,7 @@
     "type": "development",
     "color": "#00d8ff",
     "scheme": "teal",
+    "hearts": 3,
     "image": "../images/icons8-react-40.png"
   },
   {
@@ -79,6 +86,7 @@
     "type": "development",
     "color": "#00d8ff",
     "scheme": "teal",
+    "hearts": 3,
     "image": "../images/icons8-react-40.png"
   },
   {
@@ -88,6 +96,7 @@
     "type": "development",
     "color": "#764abc",
     "scheme": "purple",
+    "hearts": 2,
     "image": "../images/icons8-redux-144.png"
   },
   {
@@ -97,6 +106,7 @@
     "type": "framework",
     "color": "#663399",
     "scheme": "purple",
+    "hearts": 2,
     "image": "../images/icons8-gatsbyjs-144.png"
   },
   {
@@ -106,6 +116,7 @@
     "type": "development",
     "color": "#e10098",
     "scheme": "pink",
+    "hearts": 2,
     "image": "../images/icons8-graphql-144.png"
   },
   {
@@ -115,15 +126,17 @@
     "type": "tools",
     "color": "#00d8ff",
     "scheme": "purple",
+    "hearts": 3,
     "image": "../images/icons8-visual-studio-2019-48.png"
   },
   {
     "name": "Firebase",
     "description": "Database / SaaS",
     "link": "https://firebase.google.com/",
-    "type": "Database / SaaS",
+    "type": "Database",
     "color": "#fbbc05",
     "scheme": "orange",
+    "hearts": 3,
     "image": "../images/icons8-firebase-48.png"
   },
   {
@@ -133,6 +146,7 @@
     "type": "Web Development",
     "color": "#589636",
     "scheme": "green",
+    "hearts": 2,
     "image": "../images/icons8-mongodb-48.png"
   },
   {
@@ -142,6 +156,7 @@
     "type": "DevOps",
     "color": "#c9c3e6",
     "scheme": "telegram",
+    "hearts": 2,
     "image": "../images/icons8-heroku-48.png"
   },
   {
@@ -151,6 +166,7 @@
     "type": "Web Design",
     "color": "#0cb9c1",
     "scheme": "twitter",
+    "hearts": 2,
     "image": "../images/icons8-figma-48.png"
   },
   {
@@ -160,6 +176,7 @@
     "type": "tools",
     "color": "#ef5b25",
     "scheme": "orange",
+    "hearts": 2,
     "image": "../images/icons8-postman-api-64.png"
   }
 ]

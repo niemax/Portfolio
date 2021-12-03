@@ -30,7 +30,7 @@ export const MBox = ({ height, width, animation, children, ...props }: IMBoxProp
     height={height}
     width={width}
     rounded="lg"
-    bg={useColorModeValue("#F2F2F0", "boxes")}
+    bg={useColorModeValue("light", "boxes")}
     whileHover={animation}
     whileTap={{ scale: 0.9 }}
     {...props}

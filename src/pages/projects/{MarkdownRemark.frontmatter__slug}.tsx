@@ -2,7 +2,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import {
   Flex,
-  VStack,
   HStack,
   Heading,
   Box,
@@ -53,7 +52,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
           <HStack mt={3}>
             <Heading fontWeight="700">{frontmatter.title}</Heading>
             <Wrap>
-              {frontmatter.techStack?.map((itm: any, idx: string) => (
+              {frontmatter.techStack.map((itm: any, idx: string) => (
                 <WrapItem>
                   <Tag key={idx} rounded="md" size="sm" colorScheme="teal" variant="subtle">
                     <TagLabel color={getTagColor(itm)}>{itm}</TagLabel>

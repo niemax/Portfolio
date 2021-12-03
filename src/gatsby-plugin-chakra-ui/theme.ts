@@ -38,9 +38,10 @@ const theme = {
   styles: {
     global: props => ({
       body: {
-        color: mode("#534436", "#ffff")(props),
-        bg: mode("#F9F8EB", "#131B1F")(props),
-        overflowX: "hidden",
+        color: mode("#000", "#ffff")(props),
+        bg: mode("#f1faee", "#131B1F")(props),
+        overflowX: "auto",
+        overflowY: "auto",
       },
       a: {
         cursor: "pointer",

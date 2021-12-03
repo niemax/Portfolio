@@ -3,19 +3,10 @@ import { PageScaleFade } from "../components/motion/transitions";
 import { motion } from "framer-motion";
 import { skillsContainer, skillsItem } from "../components/motion/transitions";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import {
-  Box,
-  HStack,
-  VStack,
-  useColorModeValue,
-  Heading,
-  SimpleGrid,
-  Tag,
-  TagLabel,
-} from "@chakra-ui/react";
+import { Box, HStack, useColorModeValue, Heading, SimpleGrid } from "@chakra-ui/react";
 import { MBox } from "../components/motion/MotionBox";
 import { graphql } from "gatsby";
-import { FaChartPie } from "react-icons/fa";
+import { FaChartPie, FaHeart } from "react-icons/fa";
 import Seo from "../components/seo";
 
 const Skills = ({ data }: any) => {
@@ -34,7 +25,6 @@ const Skills = ({ data }: any) => {
             Languages, technologies, and tools I'm familiar with.
           </Heading>
         </Box>
-
         <Box mt="8">
           <motion.div variants={skillsContainer} initial="hidden" animate="show">
             <SimpleGrid columns={[1, 2, 2, 2]} spacingX={6} spacingY={4}>
@@ -59,20 +49,23 @@ const Skills = ({ data }: any) => {
                         >
                           <GatsbyImage alt={node.name} image={image} height={50} width={50} />
                         </Box>
-                        <VStack>
-                          <Box
-                            as="a"
-                            onClick={() => window.open(`${node.link}`)}
-                            _hover={{ color: node.color }}
-                          >
+                        <Box
+                          as="a"
+                          onClick={() => window.open(`${node.link}`)}
+                          _hover={{ color: node.color }}
+                        >
+                          <HStack>
                             <Heading size="md" fontSize={18} fontWeight={500} mt={2}>
                               {node.name}
                             </Heading>
-                            <Heading size="xs" mt={1}>
-                              {node.description}
-                            </Heading>
-                          </Box>
-                        </VStack>
+                            {Array.from(Array(node.hearts)).map((_, idx) => (
+                              <FaHeart key={idx} color="e63946" />
+                            ))}
+                          </HStack>
+                          <Heading size="xs" mt={1}>
+                            {node.description}
+                          </Heading>
+                        </Box>
                       </HStack>
                     </MBox>
                   </motion.div>
@@ -96,6 +89,7 @@ export const _query = graphql`
           link
           name
           type
+          hearts
           image {
             childImageSharp {
               gatsbyImageData(
