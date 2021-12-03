@@ -33,8 +33,9 @@ export const Education = () => (
         >
           <HStack align="center" spacing={4} p={2}>
             <Box
-              height={120}
-              width={120}
+              height="auto"
+              width="auto"
+              p={1}
               rounded="full"
               align="center"
               justify="center"

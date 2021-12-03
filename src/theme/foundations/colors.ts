@@ -2,7 +2,7 @@ export const colors = {
   green: "#a8dadc",
   darkerGreen: "#155E63",
   dark: "#192429",
-  light: "#f1faee",
+  light: "#F9F9F9",
   boxes: "#192429",
   navLightHover: "#E0E0E0",
   navDarkHover: "#151B23",

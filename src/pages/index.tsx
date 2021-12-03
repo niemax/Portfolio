@@ -28,8 +28,8 @@ const IndexPage = () => (
           <section>
             <Introduction />
             <Box
-              bg={useColorModeValue("#F2F2F0", "boxes")}
-              borderLeft="3px solid #"
+              bg={useColorModeValue("#F7F7F7", "boxes")}
+              borderLeft="3px solid #155E63"
               rounded="md"
               shadow="sm"
               mt={20}
