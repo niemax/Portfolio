@@ -66,7 +66,7 @@ const IndexPage = () => (
                         textDecor="none"
                         _hover={{ color: "green" }}
                       >
-                        Skill levels as hearts in Skills page
+                        Skill levels as lightnings in Skills page
                       </Heading>
                     </Link>
                     <Badge colorScheme="teal" variant="subtle">
