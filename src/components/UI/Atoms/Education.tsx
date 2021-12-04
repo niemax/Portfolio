@@ -27,7 +27,6 @@ export const Education = () => (
           height="auto"
           border={useColorModeValue("", `1px solid #2A404B`)}
           animation={{ scale: 1.02 }}
-          shadow="md"
           py={2}
           width="auto"
         >

@@ -44,7 +44,6 @@ export const ProjectCards = (props: IProjectCardProps) => {
                 height="auto"
                 width="auto"
                 border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
-                shadow="md"
                 my={4}
                 py={1}
                 animation={{ scale: 1.04 }}

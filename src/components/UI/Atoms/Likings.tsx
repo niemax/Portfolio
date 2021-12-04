@@ -11,23 +11,23 @@ export const Likings = () => (
         <Heading mb="4">What I like</Heading>
         <List spacing={3}>
           <ListItem>
-            <ListIcon as={MdCheckCircle} color="#457b9d" fontSize={22} />
+            <ListIcon as={MdCheckCircle} color="tealish" fontSize={22} />
             Forests 🌲
           </ListItem>
           <ListItem>
-            <ListIcon as={MdCheckCircle} color="#457b9d" fontSize={22} />
+            <ListIcon as={MdCheckCircle} color="tealish" fontSize={22} />
             Green Tea 🍵
           </ListItem>
           <ListItem>
-            <ListIcon as={MdCheckCircle} color="#457b9d" fontSize={22} />
+            <ListIcon as={MdCheckCircle} color="tealish" fontSize={22} />
             Coding (obviously) 🤓
           </ListItem>
           <ListItem>
-            <ListIcon as={MdCheckCircle} color="#457b9d" fontSize={22} />
-            Hitting the gym 🦾
+            <ListIcon as={MdCheckCircle} color="tealish" fontSize={22} />
+            The gym 🦾
           </ListItem>
           <ListItem>
-            <ListIcon as={MdCheckCircle} color="#457b9d" fontSize={22} />
+            <ListIcon as={MdCheckCircle} color="tealish" fontSize={22} />
             My Girlfriend 💟
           </ListItem>
         </List>

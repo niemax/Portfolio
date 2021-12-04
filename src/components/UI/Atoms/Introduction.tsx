@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Heading } from "@chakra-ui/react";
-import { LineBreak } from "./LineBreak";
 
 export const Introduction: React.FC = () => (
   <>
@@ -19,7 +18,7 @@ export const Introduction: React.FC = () => (
         Software Developer and student from Helsinki. My vision is to make the web accessible and
         enjoyable for everyone. Love working in the <strong>JavaScript</strong> ecosystem -
         especially <strong>React & NodeJS.</strong> Always up for challenges and eager to learn from
-        better programmers.
+        better programmers. <strong>Open for work!</strong>
       </Heading>
     </Box>
   </>

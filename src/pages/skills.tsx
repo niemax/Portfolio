@@ -7,6 +7,7 @@ import { Box, HStack, useColorModeValue, Heading, SimpleGrid } from "@chakra-ui/
 import { MBox } from "../components/motion/MotionBox";
 import { graphql } from "gatsby";
 import { FaChartPie, FaHeart } from "react-icons/fa";
+import { HiOutlineLightningBolt } from "react-icons/hi";
 import Seo from "../components/seo";
 
 const Skills = ({ data }: any) => {
@@ -38,7 +39,6 @@ const Skills = ({ data }: any) => {
                       px={2}
                       py={2}
                       animation={{ y: -6.25 }}
-                      shadow={useColorModeValue("lg", "xl")}
                       border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
                     >
                       <HStack>
@@ -59,7 +59,7 @@ const Skills = ({ data }: any) => {
                               {node.name}
                             </Heading>
                             {Array.from(Array(node.hearts)).map((_, idx) => (
-                              <FaHeart key={idx} color="e63946" />
+                              <HiOutlineLightningBolt key={idx} />
                             ))}
                           </HStack>
                           <Heading size="xs" mt={1}>

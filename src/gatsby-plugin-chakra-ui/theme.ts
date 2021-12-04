@@ -39,8 +39,8 @@ const theme = {
     global: props => ({
       body: {
         color: mode("#000", "#ffff")(props),
-        bg: mode("#f1faee", "#131B1F")(props),
-        overflowX: "auto",
+        bg: mode("#F7FAFC", "#131B1F")(props),
+        overflowX: "hidden",
         overflowY: "auto",
       },
       a: {

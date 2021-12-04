@@ -28,15 +28,15 @@ const IndexPage = () => (
           <section>
             <Introduction />
             <Box
-              bg={useColorModeValue("#F7F7F7", "boxes")}
-              borderLeft="3px solid #155E63"
+              bg={useColorModeValue("#FFF", "boxes")}
+              borderLeft="3px solid #B1D8B7"
               rounded="md"
               shadow="sm"
               mt={20}
               h="auto"
               p={3}
             >
-              <Heading fontSize={20} textDecor="none" color="#457b9d">
+              <Heading fontSize={20} textDecor="none" color={useColorModeValue("457b9d", "green")}>
                 Features in this version
               </Heading>
               <UnorderedList>
