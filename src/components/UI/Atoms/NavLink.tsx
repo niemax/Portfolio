@@ -4,7 +4,6 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import { INavLinkProps } from "../../../interfaces";
 
 export const NavLink = ({ ...props }: INavLinkProps) => {
-  const [isActive, setIsActive] = React.useState<boolean | number>(false);
   const { allNavlinksJson } = useStaticQuery<AllNavlinksJson>(
     graphql`
       query {
@@ -35,7 +34,7 @@ export const NavLink = ({ ...props }: INavLinkProps) => {
 
   return (
     <Box ml={1}>
-      {allNavlinksJson.edges?.map(({ node }, index) => (
+      {allNavlinksJson.edges?.map(({ node } ) => (
         <Button
           key={node.name}
           py={props.padding}
@@ -43,7 +42,6 @@ export const NavLink = ({ ...props }: INavLinkProps) => {
           w="auto"
           mx={1}
           variant="ghost"
-          onClick={() => setIsActive(index)}
           _hover={{ bg: useColorModeValue("navLightHover", "boxes") }}
           {...props}
         >

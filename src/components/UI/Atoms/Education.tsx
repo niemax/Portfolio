@@ -2,7 +2,8 @@ import React from "react";
 import {
   Heading,
   Box,
-  Stack,
+  Wrap,
+  WrapItem,
   VStack,
   HStack,
   useColorModeValue,
@@ -55,17 +56,25 @@ export const Education = () => (
               </Heading>
               <Heading size="sm">ICT and Digital Services</Heading>
               <Heading size="sm">2020 - present</Heading>
-              <Stack direction={["column", "column", "row", "row"]}>
-                <Tag colorScheme="teal" rounded="md" size="sm" variant="subtle">
-                  <TagLabel>ICT</TagLabel>
-                </Tag>
-                <Tag colorScheme="teal" rounded="md" size="sm" variant="subtle">
-                  <TagLabel>Programming</TagLabel>
-                </Tag>
-                <Tag colorScheme="teal" rounded="md" size="sm" variant="subtle">
-                  <TagLabel>Entrepreneurship</TagLabel>
-                </Tag>
-              </Stack>
+              <HStack>
+                <Wrap>
+                  <WrapItem>
+                    <Tag colorScheme="teal" rounded="md" size="sm" variant="subtle">
+                      <TagLabel>ICT</TagLabel>
+                    </Tag>
+                  </WrapItem>
+                  <WrapItem>
+                    <Tag colorScheme="teal" rounded="md" size="sm" variant="subtle">
+                      <TagLabel>Programming</TagLabel>
+                    </Tag>
+                  </WrapItem>
+                  <WrapItem>
+                    <Tag colorScheme="teal" rounded="md" size="sm" variant="subtle">
+                      <TagLabel>Entrepreneurship</TagLabel>
+                    </Tag>
+                  </WrapItem>
+                </Wrap>
+              </HStack>
             </VStack>
           </HStack>
         </MBox>

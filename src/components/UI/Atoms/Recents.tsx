@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Heading } from "@chakra-ui/react";
-import { LineBreak } from "./LineBreak";
 import { ProjectCards } from "./ProjectCards";
 import { graphql, useStaticQuery } from "gatsby";
 import { AllProjectsJson } from "../../../types";
@@ -43,7 +42,7 @@ export const Recents = () => {
   return (
     <>
       <Heading mt={20}>Recent work</Heading>
-      <Box w="100%">
+      <Box>
         <ProjectCards data={mapped} slug="/projects" />
       </Box>
     </>
