@@ -50,11 +50,11 @@ const IndexPage = () => (
                         _hover={{ color: "green" }}
                       >
                         Project details in projects page
+                        <Badge colorScheme="teal" variant="subtle" ml={1}>
+                          New
+                        </Badge>
                       </Heading>
                     </Link>
-                    <Badge colorScheme="teal" variant="subtle">
-                      New
-                    </Badge>
                   </HStack>
                 </ListItem>
                 <ListItem>
@@ -67,11 +67,11 @@ const IndexPage = () => (
                         _hover={{ color: "green" }}
                       >
                         Skill levels as lightnings in Skills page
+                        <Badge colorScheme="teal" variant="subtle" ml={1}>
+                          New
+                        </Badge>
                       </Heading>
                     </Link>
-                    <Badge colorScheme="teal" variant="subtle">
-                      New
-                    </Badge>
                   </HStack>
                 </ListItem>
               </UnorderedList>
