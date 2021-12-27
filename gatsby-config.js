@@ -4,8 +4,8 @@ module.exports = {
   },
   siteMetadata: {
     title: `Niemax's Portfolio`,
-    description: `My Developer Portfolio`,
-    author: `@niemax`,
+    description: `niemax's portfolio`,
+    author: `Axel Nieminen`,
     siteUrl: `https://niemax.me/portfolio`,
   },
   plugins: [
