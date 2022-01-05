@@ -44,10 +44,9 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
         <Box>
           <GatsbyImage alt={frontmatter.title} image={image} />
         </Box>
-        <Box mt={8} w="100%" h={"0.1rem"} bg="grey" />
         <Box mt={10}>
           <Heading size="xs" color="grey">
-            {frontmatter.date}
+            published on {frontmatter.date}
           </Heading>
           <HStack mt={3}>
             <Heading fontWeight="700">{frontmatter.title}</Heading>

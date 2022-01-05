@@ -66,7 +66,7 @@ const IndexPage = () => (
                         textDecor="none"
                         _hover={{ color: "green" }}
                       >
-                        Skill levels as lightnings in Skills page
+                        New projects page
                         <Badge colorScheme="teal" variant="subtle" ml={1}>
                           New
                         </Badge>

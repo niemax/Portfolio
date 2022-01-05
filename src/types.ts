@@ -30,3 +30,11 @@ export type AllTechStackJson = {
     };
   };
 };
+
+export type Scale = {
+  scale: number;
+};
+
+export type Y = {
+  y: number;
+};

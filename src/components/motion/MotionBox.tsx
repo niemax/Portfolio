@@ -2,16 +2,8 @@ import React, { ReactNode } from "react";
 import { Box, BoxProps } from "@chakra-ui/layout";
 import { motion } from "framer-motion";
 import { useColorModeValue } from "@chakra-ui/color-mode";
-
+import { Y, Scale } from "../../types";
 export const MotionBox = motion<BoxProps>(Box);
-
-type Scale = {
-  scale: number;
-};
-
-type Y = {
-  y: number;
-};
 
 interface IMBoxProps {
   height: number | string;
@@ -33,6 +25,7 @@ export const MBox = ({ height, width, animation, children, ...props }: IMBoxProp
     bg={useColorModeValue("light", "boxes")}
     whileHover={animation}
     whileTap={{ scale: 0.9 }}
+    _hover={{ opacity: 1 }}
     {...props}
   >
     {children}

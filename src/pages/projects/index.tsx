@@ -32,6 +32,17 @@ const Projects = () => {
                   )
                 }
               }
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    quality: 100
+                    height: 500
+                    width: 500
+                    placeholder: BLURRED
+                  )
+                }
+              }
             }
           }
         }
@@ -42,7 +53,7 @@ const Projects = () => {
     <PageScaleFade>
       <Flex direction="column" align="center">
         <Seo title="Projects" />
-        <Flex px={[2, 6, 14, 14]}>
+        <Flex px={[2, 6, 0, 0]}>
           <Box>
             <Heading>My Work</Heading>
             <Heading size="md" mt={4} mb={6}>

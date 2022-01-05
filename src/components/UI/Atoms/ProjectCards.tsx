@@ -3,23 +3,35 @@ import { motion } from "framer-motion";
 import {
   Heading,
   Tooltip,
-  Flex,
   Stack,
-  Tag,
-  TagLabel,
+  HStack,
+  VStack,
   Box,
   useColorModeValue,
+  IconButton,
 } from "@chakra-ui/react";
 import { MBox } from "../../motion/MotionBox";
 import { container, item } from "../../motion/transitions";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { getTagColor } from "../../../utility/helpers/getTagColor";
 import { windowOpen } from "../../../utility/helpers/windowOpen";
 import { Link } from "gatsby";
+import { Scale, Y } from "../../../types";
+import { RiShareBoxFill } from "react-icons/ri";
 
 interface IProjectCardProps {
   data: any[];
   slug: string;
+  backgroundColor?: string;
+  rounded?: string;
+  mt?: number;
+  shadow?: string;
+  padding?: number;
+  headingSize?: string;
+  headingWeight?: number;
+  icon?: any;
+  textColor?: string;
+  border?: string;
+  animation?: Y | Scale;
 }
 
 export const ProjectCards = (props: IProjectCardProps) => {
@@ -36,50 +48,79 @@ export const ProjectCards = (props: IProjectCardProps) => {
   return (
     <motion.div variants={container} initial="hidden" animate="show">
       {props.data.map(({ node }: any) => {
-        const image = getImage(node.icon?.childImageSharp);
+        const image = getImage(node.image?.childImageSharp);
         return (
           <motion.div variants={item} key={node.name}>
-            <Link to={resolvePathToSlug(props.slug, node.slug)}>
-              <MBox
-                height="auto"
-                width="auto"
-                border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
-                my={4}
-                py={1}
-                animation={{ scale: 1.04 }}
-              >
-                <Flex p={4} direction="column">
-                  <Stack
-                    direction={["column", "row", "row", "row"]}
-                    align="center"
-                    justify="baseline"
-                  >
-                    <GatsbyImage alt={node.language} image={image} />
+            <Stack
+              shadow={props.shadow}
+              mt={props.mt}
+              background={props.backgroundColor}
+              rounded={props.rounded}
+              _hover={{ opacity: 1 }}
+              animation={props.animation}
+              opacity={0.8}
+              mb={8}
+              padding={props.padding}
+              direction={["column", "column", "row", "row"]}
+              align="self-start"
+              border={props.border}
+            >
+              <MBox width="auto" height="auto" animation={{ scale: 1.04 }} shadow="lg">
+                <GatsbyImage image={image} />
+              </MBox>
+
+              <VStack align="self-start">
+                <Box ml={2}>
+                  <HStack justify="space-between" align="self-start">
+                    <Link to={resolvePathToSlug(props.slug, node.slug)}>
+                      <Heading
+                        textDecor="none"
+                        mb={3}
+                        size={props.headingSize}
+                        fontWeight={props.headingWeight}
+                      >
+                        {node.name}
+                      </Heading>
+                    </Link>
                     <Tooltip
-                      placement="top"
+                      placement="auto"
                       bg={useColorModeValue("black", "white")}
                       color={useColorModeValue("white", "black")}
-                      aria-label="A tooltip"
-                      label="Github Link"
+                      aria-label="Project link"
+                      label="GitHub link"
                     >
-                      <Box as="a" fontSize="xl" onClick={() => windowOpen(node.url)}>
-                        {node.name}
-                      </Box>
+                      <IconButton
+                        size="sm"
+                        onClick={() => windowOpen(node.url)}
+                        variant="outline"
+                        colorScheme="teal"
+                        aria-label="project link"
+                        fontSize="20px"
+                        icon={<RiShareBoxFill />}
+                      />
                     </Tooltip>
-                    <Stack direction="row">
-                      {node.tech.map((itm: any, idx: string) => (
-                        <Tag key={idx} rounded="md" size="sm" colorScheme="teal" variant="subtle">
-                          <TagLabel color={getTagColor(itm)}>{itm}</TagLabel>
-                        </Tag>
-                      ))}
-                    </Stack>
-                  </Stack>
-                  <Heading size="sm" mt="1">
-                    {node.description}
-                  </Heading>
-                </Flex>
-              </MBox>
-            </Link>
+                  </HStack>
+                  <Box maxW={80} mx="auto">
+                    <Heading size="sm" color={props.textColor}>
+                      {node.description}
+                    </Heading>
+                  </Box>
+                  <HStack mt={5} mb={2}>
+                    {node.tech.map((itm: any, idx: string) => (
+                      <Heading
+                        key={idx}
+                        size="sm"
+                        color={useColorModeValue("black", "white")}
+                        opacity={0.8}
+                        fontWeight={700}
+                      >
+                        {itm}
+                      </Heading>
+                    ))}
+                  </HStack>
+                </Box>
+              </VStack>
+            </Stack>
           </motion.div>
         );
       })}

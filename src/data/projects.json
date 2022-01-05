@@ -8,6 +8,7 @@
     "tech": ["React-Native", "AsyncStorage"],
     "url": "https://github.com/niemax/Habitio",
     "slug": "habitio-details",
+    "image": "../staticImages/HabitioScreenshot.png",
     "description": "A habit tracker app that makes you be productive and challenge yourself everyday.\nWith the help of this app you get to be the best you possible and stop procrastination."
   },
   {
@@ -19,6 +20,7 @@
     "icon": "../images/icons8-javascript-48.png",
     "url": "https://github.com/niemax/GoTrain-Mobile",
     "slug": "gotrain-mobile-details",
+    "image": "../staticImages/GoTrainScreenshot.png",
     "description": "A workout app that gives you instructions and tracks your workouts. Has a set of pre-defined workouts. My first ever React app for a school project."
   },
   {
@@ -29,6 +31,7 @@
     "language": "Javascript",
     "icon": "../images/icons8-javascript-48.png",
     "url": "https://github.com/niemax/GoTrain-API",
+    "image": "../staticImages/HabitioScreenshot.png",
     "description": "A Rest API for my workout app built with NodeJs and MongoDB storing all the pre-defined workouts."
   },
   {
@@ -40,6 +43,7 @@
     "icon": "../images/icons8-typescript-48.png",
     "url": "https://github.com/niemax/Portfolio",
     "slug": "portfolio-details",
+    "image": "../staticImages/PortfolioScreenshot.png",
     "description": "My personal portfolio made with love in Helsinki, Finland."
   }
 ]
