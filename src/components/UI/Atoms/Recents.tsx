@@ -36,8 +36,8 @@ export const Recents = () => {
                   gatsbyImageData(
                     layout: CONSTRAINED
                     quality: 100
-                    height: 150
-                    width: 300
+                    height: 200
+                    width: 400
                     placeholder: BLURRED
                   )
                 }
