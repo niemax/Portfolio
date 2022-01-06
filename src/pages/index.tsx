@@ -59,7 +59,7 @@ const IndexPage = () => (
                 </ListItem>
                 <ListItem>
                   <HStack>
-                    <Link to="/skills">
+                    <Link to="/projects">
                       <Heading
                         size="xs"
                         color={useColorModeValue("#534436", "#fff")}

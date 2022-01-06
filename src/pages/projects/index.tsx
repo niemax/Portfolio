@@ -55,8 +55,8 @@ const Projects = () => {
         <Seo title="Projects" />
         <Flex px={[2, 6, 0, 0]}>
           <Box>
-            <Heading>My Work</Heading>
-            <Heading size="md" mt={4} mb={6}>
+            <Heading ml={3}>My Work</Heading>
+            <Heading size="md" ml={3} mt={4} mb={20}>
               Some of my personal projects
             </Heading>
             <ProjectCards data={allProjectsJson.edges} slug="" />
