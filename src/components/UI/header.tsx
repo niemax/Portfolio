@@ -15,11 +15,11 @@ import {
   MenuList,
 } from "@chakra-ui/react";
 import { HiOutlineMenuAlt1 as BurgerIcon, HiX } from "react-icons/hi";
-import { WiDaySunny } from "react-icons/wi";
-import { FaGithub, FaMoon } from "react-icons/fa";
-
+import { FaGithub, FaMoon, FaSun } from "react-icons/fa";
+import { BsFillMoonStarsFill } from "react-icons/bs";
 import { NavLink } from "../UI/Atoms/NavLink";
 import { Memoji } from "../UI/Atoms/Memoji";
+
 import { windowOpen } from "../../utility/helpers/windowOpen";
 
 const Header = () => {
@@ -72,12 +72,12 @@ const Header = () => {
             label={useColorModeValue("dark mode", "light mode")}
           >
             <IconButton
-              color={"#FFD632"}
+              color="#FCBB59"
               variant="ghost"
               fontSize={colorMode === "light" ? 18 : 24}
               aria-label="toggle theme mode"
               onClick={toggleColorMode}
-              icon={colorMode === "light" ? <FaMoon /> : <WiDaySunny />}
+              icon={colorMode === "light" ? <BsFillMoonStarsFill /> : <FaSun />}
               _hover={{ bg: useColorModeValue("navLightHover", "boxes") }}
             />
           </Tooltip>

@@ -9,7 +9,7 @@
     "url": "https://github.com/niemax/Habitio",
     "slug": "habitio-details",
     "image": "../staticImages/HabitioScreenshot.png",
-    "description": "A habit tracker app that makes you be productive and challenge yourself everyday.\nWith the help of this app you get to be the best you possible and stop procrastination."
+    "description": "A habit tracker app that makes you productive and challenge yourself everyday.\nWith the help of this app you get to be the best you possible and stop procrastination."
   },
   {
     "name": "GoTrain",
@@ -44,6 +44,6 @@
     "url": "https://github.com/niemax/Portfolio",
     "slug": "portfolio-details",
     "image": "../staticImages/PortfolioScreenshot.png",
-    "description": "My personal portfolio made with love in Helsinki, Finland."
+    "description": "My personal portfolio hand-crafted with TypeScript & love in Helsinki, Finland."
   }
 ]

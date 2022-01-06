@@ -9,6 +9,7 @@ import {
   Box,
   useColorModeValue,
   IconButton,
+  Flex,
 } from "@chakra-ui/react";
 import { MBox } from "../../motion/MotionBox";
 import { container, fromDownToUpItem, item, otherItem, skillsItem } from "../../motion/transitions";
@@ -32,6 +33,7 @@ interface IProjectCardProps {
   textColor?: string;
   border?: string;
   animation?: Y | Scale;
+  mb?: number;
 }
 
 export const ProjectCards = (props: IProjectCardProps) => {
@@ -49,16 +51,17 @@ export const ProjectCards = (props: IProjectCardProps) => {
     <motion.div variants={container} initial="hidden" animate="show">
       {props.data.map(({ node }: any, index: number) => {
         const image = getImage(node.image?.childImageSharp);
+        const icon = getImage(node.icon?.childImageSharp);
         return (
           <motion.div variants={item} key={node.name}>
             <Stack
               shadow={props.shadow}
-              mt={props.mt}
               background={props.backgroundColor}
               rounded={props.rounded}
               _hover={{ opacity: 1 }}
               animation={props.animation}
               opacity={0.8}
+              mt={props.mt || 20}
               mb={20}
               padding={props.padding}
               direction={["column", "column", index % 2 === 0 ? "row-reverse" : "row"]}
@@ -71,19 +74,41 @@ export const ProjectCards = (props: IProjectCardProps) => {
                 </MBox>
               </motion.div>
               <motion.div variants={fromDownToUpItem}>
-                <VStack align="self-start">
-                  <Box ml={2}>
-                    <HStack justify="space-between" align="self-start">
+                <VStack>
+                  <Box>
+                    <HStack>
                       <Link to={resolvePathToSlug(props.slug, node.slug)}>
                         <Heading
                           textDecor="none"
-                          mb={3}
+                          mb={1}
                           size={props.headingSize}
                           fontWeight={props.headingWeight}
                         >
                           {node.name}
                         </Heading>
                       </Link>
+                    </HStack>
+                    <Box maxW={80} mx="auto" mt={3}>
+                      <Heading size="sm" color={props.textColor}>
+                        {node.description}
+                      </Heading>
+                    </Box>
+                    <HStack mt={props.mt || 5} mb={2}>
+                      {node.tech.map((itm: any, idx: string) => (
+                        <i>
+                          <Heading
+                            key={idx}
+                            size="sm"
+                            color={useColorModeValue("black", "white")}
+                            opacity={0.8}
+                            fontWeight={700}
+                          >
+                            {itm}
+                          </Heading>
+                        </i>
+                      ))}
+                    </HStack>
+                    <Box align={index % 2 !== 0 && "right"}>
                       <Tooltip
                         placement="auto"
                         bg={useColorModeValue("black", "white")}
@@ -92,34 +117,19 @@ export const ProjectCards = (props: IProjectCardProps) => {
                         label="GitHub link"
                       >
                         <IconButton
-                          size="sm"
+                          mt={3}
+                          isRound={true}
+                          size="md"
                           onClick={() => windowOpen(node.url)}
                           variant="outline"
                           colorScheme="teal"
                           aria-label="project link"
                           fontSize="20px"
+                          shadow="md"
                           icon={<RiShareBoxFill />}
                         />
                       </Tooltip>
-                    </HStack>
-                    <Box maxW={80} mx="auto">
-                      <Heading size="sm" color={props.textColor}>
-                        {node.description}
-                      </Heading>
                     </Box>
-                    <HStack mt={5} mb={2}>
-                      {node.tech.map((itm: any, idx: string) => (
-                        <Heading
-                          key={idx}
-                          size="sm"
-                          color={useColorModeValue("black", "white")}
-                          opacity={0.8}
-                          fontWeight={700}
-                        >
-                          {itm}
-                        </Heading>
-                      ))}
-                    </HStack>
                   </Box>
                 </VStack>
               </motion.div>

@@ -54,13 +54,12 @@ export const Recents = () => {
   return (
     <>
       <Heading mt={20}>Recent work</Heading>
-      <Box mt={3}>
+      <Box mt={5}>
         <ProjectCards
           data={mapped}
           slug="/projects"
           backgroundColor={useColorModeValue("light", "boxes")}
           rounded="md"
-          mt={6}
           shadow="sm"
           padding={1}
           headingSize="md"
@@ -68,6 +67,7 @@ export const Recents = () => {
           textColor="gray"
           border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
           animation={{ scale: 1.04 }}
+          mt={5}
         />
       </Box>
     </>

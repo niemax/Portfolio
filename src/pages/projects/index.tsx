@@ -1,10 +1,11 @@
 import React from "react";
 import { PageScaleFade } from "../../components/motion/transitions";
-import { Heading, Flex, Box, HStack } from "@chakra-ui/react";
+import { Heading, Flex, Box, HStack, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import Seo from "../../components/seo";
 import { ProjectCards } from "../../components/UI/Atoms/ProjectCards";
 import { graphql, useStaticQuery } from "gatsby";
 import { AllProjectsJson } from "../../types";
+import { MdOutlineWorkOutline } from "react-icons/md";
 
 const Projects = () => {
   const { allProjectsJson } = useStaticQuery<AllProjectsJson>(
@@ -25,9 +26,9 @@ const Projects = () => {
                 childImageSharp {
                   gatsbyImageData(
                     layout: FIXED
-                    quality: 50
-                    height: 40
-                    width: 40
+                    quality: 100
+                    height: 25
+                    width: 25
                     placeholder: BLURRED
                   )
                 }
@@ -37,8 +38,8 @@ const Projects = () => {
                   gatsbyImageData(
                     layout: CONSTRAINED
                     quality: 100
-                    height: 500
-                    width: 500
+                    height: 450
+                    width: 450
                     placeholder: BLURRED
                   )
                 }
@@ -55,9 +56,12 @@ const Projects = () => {
         <Seo title="Projects" />
         <Flex px={[2, 6, 0, 0]}>
           <Box>
-            <Heading ml={3}>My Work</Heading>
-            <Heading size="md" ml={3} mt={4} mb={20}>
-              Some of my personal projects
+            <HStack>
+              <Heading ml={3}>My Work</Heading>
+              <MdOutlineWorkOutline fontSize={32} color={useColorModeValue("black", "white")} />
+            </HStack>
+            <Heading size="md" ml={3}>
+              Some of my personal projects that I have personally found the most successful.
             </Heading>
             <ProjectCards data={allProjectsJson.edges} slug="" />
           </Box>

@@ -1,8 +1,10 @@
 import React from "react";
 import { Box, Heading, List, ListItem, ListIcon } from "@chakra-ui/react";
-import { MdCheckCircle } from "react-icons/md";
 import { motion } from "framer-motion";
 import { otherItem, otherTransition } from "../../motion/transitions";
+import { GiForest, GiCoffeeCup, GiGymBag } from "react-icons/gi";
+import { CgGirl } from "react-icons/cg";
+import { FaCode } from "react-icons/fa";
 
 export const Likings = () => (
   <Box mt="10" mb="4">
@@ -11,24 +13,24 @@ export const Likings = () => (
         <Heading mb="4">What I like</Heading>
         <List spacing={3}>
           <ListItem>
-            <ListIcon as={MdCheckCircle} color="tealish" fontSize={22} />
-            Forests 🌲
+            <ListIcon as={GiForest} color="tealish" fontSize={22} />
+            Forests
           </ListItem>
           <ListItem>
-            <ListIcon as={MdCheckCircle} color="tealish" fontSize={22} />
-            Green Tea 🍵
+            <ListIcon as={GiCoffeeCup} color="tealish" fontSize={22} />
+            Green Tea
           </ListItem>
           <ListItem>
-            <ListIcon as={MdCheckCircle} color="tealish" fontSize={22} />
-            Coding (obviously) 🤓
+            <ListIcon as={FaCode} color="tealish" fontSize={22} />
+            Coding (obviously)
           </ListItem>
           <ListItem>
-            <ListIcon as={MdCheckCircle} color="tealish" fontSize={22} />
-            The gym 🦾
+            <ListIcon as={GiGymBag} color="tealish" fontSize={22} />
+            The gym
           </ListItem>
           <ListItem>
-            <ListIcon as={MdCheckCircle} color="tealish" fontSize={22} />
-            My Girlfriend 💟
+            <ListIcon as={CgGirl} color="tealish" fontSize={22} />
+            My Girlfriend
           </ListItem>
         </List>
       </motion.div>
