@@ -27,7 +27,7 @@ const Layout = ({ children }: ILayoutProps) => {
       <motion.div variants={container} initial="hidden" animate="show">
         <Flex align="center" justify="center" mt="50vh">
           <motion.div variants={otherItem}>
-            <Heading textDecor="none">Welcome, traveller!</Heading>
+            <Heading textDecor="none">Welcome, friend!</Heading>
           </motion.div>
         </Flex>
       </motion.div>
