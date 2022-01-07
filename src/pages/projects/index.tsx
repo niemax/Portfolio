@@ -14,25 +14,12 @@ const Projects = () => {
         allProjectsJson {
           edges {
             node {
-              color
               description
               language
-              languageColor
               name
               tech
               url
               slug
-              icon {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: FIXED
-                    quality: 100
-                    height: 25
-                    width: 25
-                    placeholder: BLURRED
-                  )
-                }
-              }
               image {
                 childImageSharp {
                   gatsbyImageData(

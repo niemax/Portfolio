@@ -5,11 +5,9 @@ import {
   Tooltip,
   Stack,
   HStack,
-  VStack,
   Box,
   useColorModeValue,
   IconButton,
-  Flex,
 } from "@chakra-ui/react";
 import { MBox } from "../../motion/MotionBox";
 import { container, fromDownToUpItem, item, otherItem } from "../../motion/transitions";
@@ -57,9 +55,9 @@ export const ProjectCards = (props: IProjectCardProps) => {
               shadow={props.shadow}
               background={props.backgroundColor}
               rounded={props.rounded}
-              _hover={{ opacity: 1 }}
+              _hover={{ opacity: 1, color: node.languageColor }}
               animation={props.animation}
-              opacity={0.85}
+              opacity={0.91}
               mt={props.mt || 20}
               mb={20}
               padding={props.padding}
