@@ -9,10 +9,9 @@ import {
   Box,
   useColorModeValue,
   IconButton,
-  Flex,
 } from "@chakra-ui/react";
 import { MBox } from "../../motion/MotionBox";
-import { container, fromDownToUpItem, item, otherItem, skillsItem } from "../../motion/transitions";
+import { container, fromDownToUpItem, item, otherItem } from "../../motion/transitions";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { windowOpen } from "../../../utility/helpers/windowOpen";
 import { Link } from "gatsby";
@@ -51,7 +50,6 @@ export const ProjectCards = (props: IProjectCardProps) => {
     <motion.div variants={container} initial="hidden" animate="show">
       {props.data.map(({ node }: any, index: number) => {
         const image = getImage(node.image?.childImageSharp);
-        const icon = getImage(node.icon?.childImageSharp);
         return (
           <motion.div variants={item} key={node.name}>
             <Stack

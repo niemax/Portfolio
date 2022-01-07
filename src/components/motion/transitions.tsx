@@ -92,7 +92,7 @@ export const PageScaleFade: React.FC = ({ children }) => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       onToggle(!onToggle);
-    }, 400);
+    }, 300);
 
     return () => {
       clearInterval(timeout);
