@@ -4,8 +4,8 @@
     "description": "Web development",
     "link": "https://developer.mozilla.org/en-US/",
     "type": "language",
-    "color": "#f7df1e",
     "hearts": 3,
+    "colorScheme": "yellow",
     "image": "../images/icons8-javascript-48.png"
   },
   {
@@ -13,8 +13,8 @@
     "description": "Web development",
     "link": "https://www.typescriptlang.org/",
     "type": "language",
-    "color": "#3178c6",
     "hearts": 2,
+    "colorScheme": "blue",
     "image": "../images/icons8-typescript-48.png"
   },
   {
@@ -22,18 +22,17 @@
     "description": "Automation",
     "link": "https://www.python.org/",
     "type": "language",
-    "color": "#ffde57",
-    "scheme": "yellow",
     "hearts": 1,
+    "colorScheme": "yellow",
     "image": "../images/icons8-python-48.png"
   },
   {
     "name": "HTML5",
     "description": "Web Layout",
     "link": "https://reactjs.org/",
-    "color": "#e34f26",
     "type": "Web Development",
     "hearts": 3,
+    "colorScheme": "orange",
     "image": "../images/icons8-html-5-48.png"
   },
   {
@@ -41,8 +40,8 @@
     "description": "Web Styling",
     "link": "https://www.tutorialspoint.com/css/css3_tutorial.htm",
     "type": "Design",
-    "color": "#002561",
     "hearts": 3,
+    "colorScheme": "blue",
     "image": "../images/icons8-css3-48.png"
   },
   {
@@ -50,9 +49,8 @@
     "description": "Web Styling",
     "link": "https://sass-lang.com/",
     "type": "Web Design",
-    "color": "#f06292",
-    "scheme": "pink",
     "hearts": 2,
+    "colorScheme": "pink",
     "image": "../images/icons8-sass-144.png"
   },
   {
@@ -60,8 +58,8 @@
     "description": "Web development",
     "link": "https://nodejs.org/en/",
     "type": "development",
-    "color": "#6cc24a",
     "hearts": 2,
+    "colorScheme": "whatsapp",
     "image": "../images/icons8-nodejs-144.png"
   },
   {
@@ -69,8 +67,8 @@
     "description": "Web development",
     "link": "https://reactjs.org/",
     "type": "development",
-    "color": "#00d8ff",
     "hearts": 3,
+    "colorScheme": "facebook",
     "image": "../images/icons8-react-40.png"
   },
   {
@@ -78,8 +76,8 @@
     "description": "Mobile development",
     "link": "https://reactnative.dev",
     "type": "development",
-    "color": "#00d8ff",
     "hearts": 3,
+    "colorScheme": "facebook",
     "image": "../images/icons8-react-40.png"
   },
   {
@@ -87,8 +85,8 @@
     "description": "State Management",
     "link": "https://redux.js.org",
     "type": "development",
-    "color": "#764abc",
     "hearts": 2,
+    "colorScheme": "purple",
     "image": "../images/icons8-redux-144.png"
   },
   {
@@ -96,8 +94,8 @@
     "description": "Web Development",
     "link": "https://www.gatsbyjs.com/",
     "type": "development",
-    "color": "#663399",
     "hearts": 2,
+    "colorScheme": "purple",
     "image": "../images/icons8-gatsbyjs-144.png"
   },
   {
@@ -105,8 +103,8 @@
     "description": "Query Language",
     "link": "https://graphql.org/",
     "type": "development",
-    "color": "#e10098",
     "hearts": 2,
+    "colorScheme": "purple",
     "image": "../images/icons8-graphql-144.png"
   },
   {
@@ -114,7 +112,7 @@
     "description": "My favorite IDE",
     "link": "https://code.visualstudio.com",
     "type": "tools",
-    "color": "#00d8ff",
+    "colorScheme": "purple",
     "hearts": 3,
     "image": "../images/icons8-visual-studio-2019-48.png"
   },
@@ -123,8 +121,8 @@
     "description": "Database / SaaS",
     "link": "https://firebase.google.com/",
     "type": "development",
-    "color": "#fbbc05",
     "hearts": 3,
+    "colorScheme": "yellow",
     "image": "../images/icons8-firebase-48.png"
   },
   {
@@ -132,8 +130,8 @@
     "description": "Database",
     "link": "https://www.mongodb.com/",
     "type": "development",
-    "color": "#589636",
     "hearts": 2,
+    "colorScheme": "whatsapp",
     "image": "../images/icons8-mongodb-48.png"
   },
   {
@@ -141,8 +139,7 @@
     "description": "DevOps",
     "link": "https://www.heroku.com/#",
     "type": "tools",
-    "color": "#c9c3e6",
-    "scheme": "telegram",
+    "colorScheme": "purple",
     "image": "../images/icons8-heroku-48.png"
   },
   {
@@ -150,8 +147,8 @@
     "description": "Web Design",
     "link": "https://www.figma.com",
     "type": "design",
-    "color": "#0cb9c1",
     "hearts": 2,
+    "colorScheme": "red",
     "image": "../images/icons8-figma-48.png"
   },
   {
@@ -159,8 +156,8 @@
     "description": "API Design",
     "link": "https://www.postman.com",
     "type": "tools",
-    "color": "#ef5b25",
     "hearts": 2,
+    "colorScheme": "red",
     "image": "../images/icons8-postman-api-64.png"
   }
 ]
