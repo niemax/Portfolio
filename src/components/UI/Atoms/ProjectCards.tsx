@@ -74,7 +74,7 @@ export const ProjectCards = (props: IProjectCardProps) => {
               </motion.div>
               <motion.div variants={fromDownToUpItem}>
                 <Box
-                  mt={24}
+                  mt={props.mt || 24}
                   p={3}
                   rounded="lg"
                   shadow="xl"
