@@ -66,7 +66,7 @@ export const ProjectCards = (props: IProjectCardProps) => {
               border={props.border}
             >
               <motion.div variants={otherItem}>
-                <MBox width="auto" height="auto" animation={{ scale: 1.3 }} shadow="2xl">
+                <MBox width="auto" height="auto" animation={{ scale: 1.2 }} shadow="2xl">
                   <GatsbyImage image={image} imgStyle={{ borderRadius: 10 }} />
                 </MBox>
               </motion.div>
