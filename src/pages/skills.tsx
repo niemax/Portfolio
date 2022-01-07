@@ -1,6 +1,6 @@
 import React from "react";
 import { PageScaleFade } from "../components/motion/transitions";
-import { Box, HStack, Heading, Tabs as ChakraTabs, TabList, Tab } from "@chakra-ui/react";
+import { Box, HStack, Heading, Tabs as ChakraTabs, TabList, Tab, Wrap } from "@chakra-ui/react";
 import { graphql } from "gatsby";
 import { FaChartPie, FaLanguage, FaListUl } from "react-icons/fa";
 import { GiSpiderWeb } from "react-icons/gi";
@@ -33,49 +33,51 @@ const Skills = ({ data }: any) => {
             with the tool).
           </Heading>
         </Box>
-        <Box mt={4}>
+        <Box mt={5}>
           <ChakraTabs isLazy={true} variant="soft-rounded" colorScheme={colorScheme}>
             <TabList>
-              <Tab
-                onClick={() => {
-                  setColorScheme("whatsapp");
-                  setSkillsData(skills);
-                }}
-              >
-                All <FaListUl style={{ marginLeft: 6 }} fontSize={16} />
-              </Tab>
-              <Tab
-                onClick={() => {
-                  setColorScheme("teal");
-                  filterData("language");
-                }}
-              >
-                Language <FaLanguage style={{ marginLeft: 2 }} fontSize={24} />
-              </Tab>
-              <Tab
-                onClick={() => {
-                  setColorScheme("yellow");
-                  filterData("development");
-                }}
-              >
-                Web Development <GiSpiderWeb />
-              </Tab>
-              <Tab
-                onClick={() => {
-                  setColorScheme("purple");
-                  filterData("design");
-                }}
-              >
-                Design <MdOutlineDesignServices />{" "}
-              </Tab>
-              <Tab
-                onClick={() => {
-                  setColorScheme("orange");
-                  filterData("tools");
-                }}
-              >
-                Tools <VscTools />
-              </Tab>
+              <Wrap>
+                <Tab
+                  onClick={() => {
+                    setColorScheme("whatsapp");
+                    setSkillsData(skills);
+                  }}
+                >
+                  All <FaListUl style={{ marginLeft: 6 }} fontSize={16} />
+                </Tab>
+                <Tab
+                  onClick={() => {
+                    setColorScheme("teal");
+                    filterData("language");
+                  }}
+                >
+                  Language <FaLanguage style={{ marginLeft: 2 }} fontSize={24} />
+                </Tab>
+                <Tab
+                  onClick={() => {
+                    setColorScheme("yellow");
+                    filterData("development");
+                  }}
+                >
+                  Web/Mobile Development <GiSpiderWeb />
+                </Tab>
+                <Tab
+                  onClick={() => {
+                    setColorScheme("purple");
+                    filterData("design");
+                  }}
+                >
+                  Design <MdOutlineDesignServices />{" "}
+                </Tab>
+                <Tab
+                  onClick={() => {
+                    setColorScheme("orange");
+                    filterData("tools");
+                  }}
+                >
+                  Tools <VscTools />
+                </Tab>
+              </Wrap>
             </TabList>
           </ChakraTabs>
         </Box>
