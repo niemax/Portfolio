@@ -2,6 +2,7 @@
   {
     "name": "Habitio",
     "color": "#00A375",
+    "languageColor": "#f7df1e",
     "language": "Javascript",
     "tech": ["React-Native", "AsyncStorage"],
     "url": "https://github.com/niemax/Habitio",
@@ -11,6 +12,7 @@
   },
   {
     "name": "GoTrain",
+    "languageColor": "#f7df1e",
     "color": "#EE7676",
     "tech": ["React-Native", "Firebase", "NodeJS", "MongoDB"],
     "language": "Javascript",
@@ -21,6 +23,7 @@
   },
   {
     "name": "GoTrain-API",
+    "languageColor": "#f7df1e",
     "color": "#EE7676",
     "tech": ["NodeJs", "MongoDB", "Express"],
     "language": "Javascript",
@@ -30,6 +33,7 @@
   },
   {
     "name": "Portfolio",
+    "languageColor": "#3178c6",
     "color": "#9D6AD6",
     "tech": ["React", "Gatsby", "Graphql", "ChakraUI"],
     "language": "Typescript",
