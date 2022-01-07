@@ -75,7 +75,7 @@ export const ProjectCards = (props: IProjectCardProps) => {
                   mt={props.mt || 24}
                   p={3}
                   rounded="lg"
-                  shadow="xl"
+                  shadow="lg"
                   bg={useColorModeValue("light", "boxes")}
                 >
                   <Link to={resolvePathToSlug(props.slug, node.slug)}>
