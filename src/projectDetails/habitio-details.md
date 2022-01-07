@@ -8,7 +8,7 @@ techStack: ["React-Native", "AsyncStorage"]
 videoURL: https://player.vimeo.com/video/653381964?h=93c8f3cdd1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479
 ---
 
-# **_What is Habitio?_** 📱
+# **What is Habitio?** 📱
 
 <br>
 
@@ -16,7 +16,7 @@ videoURL: https://player.vimeo.com/video/653381964?h=93c8f3cdd1&amp;badge=0&amp;
 
 <br>
 
-# **_Why build something like this?_** 👷
+# **Why build something like this?** 👷
 
 <br>
 
@@ -28,9 +28,9 @@ videoURL: https://player.vimeo.com/video/653381964?h=93c8f3cdd1&amp;badge=0&amp;
 
 <br>
 
-1. Increased productivity
-2. Stopping procrastination
-3. Increased energy levels
+    1. Increased productivity
+    2. Stopping procrastination
+    3. Increased energy levels
 
 <br>
 
@@ -38,10 +38,10 @@ videoURL: https://player.vimeo.com/video/653381964?h=93c8f3cdd1&amp;badge=0&amp;
 
 <br>
 
-1. React-Native / Expo
-2. Persistent storage with AsyncStorage
-3. Styled Components
-4. JavaScript
+    1. React-Native / Expo
+    2. Persistent storage with AsyncStorage
+    3. Styled Components
+    4. JavaScript
 
 <br>
 

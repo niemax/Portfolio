@@ -64,7 +64,7 @@ export const ProjectCards = (props: IProjectCardProps) => {
               mt={props.mt || 20}
               mb={20}
               padding={props.padding}
-              direction={["column", "column", index % 2 === 0 ? "row-reverse" : "row"]}
+              direction={["column", index % 2 === 0 ? "row-reverse" : "row"]}
               align="self-start"
               border={props.border}
             >

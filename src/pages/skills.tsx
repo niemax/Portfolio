@@ -3,15 +3,34 @@ import { PageScaleFade } from "../components/motion/transitions";
 import { motion } from "framer-motion";
 import { skillsContainer, skillsItem } from "../components/motion/transitions";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { Box, HStack, useColorModeValue, Heading, SimpleGrid } from "@chakra-ui/react";
+import {
+  Box,
+  HStack,
+  useColorModeValue,
+  Heading,
+  SimpleGrid,
+  Tabs as ChakraTabs,
+  TabList,
+  Tab,
+} from "@chakra-ui/react";
 import { MBox } from "../components/motion/MotionBox";
 import { graphql } from "gatsby";
-import { FaChartPie, FaHeart } from "react-icons/fa";
+import { FaChartPie, FaLanguage, FaListUl } from "react-icons/fa";
 import { HiOutlineLightningBolt } from "react-icons/hi";
+import { GiSpiderWeb } from "react-icons/gi";
+import { MdOutlineDesignServices } from "react-icons/md";
+import { VscTools } from "react-icons/vsc";
 import Seo from "../components/seo";
 
 const Skills = ({ data }: any) => {
   const skills = data.allTechStackJson.edges;
+  const [skillsData, setSkillsData] = React.useState<[]>(skills);
+  const [colorScheme, setColorScheme] = React.useState<string>("whatsapp");
+
+  const filterData = (keyword: string) => {
+    const filteredData: any = skills?.filter(({ node }: any) => node.type === keyword);
+    setSkillsData(filteredData);
+  };
 
   return (
     <PageScaleFade>
@@ -23,13 +42,60 @@ const Skills = ({ data }: any) => {
             <FaChartPie fontSize={28} />
           </HStack>
           <Heading size="md" mt={4}>
-            Languages, technologies, and tools I'm familiar with.
+            Languages, technologies, and tools I'm familiar with (lightnings describe my efficiency
+            with the tool).
           </Heading>
+        </Box>
+        <Box mt={4}>
+          <ChakraTabs isLazy={true} variant="soft-rounded" colorScheme={colorScheme}>
+            <TabList>
+              <Tab
+                onClick={() => {
+                  setColorScheme("whatsapp");
+                  setSkillsData(skills);
+                }}
+              >
+                All <FaListUl style={{ marginLeft: 6 }} fontSize={16} />
+              </Tab>
+              <Tab
+                onClick={() => {
+                  setColorScheme("teal");
+                  filterData("language");
+                }}
+              >
+                Language <FaLanguage style={{ marginLeft: 2 }} fontSize={24} />
+              </Tab>
+              <Tab
+                onClick={() => {
+                  setColorScheme("yellow");
+                  filterData("development");
+                }}
+              >
+                Web Development <GiSpiderWeb />
+              </Tab>
+              <Tab
+                onClick={() => {
+                  setColorScheme("purple");
+                  filterData("design");
+                }}
+              >
+                Design <MdOutlineDesignServices />{" "}
+              </Tab>
+              <Tab
+                onClick={() => {
+                  setColorScheme("orange");
+                  filterData("tools");
+                }}
+              >
+                Tools <VscTools />
+              </Tab>
+            </TabList>
+          </ChakraTabs>
         </Box>
         <Box mt="8">
           <motion.div variants={skillsContainer} initial="hidden" animate="show">
             <SimpleGrid columns={[1, 2, 2, 2]} spacingX={6} spacingY={4}>
-              {skills.map(({ node }: any) => {
+              {skillsData.map(({ node }: any) => {
                 const image = getImage(node.image.childImageSharp);
                 return (
                   <motion.div variants={skillsItem} key={node.name}>

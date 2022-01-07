@@ -5,7 +5,6 @@
     "link": "https://developer.mozilla.org/en-US/",
     "type": "language",
     "color": "#f7df1e",
-    "scheme": "yellow",
     "hearts": 3,
     "image": "../images/icons8-javascript-48.png"
   },
@@ -15,7 +14,6 @@
     "link": "https://www.typescriptlang.org/",
     "type": "language",
     "color": "#3178c6",
-    "scheme": "blue",
     "hearts": 2,
     "image": "../images/icons8-typescript-48.png"
   },
@@ -34,8 +32,7 @@
     "description": "Web Layout",
     "link": "https://reactjs.org/",
     "color": "#e34f26",
-    "scheme": "orange",
-    "type": "development",
+    "type": "Web Development",
     "hearts": 3,
     "image": "../images/icons8-html-5-48.png"
   },
@@ -43,9 +40,8 @@
     "name": "CSS3",
     "description": "Web Styling",
     "link": "https://www.tutorialspoint.com/css/css3_tutorial.htm",
-    "type": "development",
+    "type": "Design",
     "color": "#002561",
-    "scheme": "blue",
     "hearts": 3,
     "image": "../images/icons8-css3-48.png"
   },
@@ -53,7 +49,7 @@
     "name": "Sass",
     "description": "Web Styling",
     "link": "https://sass-lang.com/",
-    "type": "development",
+    "type": "Web Design",
     "color": "#f06292",
     "scheme": "pink",
     "hearts": 2,
@@ -63,9 +59,8 @@
     "name": "NodeJs",
     "description": "Web development",
     "link": "https://nodejs.org/en/",
-    "type": "Backend",
+    "type": "development",
     "color": "#6cc24a",
-    "scheme": "green",
     "hearts": 2,
     "image": "../images/icons8-nodejs-144.png"
   },
@@ -75,7 +70,6 @@
     "link": "https://reactjs.org/",
     "type": "development",
     "color": "#00d8ff",
-    "scheme": "teal",
     "hearts": 3,
     "image": "../images/icons8-react-40.png"
   },
@@ -85,7 +79,6 @@
     "link": "https://reactnative.dev",
     "type": "development",
     "color": "#00d8ff",
-    "scheme": "teal",
     "hearts": 3,
     "image": "../images/icons8-react-40.png"
   },
@@ -95,7 +88,6 @@
     "link": "https://redux.js.org",
     "type": "development",
     "color": "#764abc",
-    "scheme": "purple",
     "hearts": 2,
     "image": "../images/icons8-redux-144.png"
   },
@@ -103,9 +95,8 @@
     "name": "GatsbyJs",
     "description": "Web Development",
     "link": "https://www.gatsbyjs.com/",
-    "type": "framework",
+    "type": "development",
     "color": "#663399",
-    "scheme": "purple",
     "hearts": 2,
     "image": "../images/icons8-gatsbyjs-144.png"
   },
@@ -115,7 +106,6 @@
     "link": "https://graphql.org/",
     "type": "development",
     "color": "#e10098",
-    "scheme": "pink",
     "hearts": 2,
     "image": "../images/icons8-graphql-144.png"
   },
@@ -125,7 +115,6 @@
     "link": "https://code.visualstudio.com",
     "type": "tools",
     "color": "#00d8ff",
-    "scheme": "purple",
     "hearts": 3,
     "image": "../images/icons8-visual-studio-2019-48.png"
   },
@@ -133,9 +122,8 @@
     "name": "Firebase",
     "description": "Database / SaaS",
     "link": "https://firebase.google.com/",
-    "type": "Database",
+    "type": "development",
     "color": "#fbbc05",
-    "scheme": "orange",
     "hearts": 3,
     "image": "../images/icons8-firebase-48.png"
   },
@@ -143,9 +131,8 @@
     "name": "MongoDB",
     "description": "Database",
     "link": "https://www.mongodb.com/",
-    "type": "Web Development",
+    "type": "development",
     "color": "#589636",
-    "scheme": "green",
     "hearts": 2,
     "image": "../images/icons8-mongodb-48.png"
   },
@@ -153,19 +140,17 @@
     "name": "Heroku",
     "description": "DevOps",
     "link": "https://www.heroku.com/#",
-    "type": "DevOps",
+    "type": "tools",
     "color": "#c9c3e6",
     "scheme": "telegram",
-    "hearts": 2,
     "image": "../images/icons8-heroku-48.png"
   },
   {
     "name": "Figma",
     "description": "Web Design",
     "link": "https://www.figma.com",
-    "type": "Web Design",
+    "type": "design",
     "color": "#0cb9c1",
-    "scheme": "twitter",
     "hearts": 2,
     "image": "../images/icons8-figma-48.png"
   },
@@ -175,7 +160,6 @@
     "link": "https://www.postman.com",
     "type": "tools",
     "color": "#ef5b25",
-    "scheme": "orange",
     "hearts": 2,
     "image": "../images/icons8-postman-api-64.png"
   }
