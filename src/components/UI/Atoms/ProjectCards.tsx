@@ -23,6 +23,7 @@ interface IProjectCardProps {
   backgroundColor?: string;
   rounded?: string;
   mt?: number;
+  height?: string | number;
   shadow?: string;
   padding?: number;
   headingSize?: string;
@@ -32,6 +33,7 @@ interface IProjectCardProps {
   border?: string;
   animation?: Y | Scale;
   mb?: number;
+  opacity?: number;
 }
 
 export const ProjectCards = (props: IProjectCardProps) => {
@@ -52,30 +54,28 @@ export const ProjectCards = (props: IProjectCardProps) => {
         return (
           <motion.div variants={item} key={node.name}>
             <Stack
-              shadow={props.shadow}
               background={props.backgroundColor}
               rounded={props.rounded}
-              _hover={{ opacity: 1, color: node.languageColor }}
+              _hover={{ opacity: 1 }}
               animation={props.animation}
-              opacity={0.91}
+              opacity={props.opacity || 0.91}
               mt={props.mt || 20}
-              mb={20}
+              mb={props.mb || 20}
               padding={props.padding}
-              direction={["column", index % 2 === 0 ? "row-reverse" : "row"]}
-              align="self-start"
+              direction={["column", "column", index % 2 === 0 ? "row-reverse" : "row"]}
               border={props.border}
             >
               <motion.div variants={otherItem}>
-                <MBox width="auto" height="auto" animation={{ scale: 1.01 }} shadow="2xl">
-                  <GatsbyImage image={image} />
+                <MBox width="auto" height="auto" animation={{ scale: 1.3 }} shadow="2xl">
+                  <GatsbyImage image={image} imgStyle={{ borderRadius: 10 }} />
                 </MBox>
               </motion.div>
               <motion.div variants={fromDownToUpItem}>
                 <Box
-                  mt={props.mt || 24}
+                  h={props.height}
                   p={3}
                   rounded="lg"
-                  shadow="lg"
+                  shadow={props.shadow || "lg"}
                   bg={useColorModeValue("light", "boxes")}
                 >
                   <Link to={resolvePathToSlug(props.slug, node.slug)}>

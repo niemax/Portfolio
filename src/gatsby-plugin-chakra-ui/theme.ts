@@ -54,11 +54,7 @@ const theme = {
   },
 };
 
-const Tag = {
-  baseStyle: {
-    colorScheme: "#76B39D",
-  },
-};
+
 
 const themeConf: ThemeConfig = {
   useSystemColorMode: true,
@@ -70,5 +66,5 @@ export default extendTheme({
   ...theme,
   ...themeConf,
   colors,
-  components: { Heading, Tag },
+  components: { Heading },
 });

@@ -58,7 +58,8 @@ export const Recents = () => {
         <ProjectCards
           data={mapped}
           slug="/projects"
-          backgroundColor={useColorModeValue("light", "boxes")}
+          height="full"
+          backgroundColor={useColorModeValue("white", "boxes")}
           rounded="md"
           shadow="sm"
           padding={1}
