@@ -49,7 +49,7 @@ const IndexPage = () => (
                         textDecor="none"
                         _hover={{ color: "green" }}
                       >
-                        Project details in projects page
+                        Redesigned skills page
                         <Badge colorScheme="teal" variant="subtle" ml={1}>
                           New
                         </Badge>
