@@ -11,6 +11,8 @@ import {
   TagLabel,
   Wrap,
   WrapItem,
+  useColorModeValue,
+  VStack,
 } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import { RiShareBoxFill } from "react-icons/ri";
@@ -43,32 +45,42 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
         )}
 
         <Box>
-          <GatsbyImage alt={frontmatter.title} image={image} />
+          <GatsbyImage alt={frontmatter.title} image={image} imgStyle={{ borderRadius: 10 }} />
         </Box>
         <Box mt={10}>
-          <Heading size="xs" color="grey">
-            published on {frontmatter.date}
-          </Heading>
-          <HStack mt={3}>
-            <Heading fontWeight="700">{frontmatter.title}</Heading>
+          <VStack align="left" mt={3}>
+            <Heading textDecor="none" fontWeight="700">
+              {frontmatter.title}
+            </Heading>
+            <Heading size="xs" color="grey">
+              published on {frontmatter.date}
+            </Heading>
             <Wrap>
               {frontmatter.techStack?.map((itm: any, idx: string) => (
                 <WrapItem>
-                  <Tag key={idx} rounded="md" size="sm" colorScheme="teal" variant="subtle">
-                    <TagLabel color={getTagColor(itm)}>{itm}</TagLabel>
-                  </Tag>
+                  <i>
+                    <Heading
+                      key={idx}
+                      size="sm"
+                      color={useColorModeValue("black", "white")}
+                      opacity={0.8}
+                      fontWeight={700}
+                    >
+                      {itm}
+                    </Heading>
+                  </i>
                 </WrapItem>
               ))}
             </Wrap>
-          </HStack>
-          <HStack justify="space-between" align="center" mb={6}>
+          </VStack>
+          <HStack justify="space-between" align="center" mb={6} mt={3}>
             <HStack>
               <Heading size="xs" color="green">
                 {frontmatter.readTime} min read
               </Heading>
             </HStack>
 
-            <HStack spacing={4} mt={2}>
+            <HStack>
               {frontmatter.demoLink !== "" && (
                 <>
                   <Heading size="sm" color="green">

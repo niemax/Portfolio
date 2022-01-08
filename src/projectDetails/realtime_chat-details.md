@@ -3,14 +3,14 @@ title: "Realtime Chat"
 slug: "realtimechat-details"
 date: "8.1.2022"
 readTime: 0
-gitHubLink: "https://github.com/niemax/Habitio"
-demoLink: "https://frozen-brook-42424.herokuapp.com/"
+gitHubLink: "https://github.com/niemax/realtime_chat"
+demoLink: "https://frozen-brook-42424.herokuapp.com"
 techStack: ["NodeJs", "Express", "Socket.io"]
-image: "../staticImages/ChatEngineScreenshot.png"
+image: "../staticImages/RealtimeChatScreenshot.png"
 videoURL: ""
 ---
 
 # **Why?**
 
 I wanted to get back to Vanilla JavaScript, and after a long time focusing heavily on frontend I
-also wanted to refresh my memoey on Node.
+also wanted to refresh my memory on Node.

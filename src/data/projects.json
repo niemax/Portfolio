@@ -55,7 +55,7 @@
     "icon": "../images/icons8-javascript-48.png",
     "url": "https://github.com/niemax/realtime_chat",
     "slug": "realtimechat-details",
-    "image": "../staticImages/ChatEngineScreenshot.png",
+    "image": "../staticImages/RealtimeChatScreenshot.png",
     "description": "A quick realtime chat built with Node, Express and Socket.io"
   }
 ]
