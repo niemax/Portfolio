@@ -41,7 +41,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
           </Box>
         )}
 
-        <Box>
+        <Box align="center">
           <GatsbyImage alt={frontmatter.title} image={image} imgStyle={{ borderRadius: 10 }} />
         </Box>
         <Box mt={10}>
