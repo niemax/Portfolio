@@ -12,5 +12,8 @@ videoURL: ""
 
 # **Why?**
 
-I wanted to get back to Vanilla JavaScript, and after a long time focusing heavily on frontend I
-also wanted to refresh my memory on Node.
+<br>
+
+I wanted to get back to **Vanilla JavaScript**, and after a long time focusing heavily on frontend I
+also wanted to refresh my memory on the backend and actually found it very fun to work with
+**sockets**.

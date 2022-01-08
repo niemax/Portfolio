@@ -7,8 +7,6 @@ import {
   Box,
   AspectRatio,
   IconButton,
-  Tag,
-  TagLabel,
   Wrap,
   WrapItem,
   useColorModeValue,
@@ -20,7 +18,6 @@ import Seo from "../../components/seo";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { windowOpen } from "../../utility/helpers/windowOpen";
 import { PageScaleFade } from "../../components/motion/transitions";
-import { getTagColor } from "../../utility/helpers/getTagColor";
 
 function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
   const { frontmatter, html } = markdownRemark;

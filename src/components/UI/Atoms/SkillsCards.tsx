@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 import { HiOutlineLightningBolt } from "react-icons/hi";
+import { windowOpen } from "../../../utility/helpers/windowOpen";
 import { MBox } from "../../motion/MotionBox";
 import { skillsContainer, skillsItem } from "../../motion/transitions";
 
@@ -29,11 +30,11 @@ export const SkillsCards = ({ skillsData }: SkillsCardsProps) => {
                 >
                   <HStack>
                     <Badge variant="subtle" colorScheme={node.colorScheme} p={1} rounded="md">
-                      <GatsbyImage alt={node.name} image={image} height={50} width={50} />
+                      <GatsbyImage alt={node.name} image={image} />
                     </Badge>
                     <Box
                       as="a"
-                      onClick={() => window.open(`${node.link}`)}
+                      onClick={() => windowOpen(`${node.link}`)}
                       _hover={{ color: node.color }}
                     >
                       <HStack>

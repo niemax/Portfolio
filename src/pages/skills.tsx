@@ -2,7 +2,8 @@ import React from "react";
 import { PageScaleFade } from "../components/motion/transitions";
 import { Box, HStack, Heading, Tabs as ChakraTabs, TabList, Tab, Wrap } from "@chakra-ui/react";
 import { graphql } from "gatsby";
-import { FaChartPie, FaLanguage, FaListUl } from "react-icons/fa";
+import { FaLanguage, FaListUl } from "react-icons/fa";
+import { BsStack } from "react-icons/bs";
 import { GiSpiderWeb } from "react-icons/gi";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { VscTools } from "react-icons/vsc";
@@ -26,7 +27,7 @@ const Skills = ({ data }: any) => {
         <Box align="center" justify="center">
           <HStack align="center" justify="center">
             <Heading>Tech Stack</Heading>
-            <FaChartPie fontSize={28} />
+            <BsStack fontSize={28} />
           </HStack>
           <Heading size="md" mt={4}>
             Languages, technologies, and tools I'm familiar with (lightnings describe my efficiency
