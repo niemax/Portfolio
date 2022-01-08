@@ -55,6 +55,23 @@ const IndexPage = () => {
                           textDecor="none"
                           _hover={{ color: "green" }}
                         >
+                          New chat project
+                          <Badge colorScheme="teal" variant="subtle" ml={1}>
+                            New
+                          </Badge>
+                        </Heading>
+                      </Link>
+                    </HStack>
+                  </ListItem>
+                  <ListItem>
+                    <HStack>
+                      <Link to="/projects">
+                        <Heading
+                          size="xs"
+                          color={useColorModeValue("#534436", "#fff")}
+                          textDecor="none"
+                          _hover={{ color: "green" }}
+                        >
                           Redesigned skills page
                           <Badge colorScheme="teal" variant="subtle" ml={1}>
                             New
