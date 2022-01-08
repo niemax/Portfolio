@@ -13,6 +13,7 @@ import {
   WrapItem,
 } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
+import { RiShareBoxFill } from "react-icons/ri";
 import Seo from "../../components/seo";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { windowOpen } from "../../utility/helpers/windowOpen";
@@ -67,7 +68,26 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
               </Heading>
             </HStack>
 
-            <HStack>
+            <HStack spacing={4} mt={2}>
+              {frontmatter.demoLink !== "" && (
+                <>
+                  <Heading size="sm" color="green">
+                    Demo Link
+                  </Heading>
+                  <IconButton
+                    mt={3}
+                    size="sm"
+                    onClick={() => windowOpen(frontmatter.demoLink)}
+                    variant="outline"
+                    colorScheme="teal"
+                    aria-label="demo link"
+                    fontSize="20px"
+                    shadow="md"
+                    icon={<RiShareBoxFill />}
+                  />
+                </>
+              )}
+
               <Heading size="sm" color="green">
                 Project Link
               </Heading>

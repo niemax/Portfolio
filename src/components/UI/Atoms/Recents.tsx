@@ -49,7 +49,7 @@ export const Recents = () => {
     `
   );
 
-  const mapped = allProjectsJson.edges.filter(({ node }: any) => node.name === "Portfolio");
+  const mapped = allProjectsJson.edges.filter(({ node }: any) => node.name === "Realtime Chat");
 
   return (
     <>

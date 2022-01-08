@@ -47,7 +47,7 @@ const Skills = ({ data }: any) => {
                 </Tab>
                 <Tab
                   onClick={() => {
-                    setColorScheme("teal");
+                    setColorScheme("telegram");
                     filterData("language");
                   }}
                 >

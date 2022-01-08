@@ -39,16 +39,16 @@ color and little animations.
 
 # **About the tech stack** ⚡
 
-<br>
+<br>#F3A724
 
 **GatsbyJs** is definitely a very powerful framework for static sites with minimal data flowing like
 these. I have really enjoyed working with both--**Gatsby** and **GraphQL**--as they are both
 semi-new technologies and get the work done very efficiently and differ from a lot of frameworks out
-there. Thanks to **Gatsby** and **Chakra UI**, my lighthouse scores for accessibility and
-performance are both nearly 100 which is what I aim for. I love how accessibility--in my honest
-opinion one, if not the most important aspect in software--is made effortless to create. Also I
-really enjoy the static typing TypeScript offers, and also, of course, the compiler throwing errors
-in the right time.
+there. Thanks to **Gatsby** and **Chakra UI**, my lighthouse scores for **accessibility**, **SEO**
+and **performance** are both nearly 100 which is what I aim for. I love how accessibility--in my
+honest opinion one, if not the most important aspect in software--is made effortless to create with
+**Chakra**. Also I really enjoy the static typing TypeScript offers, and also, of course, the
+compiler throwing errors in the right time.
 
 <br>
 <br>

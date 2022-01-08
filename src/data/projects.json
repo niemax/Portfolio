@@ -45,5 +45,17 @@
     "slug": "portfolio-details",
     "image": "../staticImages/PortfolioScreenshot.png",
     "description": "My personal portfolio hand-crafted with TypeScript & love in Helsinki, Finland."
+  },
+  {
+    "name": "Realtime Chat",
+    "languageColor": "#3178c6",
+    "color": "#9D6AD6",
+    "tech": ["NodeJs", "Express", "Socket.io"],
+    "language": "JavaScript",
+    "icon": "../images/icons8-javascript-48.png",
+    "url": "https://github.com/niemax/realtime_chat",
+    "slug": "realtimechat-details",
+    "image": "../staticImages/ChatEngineScreenshot.png",
+    "description": "A quick realtime chat built with Node, Express and Socket.io"
   }
 ]
