@@ -50,8 +50,9 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
               {frontmatter.title}
             </Heading>
             <Heading size="xs" color="grey">
-              published on {frontmatter.date}
+              {frontmatter.date} &#8226; {frontmatter.readTime} min read
             </Heading>
+
             <Wrap>
               {frontmatter.techStack?.map((itm: any, idx: string) => (
                 <WrapItem>
@@ -71,12 +72,6 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
             </Wrap>
           </VStack>
           <HStack justify="space-between" align="center" mb={6} mt={3}>
-            <HStack>
-              <Heading size="xs" color="green">
-                {frontmatter.readTime} min read
-              </Heading>
-            </HStack>
-
             <HStack>
               {frontmatter.demoLink !== "" && (
                 <>
