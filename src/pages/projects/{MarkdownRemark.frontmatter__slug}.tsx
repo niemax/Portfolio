@@ -46,30 +46,31 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
         </Box>
         <Box mt={10}>
           <VStack align="left" mt={3}>
-            <Heading textDecor="none" fontWeight="700">
-              {frontmatter.title}
-            </Heading>
+            <HStack>
+              <Heading textDecor="none" fontWeight="700">
+                {frontmatter.title}
+              </Heading>
+              <Wrap>
+                {frontmatter.techStack?.map((itm: any, idx: string) => (
+                  <WrapItem>
+                    <i>
+                      <Heading
+                        key={idx}
+                        size="sm"
+                        color={useColorModeValue("black", "white")}
+                        opacity={0.8}
+                        fontWeight={700}
+                      >
+                        {itm}
+                      </Heading>
+                    </i>
+                  </WrapItem>
+                ))}
+              </Wrap>
+            </HStack>
             <Heading size="xs" color="grey">
               {frontmatter.date} &#8226; {frontmatter.readTime} min read
             </Heading>
-
-            <Wrap>
-              {frontmatter.techStack?.map((itm: any, idx: string) => (
-                <WrapItem>
-                  <i>
-                    <Heading
-                      key={idx}
-                      size="sm"
-                      color={useColorModeValue("black", "white")}
-                      opacity={0.8}
-                      fontWeight={700}
-                    >
-                      {itm}
-                    </Heading>
-                  </i>
-                </WrapItem>
-              ))}
-            </Wrap>
           </VStack>
           <HStack justify="space-between" align="center" mb={6} mt={3}>
             <HStack>
