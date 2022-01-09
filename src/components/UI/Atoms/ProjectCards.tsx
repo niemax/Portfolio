@@ -58,7 +58,7 @@ export const ProjectCards = (props: IProjectCardProps) => {
               rounded={props.rounded}
               _hover={{ opacity: 1 }}
               animation={props.animation}
-              opacity={props.opacity || 0.91}
+              opacity={props.opacity || 0.85}
               mt={props.mt || 20}
               mb={props.mb || 20}
               padding={props.padding}
