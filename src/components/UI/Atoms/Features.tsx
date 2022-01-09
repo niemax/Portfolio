@@ -34,7 +34,7 @@ export const Features: React.FC = () => (
               _hover={{ color: "green" }}
             >
               New chat project
-              <Badge colorScheme="teal" variant="subtle" ml={1}>
+              <Badge colorScheme="whatsapp" variant="subtle" ml={1}>
                 New
               </Badge>
             </Heading>
@@ -51,7 +51,7 @@ export const Features: React.FC = () => (
               _hover={{ color: "green" }}
             >
               Redesigned skills page
-              <Badge colorScheme="teal" variant="subtle" ml={1}>
+              <Badge colorScheme="whatsapp" variant="subtle" ml={1}>
                 New
               </Badge>
             </Heading>
@@ -68,7 +68,7 @@ export const Features: React.FC = () => (
               _hover={{ color: "green" }}
             >
               New projects page
-              <Badge colorScheme="teal" variant="subtle" ml={1}>
+              <Badge colorScheme="whatsapp" variant="subtle" ml={1}>
                 New
               </Badge>
             </Heading>
