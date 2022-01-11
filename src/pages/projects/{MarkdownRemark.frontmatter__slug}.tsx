@@ -51,7 +51,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
                 {frontmatter.title}
               </Heading>
               <Wrap alignSelf="end">
-                {frontmatter.techStack.map((itm: any, idx: string) => (
+                {frontmatter.techStack?.map((itm: any, idx: string) => (
                   <WrapItem key={idx}>
                     <i>
                       <Heading
