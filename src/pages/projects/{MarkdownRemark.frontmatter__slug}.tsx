@@ -45,18 +45,18 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
           <GatsbyImage alt={frontmatter.title} image={image} imgStyle={{ borderRadius: 10 }} />
         </Box>
         <Box mt={10}>
-          <VStack align="left" mt={3}>
+          <VStack align="left">
             <HStack>
               <Heading textDecor="none" fontWeight="700">
                 {frontmatter.title}
               </Heading>
-              <Wrap>
-                {frontmatter.techStack?.map((itm: any, idx: string) => (
-                  <WrapItem>
+              <Wrap alignSelf="end">
+                {frontmatter.techStack.map((itm: any, idx: string) => (
+                  <WrapItem key={idx}>
                     <i>
                       <Heading
-                        key={idx}
-                        size="sm"
+                        fontSize={14}
+                        textDecor="none"
                         color={useColorModeValue("black", "white")}
                         opacity={0.8}
                         fontWeight={700}

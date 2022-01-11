@@ -62,11 +62,12 @@ export const ProjectCards = (props: IProjectCardProps) => {
               mt={props.mt || 20}
               mb={props.mb || 20}
               padding={props.padding}
+              align="center"
               direction={["column", "column", index % 2 === 0 ? "row-reverse" : "row"]}
               border={props.border}
             >
               <motion.div variants={otherItem}>
-                <MBox width="auto" height="auto" animation={{ scale: 1.2 }} shadow="2xl">
+                <MBox maxW={450} height="auto" animation={{ scale: 1.2 }} shadow="2xl">
                   <GatsbyImage image={image} imgStyle={{ borderRadius: 10 }} />
                 </MBox>
               </motion.div>
@@ -74,6 +75,7 @@ export const ProjectCards = (props: IProjectCardProps) => {
                 <Box
                   h={props.height}
                   p={3}
+                  maxW={[450, 450, 360, 370]}
                   rounded="lg"
                   shadow={props.shadow || "lg"}
                   bg={useColorModeValue("light", "boxes")}
@@ -88,7 +90,7 @@ export const ProjectCards = (props: IProjectCardProps) => {
                       {node.name}
                     </Heading>
                   </Link>
-                  <Box w={80} mx="auto" mt={3}>
+                  <Box mt={3}>
                     <Heading size="sm" color={props.textColor}>
                       {node.description}
                     </Heading>
@@ -124,7 +126,7 @@ export const ProjectCards = (props: IProjectCardProps) => {
                         variant="outline"
                         colorScheme="teal"
                         aria-label="project link"
-                        fontSize="20px"
+                        fontSize={20}
                         shadow="md"
                         icon={<RiShareBoxFill />}
                       />

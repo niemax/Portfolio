@@ -1,6 +1,6 @@
 import React from "react";
 import { PageScaleFade } from "../../components/motion/transitions";
-import { Heading, Flex, Box, HStack, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Heading, Flex, Box, HStack, useColorModeValue } from "@chakra-ui/react";
 import Seo from "../../components/seo";
 import { ProjectCards } from "../../components/UI/Atoms/ProjectCards";
 import { graphql, useStaticQuery } from "gatsby";
@@ -39,7 +39,7 @@ const Projects = () => {
   );
   return (
     <PageScaleFade>
-      <Flex direction="column" align="center">
+      <Flex>
         <Seo title="Projects" />
         <Flex px={[2, 6, 0, 0]}>
           <Box>

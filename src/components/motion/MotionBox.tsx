@@ -7,7 +7,7 @@ export const MotionBox = motion<BoxProps>(Box);
 
 interface IMBoxProps {
   height: number | string;
-  width: number | string;
+  width?: number | string;
   animation?: Scale | Y;
   border?: string;
   shadow?: string;
@@ -15,6 +15,7 @@ interface IMBoxProps {
   py?: number;
   px?: number;
   children: ReactNode;
+  maxW?: number;
 }
 
 export const MBox = ({ height, width, animation, children, ...props }: IMBoxProps) => (
@@ -25,7 +26,6 @@ export const MBox = ({ height, width, animation, children, ...props }: IMBoxProp
     bg={useColorModeValue("light", "boxes")}
     whileHover={animation}
     whileTap={{ scale: 0.9 }}
-    _hover={{ opacity: 1 }}
     {...props}
   >
     {children}
