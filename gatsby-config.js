@@ -31,9 +31,6 @@ module.exports = {
     },
     {
       resolve: "@chakra-ui/gatsby-plugin",
-      options: {
-        isUsingColorMode: true,
-      },
     },
     {
       resolve: `gatsby-source-filesystem`,

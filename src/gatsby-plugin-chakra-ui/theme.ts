@@ -55,16 +55,9 @@ const theme = {
 };
 
 
-
-const themeConf: ThemeConfig = {
-  useSystemColorMode: true,
-  initialColorMode: "dark",
-};
-
 export default extendTheme({
   ...baseTheme,
   ...theme,
-  ...themeConf,
   colors,
   components: { Heading },
 });
