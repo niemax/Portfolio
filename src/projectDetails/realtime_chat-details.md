@@ -3,8 +3,8 @@ title: "Realtime Chat"
 slug: "realtimechat-details"
 date: "8.1.2022"
 readTime: 0
-gitHubLink: "https://github.com/niemax/realtime_chat"
-demoLink: "https://frozen-brook-42424.herokuapp.com"
+gitHubLink: https://github.com/niemax/realtime_chat
+demoLink: https://frozen-brook-42424.herokuapp.com
 techStack: ["NodeJs", "Express", "Socket.io"]
 image: "../staticImages/RealtimeChatScreenshot.png"
 videoURL: ""

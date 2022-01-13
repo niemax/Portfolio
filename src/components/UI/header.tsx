@@ -14,12 +14,11 @@ import {
   MenuItem,
   MenuList,
 } from "@chakra-ui/react";
-import { HiOutlineMenuAlt1 as BurgerIcon, HiX } from "react-icons/hi";
-import { FaGithub, FaMoon, FaSun } from "react-icons/fa";
+import { HiOutlineMenuAlt1 as BurgerIcon } from "react-icons/hi";
+import { FaGithub, FaSun } from "react-icons/fa";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { NavLink } from "../UI/Atoms/NavLink";
 import { Memoji } from "../UI/Atoms/Memoji";
-
 import { windowOpen } from "../../utility/helpers/windowOpen";
 
 const Header = () => {

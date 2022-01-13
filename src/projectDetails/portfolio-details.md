@@ -13,8 +13,8 @@ image: "../staticImages/PortfolioScreenshot.png"
 
 <br>
 
-This portfolio is meant to showcase my work but also give a short idea about who I am and what I am
-as a developer and a person.
+This portfolio is meant to showcase my work but also give a short idea about who I as a developer
+and a person.
 
 <br>
 

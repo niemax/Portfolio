@@ -50,7 +50,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
               <Heading textDecor="none" fontWeight="700">
                 {frontmatter.title}
               </Heading>
-              <Wrap alignSelf="end">
+              <Wrap>
                 {frontmatter.techStack?.map((itm: any, idx: string) => (
                   <WrapItem key={idx}>
                     <i>
@@ -74,7 +74,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
           </VStack>
           <HStack justify="space-between" align="center" mb={6} mt={3}>
             <HStack>
-              {frontmatter.demoLink !== "" && (
+              {frontmatter.demoLink && (
                 <>
                   <Heading size="sm" color="green">
                     Demo Link
