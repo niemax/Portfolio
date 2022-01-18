@@ -9,6 +9,15 @@ module.exports = {
     siteUrl: `https://niemax.me/portfolio`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-RG7VE91W6E"],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
