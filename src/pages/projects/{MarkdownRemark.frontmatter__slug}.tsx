@@ -24,27 +24,29 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
   const image = getImage(frontmatter.image?.childImageSharp);
 
   return (
-    <Flex px={[0, 14, 14, 14]} align="center">
+    <Flex px={[0, 14, 14, 14]} align="center" justify="center">
       <PageScaleFade>
         <Seo title={frontmatter.title} />
         {frontmatter.videoURL !== "" && (
-          <Box align="center" bg="green" py={6} rounded="lg" shadow="md">
-            <AspectRatio maxW={640} ratio={1}>
-              <iframe
-                src={frontmatter.videoURL}
-                loading="lazy"
-                webkitallowfullscreen={true}
-                mozallowfullscreen={true}
-                allowFullScreen={true}
-              />
-            </AspectRatio>
+          <Box p={2}>
+            <Box align="center" bg="green" py={6} rounded="lg" shadow="md">
+              <AspectRatio maxW={640} ratio={1}>
+                <iframe
+                  src={frontmatter.videoURL}
+                  loading="lazy"
+                  webkitallowfullscreen={true}
+                  mozallowfullscreen={true}
+                  allowFullScreen={true}
+                />
+              </AspectRatio>
+            </Box>
           </Box>
         )}
 
-        <Box align="center">
+        <Box>
           <GatsbyImage alt={frontmatter.title} image={image} imgStyle={{ borderRadius: 10 }} />
         </Box>
-        <Box mt={10}>
+        <Box mt={10} px={2}>
           <VStack align="left">
             <HStack>
               <Heading textDecor="none" fontWeight="700">
@@ -108,7 +110,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
             </HStack>
           </HStack>
         </Box>
-        <Box dangerouslySetInnerHTML={{ __html: html }} />
+        <Box ml={2} dangerouslySetInnerHTML={{ __html: html }} />
       </PageScaleFade>
     </Flex>
   );

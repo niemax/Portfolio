@@ -98,7 +98,11 @@ const Header = () => {
                 variant="outline"
                 aria-label="Options"
               />
-              <MenuList direction="column" bg={useColorModeValue("light", "boxes")}>
+              <MenuList
+                direction="column"
+                bg={useColorModeValue("light", "boxes")}
+                justify="center"
+              >
                 <MenuItem as={NavLink} />
               </MenuList>
             </Menu>

@@ -47,7 +47,7 @@ const Projects = () => {
             <MdOutlineWorkOutline fontSize={32} color={useColorModeValue("black", "white")} />
           </HStack>
           <Heading size="md" ml={3} align="center" mt={3}>
-            Some of my personal projects that I have personally found the most successful.
+            Some of my personal projects that I like the most.
           </Heading>
           <ProjectCards data={allProjectsJson.edges} slug="" />
         </Box>

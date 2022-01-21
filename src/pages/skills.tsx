@@ -1,6 +1,15 @@
 import React from "react";
 import { PageScaleFade } from "../components/motion/transitions";
-import { Box, HStack, Heading, Tabs as ChakraTabs, TabList, Tab, Wrap } from "@chakra-ui/react";
+import {
+  Box,
+  HStack,
+  Heading,
+  Tabs as ChakraTabs,
+  TabList,
+  Tab,
+  Wrap,
+  Flex,
+} from "@chakra-ui/react";
 import { graphql } from "gatsby";
 import { FaLanguage, FaListUl } from "react-icons/fa";
 import { BsStack } from "react-icons/bs";
@@ -23,7 +32,7 @@ const Skills = ({ data }: any) => {
   return (
     <PageScaleFade>
       <Seo title="Skills" />
-      <Box mt="3" w={[null, null, "70%"]} mx="auto" px={[4, 6, 0, 0]}>
+      <Flex direction="column" mt="3" w={["auto", "auto", "70%"]} mx="auto" px={[2, 6, 0, 0]}>
         <Box align="center" justify="center">
           <HStack align="center" justify="center">
             <Heading>Tech Stack</Heading>
@@ -83,7 +92,7 @@ const Skills = ({ data }: any) => {
           </ChakraTabs>
         </Box>
         <SkillsCards skillsData={skillsData} />
-      </Box>
+      </Flex>
     </PageScaleFade>
   );
 };
