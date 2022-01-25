@@ -85,7 +85,7 @@
     "description": "State Management",
     "link": "https://redux.js.org",
     "type": "development",
-    "hearts": 2,
+    "hearts": 1,
     "colorScheme": "purple",
     "image": "../images/icons8-redux-144.png"
   },
@@ -118,7 +118,7 @@
   },
   {
     "name": "Firebase",
-    "description": "Database / SaaS",
+    "description": "Database",
     "link": "https://firebase.google.com/",
     "type": "development",
     "hearts": 3,
