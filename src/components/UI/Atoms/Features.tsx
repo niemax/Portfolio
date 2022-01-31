@@ -60,19 +60,17 @@ export const Features: React.FC = () => (
       </ListItem>
       <ListItem>
         <HStack>
-          <Link to="/projects">
-            <Heading
-              size="xs"
-              color={useColorModeValue("#534436", "#fff")}
-              textDecor="none"
-              _hover={{ color: "green" }}
-            >
-              New projects page
-              <Badge colorScheme="whatsapp" variant="subtle" ml={1}>
-                New
-              </Badge>
-            </Heading>
-          </Link>
+          <Heading
+            size="xs"
+            color={useColorModeValue("#534436", "#fff")}
+            textDecor="none"
+            _hover={{ color: "green" }}
+          >
+            Uses system color mode as theme
+            <Badge colorScheme="whatsapp" variant="subtle" ml={1}>
+              New
+            </Badge>
+          </Heading>
         </HStack>
       </ListItem>
     </UnorderedList>

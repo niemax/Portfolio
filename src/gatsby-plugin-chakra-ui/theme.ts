@@ -1,4 +1,4 @@
-import { extendTheme, theme as baseTheme, ThemeConfig } from "@chakra-ui/react";
+import { extendTheme, theme as baseTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 import { colors } from "../theme/foundations/colors";
 
@@ -31,6 +31,9 @@ export const Heading = {
 };
 
 const theme = {
+  config: {
+    useSystemColorMode: true,
+  },
   fonts: {
     body: "M PLUS Rounded 1c",
     heading: "M PLUS Rounded 1c",
@@ -54,10 +57,11 @@ const theme = {
   },
 };
 
-
-export default extendTheme({
+const customTheme = extendTheme({
   ...baseTheme,
   ...theme,
   colors,
   components: { Heading },
 });
+
+export default customTheme;
