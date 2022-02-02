@@ -34,7 +34,6 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
                 <iframe
                   src={frontmatter.videoURL}
                   loading="lazy"
-                  webkitallowfullscreen={true}
                   mozallowfullscreen={true}
                   allowFullScreen={true}
                 />
@@ -44,7 +43,9 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
         )}
 
         <Box>
-          <GatsbyImage alt={frontmatter.title} image={image} imgStyle={{ borderRadius: 10 }} />
+          {image && (
+            <GatsbyImage alt={frontmatter.title} image={image} imgStyle={{ borderRadius: 10 }} />
+          )}
         </Box>
         <Box mt={10} px={2}>
           <VStack align="left">

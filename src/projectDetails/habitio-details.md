@@ -5,7 +5,7 @@ date: "26.11.2021"
 readTime: 3
 gitHubLink: https://github.com/niemax/Habitio
 techStack: ["React-Native", "AsyncStorage"]
-videoURL: https://player.vimeo.com/video/664675277?h=85e43f261b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479
+videoURL: https://player.vimeo.com/video/672750044?h=594edaa042&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479
 ---
 
 # **What is Habitio?** 📱
