@@ -14,14 +14,13 @@ import {
 import { motion } from "framer-motion";
 import { fromDownToUp, fromDownToUpItem } from "../../motion/transitions";
 import { MBox } from "../../motion/MotionBox";
-import { StaticImage } from "gatsby-plugin-image";
-import { FaGraduationCap } from "react-icons/fa";
+import { FaBriefcase } from "react-icons/fa";
 
 const Career = () => (
   <Box mt={14}>
     <HStack mb={5}>
       <Heading>Career</Heading>
-      <FaGraduationCap fontSize={32} />
+      <FaBriefcase fontSize={32} />
     </HStack>
     <motion.div variants={fromDownToUp} initial="hidden" animate="show">
       <motion.div variants={fromDownToUpItem}>

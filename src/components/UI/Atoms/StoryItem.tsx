@@ -4,7 +4,6 @@ import {
   FaBriefcase,
   FaTools,
   FaMobileAlt,
-  FaCode,
   FaGraduationCap,
   FaPython,
   FaHtml5,
