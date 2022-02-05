@@ -29,7 +29,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
         <Seo title={frontmatter.title} />
         {frontmatter.videoURL !== "" && (
           <Box p={2}>
-            <Box align="center" bg="green" py={6} rounded="lg" shadow="md">
+            <Box align="center" bg="green" py={6} rounded="lg" shadow="dark-lg">
               <AspectRatio maxW={640} ratio={1}>
                 <iframe
                   src={frontmatter.videoURL}

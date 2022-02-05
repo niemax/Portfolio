@@ -32,8 +32,9 @@ const Header = () => {
       w="100%"
       h={58}
       bg={useColorModeValue("#ffffff40", "#20202380")}
-      css={{ backdropFilter: "blur(10px)" }}
+      css={{ backdropFilter: "blur(20px)" }}
       zIndex={1}
+      shadow="lg"
     >
       <Container
         display="flex"

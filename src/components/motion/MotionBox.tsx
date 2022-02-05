@@ -22,7 +22,7 @@ export const MBox = ({ height, width, animation, children, ...props }: IMBoxProp
   <MotionBox
     height={height}
     width={width}
-    rounded="lg"
+    rounded="xl"
     bg={useColorModeValue("light", "boxes")}
     whileHover={animation}
     whileTap={{ scale: 0.9 }}

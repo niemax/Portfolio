@@ -13,7 +13,7 @@ export const Introduction: React.FC = () => (
     <Box>
       <Heading size="md">
         I'm{" "}
-        <Box as="span" fontWeight="800" color={useColorModeValue(colors.darkerGreen, "#A7D38D")}>
+        <Box as="span" fontWeight="800" color={useColorModeValue(colors.darkerGreen, colors.green)}>
           Axel,{" "}
         </Box>
         Software Developer and student from Helsinki. My vision is to make the web accessible and

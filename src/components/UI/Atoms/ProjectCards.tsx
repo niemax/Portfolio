@@ -124,7 +124,7 @@ export const ProjectCards = (props: IProjectCardProps) => {
                         size="md"
                         onClick={() => windowOpen(node.url)}
                         variant="outline"
-                        colorScheme="teal"
+                        colorScheme="purple"
                         aria-label="project link"
                         fontSize={20}
                         shadow="md"

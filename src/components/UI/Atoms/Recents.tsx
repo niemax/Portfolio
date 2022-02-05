@@ -54,7 +54,7 @@ export const Recents = () => {
   return (
     <>
       <Heading mt={20}>Recent work</Heading>
-      <Box mt={5}>
+      <Box mt={8}>
         <ProjectCards
           data={mapped}
           slug="/projects"

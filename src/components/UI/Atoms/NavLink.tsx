@@ -58,7 +58,7 @@ export const NavLink = ({ ...props }: INavLinkProps) => {
           >
             <Link
               activeStyle={{
-                color: useColorModeValue(colors.darkerGreen, "#A7D38D"),
+                color: colors.green,
                 fontWeight: 600,
               }}
               to={node.path}
@@ -75,7 +75,7 @@ export const NavLink = ({ ...props }: INavLinkProps) => {
               <MenuItem>
                 <Link
                   activeStyle={{
-                    color: useColorModeValue(colors.darkerGreen, "#A7D38D"),
+                    color: colors.green,
                     fontWeight: 600,
                   }}
                   to={node.path}

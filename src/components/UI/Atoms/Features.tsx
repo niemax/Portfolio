@@ -9,11 +9,12 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "gatsby";
 import React from "react";
+import { colors } from "../../../theme/foundations/colors";
 
 export const Features: React.FC = () => (
   <Box
     bg={useColorModeValue("#FFF", "boxes")}
-    borderLeft="3px solid #B1D8B7"
+    borderLeft="3px solid #AE7DE7"
     rounded="md"
     shadow="sm"
     mt={20}
@@ -34,7 +35,7 @@ export const Features: React.FC = () => (
               _hover={{ color: "green" }}
             >
               New chat project
-              <Badge colorScheme="whatsapp" variant="subtle" ml={1}>
+              <Badge colorScheme="purple" variant="subtle" ml={1}>
                 New
               </Badge>
             </Heading>
@@ -51,7 +52,7 @@ export const Features: React.FC = () => (
               _hover={{ color: "green" }}
             >
               Developer story page
-              <Badge colorScheme="whatsapp" variant="subtle" ml={1}>
+              <Badge colorScheme="purple" variant="subtle" ml={1}>
                 New
               </Badge>
             </Heading>
@@ -67,7 +68,7 @@ export const Features: React.FC = () => (
             _hover={{ color: "green" }}
           >
             Uses system color mode as theme
-            <Badge colorScheme="whatsapp" variant="subtle" ml={1}>
+            <Badge colorScheme="purple" variant="subtle" ml={1}>
               New
             </Badge>
           </Heading>

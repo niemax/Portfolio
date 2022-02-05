@@ -8,9 +8,9 @@ export const Heading = {
       fontSize: "1.9rem",
       fontWeight: 700,
       textDecoration: "underline",
-      textUnderlineOffset: 10,
-      textDecorationColor: "grey",
-      textDecorationThickness: "0.5px",
+      textUnderlineOffset: 13,
+      textDecorationColor: "gray.300",
+      textDecorationThickness: "2px",
       marginBottom: 2,
     },
     md: {
@@ -42,7 +42,7 @@ const theme = {
     global: props => ({
       body: {
         color: mode("#000", "#ffff")(props),
-        bg: mode("#F7FAFC", "#131B1F")(props),
+        bg: mode("#F7FAFC", "#171923")(props),
         overflowX: "hidden",
         overflowY: "auto",
       },

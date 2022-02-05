@@ -9,6 +9,7 @@ import {
   useColorModeValue,
   Tag,
   TagLabel,
+  Text,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { fromDownToUp, fromDownToUpItem } from "../../motion/transitions";
@@ -26,7 +27,7 @@ export const Education = () => (
       <motion.div variants={fromDownToUpItem}>
         <MBox
           height="auto"
-          border={useColorModeValue("", `1px solid #2A404B`)}
+          border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
           animation={{ scale: 1.02 }}
           py={2}
           width="auto"
@@ -54,22 +55,26 @@ export const Education = () => (
               <Heading size="md" fontWeight="600">
                 Haaga-Helia UAS
               </Heading>
-              <Heading size="sm">ICT and Digital Services</Heading>
-              <Heading size="sm">2020 - present</Heading>
+              <Text fontSize="sm" fontWeight={500}>
+                ICT and Digital Services
+              </Text>
+              <Text fontSize="sm" fontWeight={500}>
+                2020 - present
+              </Text>
               <HStack>
                 <Wrap>
                   <WrapItem>
-                    <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
+                    <Tag colorScheme="purple" rounded="md" size="sm" variant="subtle">
                       <TagLabel>ICT</TagLabel>
                     </Tag>
                   </WrapItem>
                   <WrapItem>
-                    <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
+                    <Tag colorScheme="purple" rounded="md" size="sm" variant="subtle">
                       <TagLabel>Programming</TagLabel>
                     </Tag>
                   </WrapItem>
                   <WrapItem>
-                    <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
+                    <Tag colorScheme="purple" rounded="md" size="sm" variant="subtle">
                       <TagLabel>Entrepreneurship</TagLabel>
                     </Tag>
                   </WrapItem>

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Collapse, SlideFade, useDisclosure } from "@chakra-ui/react";
+import { useDisclosure } from "@chakra-ui/react";
 import { ScaleFade } from "@chakra-ui/react";
 
 export const skillsContainer = {
@@ -55,7 +55,7 @@ export const otherTransition = {
 };
 
 export const otherItem = {
-  hidden: { opacity: 0, x: 50 },
+  hidden: { opacity: 0, x: 250 },
   show: {
     opacity: 1,
     x: 0,

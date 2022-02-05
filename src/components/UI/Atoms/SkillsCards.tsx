@@ -1,8 +1,9 @@
-import { Box, Heading, HStack, SimpleGrid, useColorModeValue, Badge } from "@chakra-ui/react";
+import { Box, Heading, HStack, SimpleGrid, useColorModeValue, Badge, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 import { HiOutlineLightningBolt } from "react-icons/hi";
+import { colors } from "../../../theme/foundations/colors";
 import { windowOpen } from "../../../utility/helpers/windowOpen";
 import { MBox } from "../../motion/MotionBox";
 import { skillsContainer, skillsItem } from "../../motion/transitions";
@@ -29,7 +30,7 @@ export const SkillsCards = ({ skillsData }: SkillsCardsProps) => {
                   border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
                 >
                   <HStack mt={1} align="center">
-                    <Badge variant="subtle" colorScheme={node.colorScheme} p={1.5} rounded="md">
+                    <Badge colorScheme={node.colorScheme} p={1.5} rounded="md">
                       <GatsbyImage alt={node.name} image={image} />
                     </Badge>
                     <Box
@@ -38,16 +39,19 @@ export const SkillsCards = ({ skillsData }: SkillsCardsProps) => {
                       _hover={{ color: node.color }}
                     >
                       <HStack>
-                        <Heading size="md" fontSize={18} fontWeight={500} mt={2}>
+                        <Heading
+                          size="md"
+                          fontSize={18}
+                          fontWeight={700}
+                          mt={2}
+                          color={colors.green}
+                        >
                           {node.name}
                         </Heading>
-                        {Array.from(Array(node.hearts)).map((_, idx) => (
-                          <HiOutlineLightningBolt key={idx} />
-                        ))}
                       </HStack>
-                      <Heading size="xs" mt={1}>
+                      <Text fontSize="xs" mt={1} fontWeight={500}>
                         {node.description}
-                      </Heading>
+                      </Text>
                     </Box>
                   </HStack>
                 </MBox>
