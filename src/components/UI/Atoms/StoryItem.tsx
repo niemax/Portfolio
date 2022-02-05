@@ -14,7 +14,7 @@ import { Link } from "gatsby";
 
 const StoryItem: React.FC = () => {
   return (
-    <Flex align="baseline" direction="column" mb={0} px={[2, 10, 10, 10]}>
+    <Flex direction="column" mb={0} px={[2, 10, 10, 12]}>
       <Box mb={10}>
         <Heading>My Developer story</Heading>
       </Box>
