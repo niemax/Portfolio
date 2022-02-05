@@ -5,6 +5,7 @@ import { PageScaleFade } from "../components/motion/transitions";
 import { Story } from "../components/UI/Atoms/Story";
 import { Education } from "../components/UI/Atoms/Education";
 import { Likings } from "../components/UI/Atoms/Likings";
+import Career from "../components/UI/Atoms/Career";
 
 const About = () => (
   <PageScaleFade>
@@ -15,6 +16,9 @@ const About = () => (
       </section>
       <section>
         <Likings />
+      </section>
+      <section>
+        <Career />
       </section>
       <section>
         <Education />

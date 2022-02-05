@@ -43,14 +43,14 @@ export const Features: React.FC = () => (
       </ListItem>
       <ListItem>
         <HStack>
-          <Link to="/skills">
+          <Link to="/story">
             <Heading
               size="xs"
               color={useColorModeValue("#534436", "#fff")}
               textDecor="none"
               _hover={{ color: "green" }}
             >
-              Redesigned skills page
+              Developer story page
               <Badge colorScheme="whatsapp" variant="subtle" ml={1}>
                 New
               </Badge>

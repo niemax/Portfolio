@@ -10,7 +10,7 @@ export const Heading = {
       textDecoration: "underline",
       textUnderlineOffset: 10,
       textDecorationColor: "grey",
-      textDecorationThickness: "2px",
+      textDecorationThickness: "0.5px",
       marginBottom: 2,
     },
     md: {

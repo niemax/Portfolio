@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useDisclosure } from "@chakra-ui/react";
+import { Collapse, SlideFade, useDisclosure } from "@chakra-ui/react";
 import { ScaleFade } from "@chakra-ui/react";
 
 export const skillsContainer = {
@@ -99,5 +99,9 @@ export const PageScaleFade: React.FC = ({ children }) => {
     };
   }, []);
 
-  return <ScaleFade in={isOpen}>{children}</ScaleFade>;
+  return (
+    <ScaleFade initialScale={0.85} reverse={true} in={isOpen}>
+      {children}
+    </ScaleFade>
+  );
 };

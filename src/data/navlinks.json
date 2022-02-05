@@ -13,5 +13,10 @@
     "name": "Skills",
     "path": "/skills",
     "ariaLabel": "skills"
+  },
+  {
+    "name": "Story",
+    "path": "/story",
+    "ariaLabel": "developer story"
   }
 ]

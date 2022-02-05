@@ -25,11 +25,11 @@ export const SkillsCards = ({ skillsData }: SkillsCardsProps) => {
                   height={20}
                   px={2}
                   py={2}
-                  animation={{ y: -6.25 }}
+                  animation={{ y: -7.25 }}
                   border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
                 >
-                  <HStack>
-                    <Badge variant="subtle" colorScheme={node.colorScheme} p={1} rounded="md">
+                  <HStack mt={1} align="center">
+                    <Badge variant="subtle" colorScheme={node.colorScheme} p={1.5} rounded="md">
                       <GatsbyImage alt={node.name} image={image} />
                     </Badge>
                     <Box

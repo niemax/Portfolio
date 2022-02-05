@@ -9,6 +9,7 @@ import {
   useColorModeValue,
   Tag,
   TagLabel,
+  Center,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { fromDownToUp, fromDownToUpItem } from "../../motion/transitions";
@@ -16,10 +17,10 @@ import { MBox } from "../../motion/MotionBox";
 import { StaticImage } from "gatsby-plugin-image";
 import { FaGraduationCap } from "react-icons/fa";
 
-export const Education = () => (
+const Career = () => (
   <Box mt={14}>
     <HStack mb={5}>
-      <Heading>Education</Heading>
+      <Heading>Career</Heading>
       <FaGraduationCap fontSize={32} />
     </HStack>
     <motion.div variants={fromDownToUp} initial="hidden" animate="show">
@@ -32,45 +33,43 @@ export const Education = () => (
           width="auto"
         >
           <HStack align="center" spacing={4} p={2}>
-            <Box
-              height="auto"
-              width="auto"
+            <Center
+              height={100}
+              width={100}
               p={1}
               rounded="full"
-              align="center"
-              justify="center"
               bg={useColorModeValue("navLightHover", "navDarkHover")}
             >
-              <StaticImage
-                src="../../../images/315f6f8c-0795-46b7-9c87-9f69a44a9d81.png"
-                alt="education logo"
-                placeholder="blurred"
-                layout="fixed"
-                width={110}
-                height={110}
-              />
-            </Box>
-            <VStack align="baseline">
               <Heading size="md" fontWeight="600">
-                Haaga-Helia UAS
+                Qvik
               </Heading>
-              <Heading size="sm">ICT and Digital Services</Heading>
-              <Heading size="sm">2020 - present</Heading>
+            </Center>
+            <VStack align="baseline">
+              <Heading size="md" fontWeight={600}>
+                Qvik
+              </Heading>
+              <Heading size="sm">Junior Software Engineer</Heading>
+              <Heading size="sm">Feb 2022 - present</Heading>
               <HStack>
                 <Wrap>
                   <WrapItem>
                     <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
-                      <TagLabel>ICT</TagLabel>
+                      <TagLabel>React</TagLabel>
                     </Tag>
                   </WrapItem>
                   <WrapItem>
                     <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
-                      <TagLabel>Programming</TagLabel>
+                      <TagLabel>React-Native</TagLabel>
                     </Tag>
                   </WrapItem>
                   <WrapItem>
                     <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
-                      <TagLabel>Entrepreneurship</TagLabel>
+                      <TagLabel>JavaScript</TagLabel>
+                    </Tag>
+                  </WrapItem>
+                  <WrapItem>
+                    <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
+                      <TagLabel>TypeScript</TagLabel>
                     </Tag>
                   </WrapItem>
                 </Wrap>
@@ -82,3 +81,5 @@ export const Education = () => (
     </motion.div>
   </Box>
 );
+
+export default Career;

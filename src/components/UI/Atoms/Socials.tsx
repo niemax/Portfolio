@@ -15,11 +15,11 @@ export const Socials: React.FC = () => (
     >
       <IconButton
         as="a"
-        fontSize={20}
-        variant="ghost"
+        fontSize={18}
         aria-label="Github Link"
         icon={<FaGithub />}
-        _hover={{ bg: "#6e5494" }}
+        opacity={0.7}
+        _hover={{ opacity: 1 }}
         onClick={() => windowOpen("https://github.com/niemax")}
       />
     </Tooltip>
@@ -32,11 +32,11 @@ export const Socials: React.FC = () => (
     >
       <IconButton
         as="a"
-        fontSize={20}
-        variant="ghost"
+        fontSize={18}
         aria-label="dev.to link"
         icon={<FaDev />}
-        _hover={{ bg: "gray" }}
+        opacity={0.7}
+        _hover={{ opacity: 1 }}
         onClick={() => windowOpen("https://dev.to/axel_nieminen_072275fab50")}
       />
     </Tooltip>
@@ -49,11 +49,11 @@ export const Socials: React.FC = () => (
     >
       <IconButton
         as="a"
-        variant="ghost"
-        fontSize={20}
+        fontSize={18}
         aria-label="stackoverflow link"
         icon={<FaStackOverflow />}
-        _hover={{ bg: "#f48024" }}
+        opacity={0.7}
+        _hover={{ opacity: 1 }}
         onClick={() => windowOpen("https://stackoverflow.com/users/13197952/niemax")}
       />
     </Tooltip>
@@ -66,11 +66,11 @@ export const Socials: React.FC = () => (
     >
       <IconButton
         as="a"
-        variant="ghost"
-        fontSize={20}
+        fontSize={18}
         aria-label="linkedin link"
         icon={<FaLinkedin />}
-        _hover={{ bg: "#0077b5" }}
+        opacity={0.7}
+        _hover={{ opacity: 1 }}
         onClick={() => windowOpen("https://www.linkedin.com/in/axel-nieminen-06a580196/")}
       />
     </Tooltip>
@@ -83,11 +83,11 @@ export const Socials: React.FC = () => (
     >
       <IconButton
         as="a"
-        variant="ghost"
-        fontSize={20}
+        fontSize={18}
         aria-label="mail link"
         icon={<ImMail />}
-        _hover={{ bg: "cyan" }}
+        opacity={0.7}
+        _hover={{ opacity: 1 }}
         onClick={() => windowOpen("mailto:axel.nieminen@mac.com")}
       />
     </Tooltip>

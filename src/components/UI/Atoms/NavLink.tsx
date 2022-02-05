@@ -1,7 +1,17 @@
 import React from "react";
-import { Button, useColorModeValue, Box } from "@chakra-ui/react";
+import {
+  Button,
+  useColorModeValue,
+  Box,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+} from "@chakra-ui/react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { INavLinkProps } from "../../../interfaces";
+import { FaChevronDown } from "react-icons/fa";
+import { colors } from "../../../theme/foundations/colors";
 
 export const NavLink = ({ ...props }: INavLinkProps) => {
   const { allNavlinksJson } = useStaticQuery<AllNavlinksJson>(
@@ -34,28 +44,49 @@ export const NavLink = ({ ...props }: INavLinkProps) => {
 
   return (
     <Box ml={1}>
-      {allNavlinksJson.edges?.map(({ node } ) => (
-        <Button
-          key={node.name}
-          py={props.padding}
-          fontSize={props.fontSize}
-          w="auto"
-          mx={1}
-          variant="ghost"
-          _hover={{ bg: useColorModeValue("navLightHover", "boxes") }}
-          {...props}
-        >
-          <Link
-            activeStyle={{
-              color: "#B1D8B7",
-              fontWeight: 600,
-            }}
-            to={node.path}
+      {allNavlinksJson.edges?.map(({ node }, index) => {
+        return index !== 3 ? (
+          <Button
+            key={node.name}
+            py={props.padding}
+            fontSize={props.fontSize}
+            w="auto"
+            mx={1}
+            variant="ghost"
+            _hover={{ bg: useColorModeValue("navLightHover", "boxes") }}
+            {...props}
           >
-            {node.name}
-          </Link>
-        </Button>
-      ))}
+            <Link
+              activeStyle={{
+                color: useColorModeValue(colors.darkerGreen, "#A7D38D"),
+                fontWeight: 600,
+              }}
+              to={node.path}
+            >
+              {node.name}
+            </Link>
+          </Button>
+        ) : (
+          <Menu>
+            <MenuButton as={Button} rightIcon={<FaChevronDown />}>
+              More
+            </MenuButton>
+            <MenuList>
+              <MenuItem>
+                <Link
+                  activeStyle={{
+                    color: useColorModeValue(colors.darkerGreen, "#A7D38D"),
+                    fontWeight: 600,
+                  }}
+                  to={node.path}
+                >
+                  {node.name}
+                </Link>
+              </MenuItem>
+            </MenuList>
+          </Menu>
+        );
+      })}
     </Box>
   );
 };
