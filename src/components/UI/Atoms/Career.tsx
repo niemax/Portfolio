@@ -53,22 +53,22 @@ const Career = () => (
           <HStack>
             <Wrap>
               <WrapItem>
-                <Tag colorScheme="purple" rounded="md" size="sm" variant="subtle">
+                <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
                   <TagLabel>React</TagLabel>
                 </Tag>
               </WrapItem>
               <WrapItem>
-                <Tag colorScheme="purple" rounded="md" size="sm" variant="subtle">
+                <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
                   <TagLabel>React-Native</TagLabel>
                 </Tag>
               </WrapItem>
               <WrapItem>
-                <Tag colorScheme="purple" rounded="md" size="sm" variant="subtle">
+                <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
                   <TagLabel>JavaScript</TagLabel>
                 </Tag>
               </WrapItem>
               <WrapItem>
-                <Tag colorScheme="purple" rounded="md" size="sm" variant="subtle">
+                <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
                   <TagLabel>TypeScript</TagLabel>
                 </Tag>
               </WrapItem>

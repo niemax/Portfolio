@@ -39,8 +39,7 @@ const Skills = ({ data }: any) => {
             <BsStack fontSize={28} />
           </HStack>
           <Heading size="md" mt={4}>
-            Languages, technologies, and tools I'm familiar with (lightnings describe my efficiency
-            with the tool).
+            Languages, technologies, and tools I'm familiar with.
           </Heading>
         </Box>
         <Box mt={5}>

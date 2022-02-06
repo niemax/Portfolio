@@ -14,9 +14,9 @@ const About = () => (
     <Flex px={[2, 10, 14, 14]} direction="column">
       <motion.div variants={otherTransition} initial="hidden" animate="show">
         <motion.div variants={otherItem}>
-          <section>
+          {/*    <section>
             <Story />
-          </section>
+          </section> */}
           <section>
             <Likings />
           </section>

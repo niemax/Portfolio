@@ -64,17 +64,17 @@ export const Education = () => (
               <HStack>
                 <Wrap>
                   <WrapItem>
-                    <Tag colorScheme="purple" rounded="md" size="sm" variant="subtle">
+                    <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
                       <TagLabel>ICT</TagLabel>
                     </Tag>
                   </WrapItem>
                   <WrapItem>
-                    <Tag colorScheme="purple" rounded="md" size="sm" variant="subtle">
+                    <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
                       <TagLabel>Programming</TagLabel>
                     </Tag>
                   </WrapItem>
                   <WrapItem>
-                    <Tag colorScheme="purple" rounded="md" size="sm" variant="subtle">
+                    <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
                       <TagLabel>Entrepreneurship</TagLabel>
                     </Tag>
                   </WrapItem>

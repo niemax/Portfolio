@@ -10,6 +10,7 @@ export interface IMemojiProps {
   width?: number | string;
   ml?: number;
   padding?: number;
+  shadow?: string;
 }
 
 export interface INavLinkProps {

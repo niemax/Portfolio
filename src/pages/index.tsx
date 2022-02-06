@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Center, Flex, HStack } from "@chakra-ui/react";
+import { Box, Center, Flex, HStack, Stack } from "@chakra-ui/react";
 import Seo from "../components/seo";
 import { Memoji } from "../components/UI/Atoms/Memoji";
 import { container, item, PageScaleFade } from "../components/motion/transitions";
@@ -17,10 +17,18 @@ const IndexPage = () => (
           <HStack align="center" justify="center" mx="auto">
             <motion.div variants={container} initial="hidden" animate="show">
               <motion.div variants={item}>
-                <Center>
-                  <Memoji width={150} height={150} padding={3} />
-                </Center>
-                <Introduction />
+                <Stack
+                  direction={["column", "column", "row"]}
+                  spacing={10}
+                  align={["center", "center", "flex-end"]}
+                >
+                  <Box>
+                    <Memoji width={150} height={150} padding={3} shadow="dark-lg" />
+                  </Box>
+                  <Box maxW={530}>
+                    <Introduction />
+                  </Box>
+                </Stack>
               </motion.div>
             </motion.div>
           </HStack>

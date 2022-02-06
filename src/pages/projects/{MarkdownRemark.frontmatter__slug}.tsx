@@ -24,7 +24,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
   const image = getImage(frontmatter.image?.childImageSharp);
 
   return (
-    <Flex px={[0, 14, 14, 14]} align="center" justify="center">
+    <Flex px={[2, 14, 14, 14]} align="center" justify="center">
       <PageScaleFade>
         <Seo title={frontmatter.title} />
         {frontmatter.videoURL !== "" && (
@@ -42,11 +42,9 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
           </Box>
         )}
 
-        <Box>
-          {image && (
-            <GatsbyImage alt={frontmatter.title} image={image} imgStyle={{ borderRadius: 10 }} />
-          )}
-        </Box>
+        {image && (
+          <GatsbyImage alt={frontmatter.title} image={image} imgStyle={{ borderRadius: 20 }} />
+        )}
         <Box mt={10} px={2}>
           <VStack align="left">
             <HStack>

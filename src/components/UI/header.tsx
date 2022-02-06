@@ -53,7 +53,7 @@ const Header = () => {
           mt={{ base: 4, md: 0 }}
         >
           <Link to="/">
-            <Memoji width={10} height={10} padding={1.5} />
+            <Memoji width={10} height={10} padding={1.5} shadow="none" />
           </Link>
           <NavLink />
         </Stack>
