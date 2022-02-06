@@ -16,7 +16,7 @@ import { MBox } from "../../motion/MotionBox";
 import { FaBriefcase } from "react-icons/fa";
 
 const Career = () => (
-  <Box mt={14}>
+  <Box>
     <HStack mb={5}>
       <Heading>Career</Heading>
       <FaBriefcase fontSize={24} />
@@ -25,16 +25,15 @@ const Career = () => (
       height="auto"
       border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
       animation={{ scale: 1.02 }}
-      py={2}
       width="auto"
     >
       <HStack align="center" spacing={4} p={2}>
         <Center
-          height={100}
-          width={100}
+          height="80px"
+          width="80px"
           p={1}
           rounded="full"
-          bg={useColorModeValue("navLightHover", "navDarkHover")}
+          bg={useColorModeValue("gray.100", "gray.900")}
         >
           <Heading size="md" fontWeight="600">
             Qvik

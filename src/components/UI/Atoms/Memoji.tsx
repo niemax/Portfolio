@@ -14,7 +14,7 @@ export const Memoji = (props: IMemojiProps) => {
       ml={props.ml}
       p={props.padding}
       whileHover={{ scale: 1.3 }}
-      border={`1px solid white`}
+      border={`2px solid ${colors.darkerGreen}`}
       shadow={props.shadow}
     >
       <StaticImage src="../../../staticImages/memoji.png" alt="memoji" placeholder="blurred" />

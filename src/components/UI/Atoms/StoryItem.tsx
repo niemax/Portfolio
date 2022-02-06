@@ -11,6 +11,10 @@ import {
   FaReact,
   FaCheck,
   FaFlagCheckered,
+  FaArchive,
+  FaDatabase,
+  FaSpider,
+  FaWeebly,
 } from "react-icons/fa";
 import Timeline from "./Timeline";
 import { Link } from "gatsby";
@@ -19,7 +23,7 @@ const StoryItem: React.FC = () => {
   return (
     <Flex direction="column" mb={0} px={[2, 10, 10, 12]}>
       <Box mb={10}>
-        <Heading>My Developer story</Heading>
+        <Heading>My Developer Story</Heading>
       </Box>
       {/* 2022 */}
       <Box mb={8}>
@@ -96,6 +100,12 @@ const StoryItem: React.FC = () => {
           2020
         </Text>
       </Box>
+      <Timeline icon={FaTools}>
+        <Text fontSize="large">
+          Built <strong>GoTrain-Web</strong> with vanilla <strong>JavaScript</strong> and{" "}
+          <strong>JQuery</strong>
+        </Text>
+      </Timeline>
       <Timeline icon={FaGraduationCap} skipTrail={true}>
         <Text fontSize="large">
           Started ICT studies in <strong>Haaga-Helia UAS</strong>
@@ -107,6 +117,12 @@ const StoryItem: React.FC = () => {
           2019
         </Text>
       </Box>
+      <Timeline icon={FaDatabase}>
+        <Text fontSize="large">
+          Dug deeper under the hood of JavaScript and also started to study more data structures &
+          algorithms
+        </Text>
+      </Timeline>
       <Timeline icon={FaHtml5}>
         <Text fontSize="large">
           Followed a tutorial and built a food recipe static website with <strong>HTML</strong> &{" "}

@@ -46,7 +46,7 @@ const Projects = () => {
           <motion.div variants={otherTransition} initial="hidden" animate="show">
             <motion.div
               variants={{
-                hidden: { opacity: 0, x: 350 },
+                hidden: { opacity: 0, x: 250 },
                 show: {
                   opacity: 1,
                   x: 0,

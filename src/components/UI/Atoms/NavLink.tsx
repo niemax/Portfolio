@@ -57,9 +57,9 @@ export const NavLink = ({ ...props }: INavLinkProps) => {
             {...props}
           >
             <Link
+              style={{ fontSize: 20, fontWeight: 400 }}
               activeStyle={{
                 color: colors.green,
-                fontWeight: 600,
               }}
               to={node.path}
             >

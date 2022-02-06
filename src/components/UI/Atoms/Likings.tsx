@@ -6,7 +6,7 @@ import { FaCode } from "react-icons/fa";
 import { colors } from "../../../theme/foundations/colors";
 
 export const Likings = () => (
-  <Box mt={2} mb={4}>
+  <Box mt={14} mb={4}>
     <Heading mb="4">What I like</Heading>
     <List spacing={3}>
       <ListItem>

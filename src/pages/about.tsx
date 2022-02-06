@@ -13,19 +13,30 @@ const About = () => (
     <Seo title="About" />
     <Flex px={[2, 10, 14, 14]} direction="column">
       <motion.div variants={otherTransition} initial="hidden" animate="show">
-        <motion.div variants={otherItem}>
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, x: 150 },
+            show: {
+              opacity: 1,
+              x: 0,
+              transition: {
+                duration: 0.8,
+              },
+            },
+          }}
+        >
           {/*    <section>
             <Story />
           </section> */}
-          <section>
-            <Likings />
-          </section>
           <section>
             <Career />
           </section>
           <section>
             <Education />
           </section>
+          {/*  <section>
+            <Likings />
+          </section> */}
         </motion.div>
       </motion.div>
     </Flex>

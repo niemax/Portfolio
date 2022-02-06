@@ -17,15 +17,11 @@ const IndexPage = () => (
           <HStack align="center" justify="center" mx="auto">
             <motion.div variants={container} initial="hidden" animate="show">
               <motion.div variants={item}>
-                <Stack
-                  direction={["column", "column", "row"]}
-                  spacing={10}
-                  align={["center", "center", "flex-end"]}
-                >
-                  <Box>
-                    <Memoji width={150} height={150} padding={3} shadow="dark-lg" />
+                <Stack direction={["column", "column", "row"]} spacing={10} align="center">
+                  <Box mt={8}>
+                    <Memoji width={130} height={130} padding={3} shadow="dark-lg" />
                   </Box>
-                  <Box maxW={530}>
+                  <Box maxW={590}>
                     <Introduction />
                   </Box>
                 </Stack>
@@ -33,7 +29,20 @@ const IndexPage = () => (
             </motion.div>
           </HStack>
           <section>
-            <motion.div variants={container} initial="hidden" animate="show">
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, transition: { when: "afterChildren" } },
+                show: {
+                  opacity: 1,
+                  transition: {
+                    staggerChildren: 0.1,
+                    staggerDirection: -5,
+                  },
+                },
+              }}
+              initial="hidden"
+              animate="show"
+            >
               <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 200 },

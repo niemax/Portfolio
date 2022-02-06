@@ -10,6 +10,7 @@ import {
   Tag,
   TagLabel,
   Text,
+  Center,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { fromDownToUp, fromDownToUpItem } from "../../motion/transitions";
@@ -29,18 +30,15 @@ export const Education = () => (
           height="auto"
           border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
           animation={{ scale: 1.02 }}
-          py={2}
           width="auto"
         >
           <HStack align="center" spacing={4} p={2}>
-            <Box
-              height="auto"
-              width="auto"
+            <Center
+              height="80px"
+              width="80px"
               p={1}
               rounded="full"
-              align="center"
-              justify="center"
-              bg={useColorModeValue("navLightHover", "navDarkHover")}
+              bg={useColorModeValue("gray.100", "gray.900")}
             >
               <StaticImage
                 src="../../../images/315f6f8c-0795-46b7-9c87-9f69a44a9d81.png"
@@ -50,7 +48,7 @@ export const Education = () => (
                 width={110}
                 height={110}
               />
-            </Box>
+            </Center>
             <VStack align="baseline">
               <Heading size="md" fontWeight="600">
                 Haaga-Helia UAS
