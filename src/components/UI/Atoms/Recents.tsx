@@ -1,9 +1,8 @@
 import React from "react";
 import { Box, Heading, useColorModeValue } from "@chakra-ui/react";
 import { ProjectCards } from "./ProjectCards";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import { AllProjectsJson } from "../../../types";
-import { motion } from "framer-motion";
 
 export const Recents = () => {
   const { allProjectsJson } = useStaticQuery<AllProjectsJson>(
@@ -20,17 +19,6 @@ export const Recents = () => {
               tech
               url
               slug
-              icon {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: FIXED
-                    quality: 50
-                    height: 30
-                    width: 30
-                    placeholder: BLURRED
-                  )
-                }
-              }
               image {
                 childImageSharp {
                   gatsbyImageData(

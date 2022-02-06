@@ -26,7 +26,7 @@ export const Introduction: React.FC = () => (
           width={30}
           height={30}
         />{" "}
-        &{" "}
+        & ️
         <StaticImage
           alt="React"
           src="../../../images/icons8-nodejs-144.png"

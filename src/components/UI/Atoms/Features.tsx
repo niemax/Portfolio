@@ -32,10 +32,10 @@ export const Features: React.FC = () => (
               size="xs"
               color={useColorModeValue("#534436", "#fff")}
               textDecor="none"
-              _hover={{ color: "mainOrange" }}
+              _hover={{ color: "orange" }}
             >
               New chat project
-              <Badge colorScheme="mainOrange" variant="subtle" ml={1}>
+              <Badge colorScheme="orange" variant="subtle" ml={1}>
                 New
               </Badge>
             </Heading>
@@ -49,10 +49,10 @@ export const Features: React.FC = () => (
               size="xs"
               color={useColorModeValue("#534436", "#fff")}
               textDecor="none"
-              _hover={{ color: "mainOrange" }}
+              _hover={{ color: "orange" }}
             >
               Developer story page
-              <Badge colorScheme="mainOrange" variant="subtle" ml={1}>
+              <Badge colorScheme="orange" variant="subtle" ml={1}>
                 New
               </Badge>
             </Heading>
@@ -65,10 +65,10 @@ export const Features: React.FC = () => (
             size="xs"
             color={useColorModeValue("#534436", "#fff")}
             textDecor="none"
-            _hover={{ color: "mainOrange" }}
+            _hover={{ color: "orange" }}
           >
             Uses system color mode as theme
-            <Badge colorScheme="mainOrange" variant="subtle" ml={1}>
+            <Badge colorScheme="orange" variant="subtle" ml={1}>
               New
             </Badge>
           </Heading>

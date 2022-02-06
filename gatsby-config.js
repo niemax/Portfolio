@@ -61,7 +61,7 @@ module.exports = {
         name: `Niemax's Portfolio`,
         short_name: `portfolio`,
         start_url: `/`,
-        background_color: `mainOrange`,
+        background_color: `orange`,
         icon: `src/staticImages/memoji.png`, // This path is relative to the root of the site.
       },
     },

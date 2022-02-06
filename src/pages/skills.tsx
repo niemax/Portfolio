@@ -48,7 +48,7 @@ const Skills = ({ data }: any) => {
               <Wrap>
                 <Tab
                   onClick={() => {
-                    setColorScheme("mainOrange");
+                    setColorScheme("orange");
                     setSkillsData(skills);
                   }}
                 >
@@ -105,7 +105,6 @@ export const _query = graphql`
           link
           name
           type
-          hearts
           colorScheme
           image {
             childImageSharp {
