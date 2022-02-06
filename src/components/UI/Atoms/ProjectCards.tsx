@@ -86,7 +86,6 @@ export const ProjectCards = (props: IProjectCardProps) => {
                 </Link>
                 <Box
                   h={props.height}
-                  px={2}
                   py={1}
                   maxW={[450, 450, 360, 370]}
                   rounded="lg"
@@ -98,16 +97,16 @@ export const ProjectCards = (props: IProjectCardProps) => {
                   </Box>
                 </Box>
                 <HStack mt={props.mt || 5} mb={2}>
-                  {node.tech.map((itm: any, idx: string) => (
+                  {node.tech.map((item: any) => (
                     <i>
                       <Text
-                        key={idx}
+                        key={item}
                         fontSize="sm"
                         color={useColorModeValue("black", "white")}
                         opacity={0.8}
                         fontWeight={700}
                       >
-                        {itm}
+                        {item}
                       </Text>
                     </i>
                   ))}
