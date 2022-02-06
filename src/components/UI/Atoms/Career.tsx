@@ -11,6 +11,7 @@ import {
   TagLabel,
   Center,
   Text,
+  Flex,
 } from "@chakra-ui/react";
 import { MBox } from "../../motion/MotionBox";
 import { FaBriefcase } from "react-icons/fa";
@@ -40,15 +41,22 @@ const Career = () => (
           </Heading>
         </Center>
         <VStack align="baseline">
-          <Heading size="md" fontWeight={600}>
-            Qvik
-          </Heading>
+          <Flex justify="space-between">
+            <Box>
+              <Heading size="md" fontWeight={600}>
+                Qvik
+              </Heading>
+            </Box>
+            <Box>
+              <Text fontSize="sm" fontWeight={500}>
+                Feb 2022 - present
+              </Text>
+            </Box>
+          </Flex>
           <Text fontSize="sm" fontWeight={500}>
             Junior Software Engineer
           </Text>
-          <Text fontSize="sm" fontWeight={500}>
-            Feb 2022 - present
-          </Text>
+
           <HStack>
             <Wrap>
               <WrapItem>

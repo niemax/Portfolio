@@ -18,11 +18,11 @@ export const Introduction: React.FC = () => (
         </Box>
         Software Developer and student from Helsinki. My vision is to make the web accessible and
         enjoyable for everyone. Love working in the <strong>JavaScript</strong> ecosystem -
-        especially <strong>React & NodeJS.</strong>
+        especially <strong>React & NodeJS 🌤</strong>
       </Text>
       <Box mt={4}>
         <Text fontSize="2xl">
-          Love working in an environment in which all the people share the same passion.
+          Love working in an environment in which all the people share the same passion. 😊
         </Text>
       </Box>
     </Box>
