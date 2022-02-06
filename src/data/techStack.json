@@ -1,7 +1,7 @@
 [
   {
     "name": "Javascript",
-    "description": "Web development",
+    "description": "Web/Mobile development",
     "link": "https://developer.mozilla.org/en-US/",
     "type": "language",
     "hearts": 3,
@@ -10,7 +10,7 @@
   },
   {
     "name": "Typescript",
-    "description": "Web development",
+    "description": "Web/Mobile development",
     "link": "https://www.typescriptlang.org/",
     "type": "language",
     "hearts": 2,
@@ -30,7 +30,7 @@
     "name": "HTML5",
     "description": "Web Layout",
     "link": "https://reactjs.org/",
-    "type": "Web Development",
+    "type": "development",
     "hearts": 3,
     "colorScheme": "orange",
     "image": "../images/icons8-html-5-48.png"
@@ -39,7 +39,7 @@
     "name": "CSS3",
     "description": "Web Styling",
     "link": "https://www.tutorialspoint.com/css/css3_tutorial.htm",
-    "type": "Design",
+    "type": "development",
     "hearts": 3,
     "colorScheme": "blue",
     "image": "../images/icons8-css3-48.png"
