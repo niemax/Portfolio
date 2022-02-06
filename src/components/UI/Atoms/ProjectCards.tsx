@@ -77,23 +77,22 @@ export const ProjectCards = (props: IProjectCardProps) => {
               <motion.div variants={fromDownToUpItem}>
                 <Link to={resolvePathToSlug(props.slug, node.slug)}>
                   <Heading
-                    textAlign={index % 2 === 0 ? "left" : "right"}
+                    textAlign={["left", "left", index % 2 === 0 ? "left" : "right"]}
                     textDecor="none"
                     mb={2}
                     size={props.headingSize}
-                    fontWeight={props.headingWeight}
+                    fontWeight={props.headingWeight || 800}
                   >
                     {node.name}
                   </Heading>
                 </Link>
                 <Box
                   h={props.height}
-                  py={1}
-                  px={0.5}
+                  p={2}
                   maxW={[450, 450, 360, 370]}
                   rounded="lg"
                   shadow={props.shadow || "lg"}
-                  bg={props.bg || useColorModeValue("gray.100", "gray.800")}
+                  bg={props.bg || useColorModeValue("gray.100", "gray.700")}
                 >
                   <Box mt={3}>
                     <Text fontSize="sm">{node.description.toUpperCase()}</Text>

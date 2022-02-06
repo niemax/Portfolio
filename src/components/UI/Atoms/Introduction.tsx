@@ -37,7 +37,7 @@ export const Introduction: React.FC = () => (
       </Text>
       <Box mt={4}>
         <Text fontSize="2xl">
-          Love working in an environment in which all the people share the same passion. 😊☄️
+          Love working in an environment in which all the people share the same passion 😊☄️
         </Text>
       </Box>
     </Box>
