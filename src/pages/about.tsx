@@ -1,7 +1,13 @@
 import React from "react";
 import { Flex } from "@chakra-ui/react";
 import Seo from "../components/seo";
-import { otherItem, otherTransition, PageScaleFade } from "../components/motion/transitions";
+import {
+  otherItem,
+  otherTransition,
+  PageScaleFade,
+  staggerProjectCardContainer,
+  staggerProjectCardItem,
+} from "../components/motion/transitions";
 import { Story } from "../components/UI/Atoms/MyStory";
 import { Education } from "../components/UI/Atoms/Education";
 import { Likings } from "../components/UI/Atoms/Likings";
@@ -12,31 +18,29 @@ const About = () => (
   <PageScaleFade>
     <Seo title="About" />
     <Flex px={[2, 10, 14, 14]} direction="column">
-      <motion.div variants={otherTransition} initial="hidden" animate="show">
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, x: 150 },
-            show: {
-              opacity: 1,
-              x: 0,
-              transition: {
-                duration: 0.8,
-              },
+      <motion.div
+        variants={{
+          hidden: { opacity: 0 },
+          show: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.5,
             },
-          }}
-        >
-          {/*    <section>
-            <Story />
-          </section> */}
+          },
+        }}
+        initial="hidden"
+        animate="show"
+      >
+        <motion.div variants={staggerProjectCardItem}>
           <section>
             <Career />
           </section>
+        </motion.div>
+
+        <motion.div variants={staggerProjectCardItem}>
           <section>
             <Education />
           </section>
-          {/*  <section>
-            <Likings />
-          </section> */}
         </motion.div>
       </motion.div>
     </Flex>

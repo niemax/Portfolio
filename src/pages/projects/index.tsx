@@ -43,42 +43,12 @@ const Projects = () => {
       <Seo title="Projects" />
       <Flex px={[2, 6, 0, 0]}>
         <Box>
-          <motion.div variants={otherTransition} initial="hidden" animate="show">
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, x: 150 },
-                show: {
-                  opacity: 1,
-                  x: 0,
-                  transition: {
-                    duration: 0.6,
-                  },
-                },
-              }}
-            >
-              <HStack justify="center">
-                <Heading ml={3}>Projects</Heading>
-              </HStack>
-            </motion.div>
-          </motion.div>
-          <motion.div variants={container} initial="hidden" animate="show">
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, x: -150 },
-                show: {
-                  opacity: 1,
-                  x: 0,
-                  transition: {
-                    duration: 0.7,
-                  },
-                },
-              }}
-            >
-              <Heading size="md" ml={3} align="center" mt={3}>
-                Some of my personal projects that I like the most.
-              </Heading>
-            </motion.div>
-          </motion.div>
+          <HStack justify="center">
+            <Heading ml={3}>Projects</Heading>
+          </HStack>
+          <Heading size="md" ml={3} align="center" mt={3}>
+            Some of my personal projects that I like the most.
+          </Heading>
           <ProjectCards data={allProjectsJson.edges} slug="" />
         </Box>
       </Flex>

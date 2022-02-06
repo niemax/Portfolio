@@ -105,3 +105,28 @@ export const PageScaleFade: React.FC = ({ children }) => {
     </ScaleFade>
   );
 };
+
+export const staggerProjectCardContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+export const staggerProjectCardItem = {
+  hidden: { opacity: 0, y: 200 },
+  show: { opacity: 1, y: 0 },
+};
+
+export const staggerTimelineItemContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
