@@ -55,7 +55,6 @@ export const Recents = () => {
           headingWeight={700}
           textColor="gray"
           border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
-          animation={{ scale: 1.04 }}
           mt={1}
           bg="none"
         />

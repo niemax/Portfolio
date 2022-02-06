@@ -20,7 +20,7 @@ const StoryItem: React.FC = () => {
   return (
     <Flex direction="column" mb={0} px={[2, 10, 10, 12]}>
       <Box mb={10}>
-        <Heading>My Developer Story</Heading>
+        <Heading>My Developer Story 👨‍💻</Heading>
       </Box>
       {/* 2022 */}
       <Box mb={8}>

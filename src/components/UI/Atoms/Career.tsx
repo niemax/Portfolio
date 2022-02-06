@@ -12,9 +12,11 @@ import {
   Center,
   Text,
   Flex,
+  Avatar,
 } from "@chakra-ui/react";
 import { MBox } from "../../motion/MotionBox";
 import { FaBriefcase } from "react-icons/fa";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Career: React.FC = () => (
   <Box>
@@ -25,7 +27,7 @@ const Career: React.FC = () => (
     <MBox
       height="auto"
       border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
-      animation={{ scale: 1.02 }}
+      animation={{ y: -3 }}
       width="auto"
     >
       <HStack align="center" spacing={4} p={2}>
@@ -62,21 +64,33 @@ const Career: React.FC = () => (
             <Wrap>
               <WrapItem>
                 <Tag colorScheme="orange" rounded="md" size="sm" variant="subtle">
-                  <TagLabel>React</TagLabel>
+                  <StaticImage src="../../../images/icons8-react-480.png" width={15} height={15} />
+                  <TagLabel ml={1}>React</TagLabel>
                 </Tag>
               </WrapItem>
               <WrapItem>
                 <Tag colorScheme="orange" rounded="md" size="sm" variant="subtle">
+                  <StaticImage src="../../../images/icons8-react-480.png" width={15} height={15} />
                   <TagLabel>React-Native</TagLabel>
                 </Tag>
               </WrapItem>
               <WrapItem>
                 <Tag colorScheme="orange" rounded="md" size="sm" variant="subtle">
+                  <StaticImage
+                    src="../../../images/icons8-javascript-256.png"
+                    width={15}
+                    height={15}
+                  />
                   <TagLabel>JavaScript</TagLabel>
                 </Tag>
               </WrapItem>
               <WrapItem>
                 <Tag colorScheme="orange" rounded="md" size="sm" variant="subtle">
+                  <StaticImage
+                    src="../../../images/icons8-typescript-240.png"
+                    width={15}
+                    height={15}
+                  />
                   <TagLabel>TypeScript</TagLabel>
                 </Tag>
               </WrapItem>

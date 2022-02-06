@@ -2,8 +2,6 @@ import { Box, Heading, HStack, SimpleGrid, useColorModeValue, Badge, Text } from
 import { motion } from "framer-motion";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
-import { HiOutlineLightningBolt } from "react-icons/hi";
-import { colors } from "../../../theme/foundations/colors";
 import { windowOpen } from "../../../utility/helpers/windowOpen";
 import { MBox } from "../../motion/MotionBox";
 import { skillsContainer, skillsItem } from "../../motion/transitions";
