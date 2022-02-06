@@ -46,31 +46,30 @@ const Projects = () => {
           <motion.div variants={otherTransition} initial="hidden" animate="show">
             <motion.div
               variants={{
-                hidden: { opacity: 0, x: 250 },
+                hidden: { opacity: 0, x: 150 },
                 show: {
                   opacity: 1,
                   x: 0,
                   transition: {
-                    duration: 0.8,
+                    duration: 0.6,
                   },
                 },
               }}
             >
               <HStack justify="center">
-                <Heading ml={3}>My Work</Heading>
-                <MdOutlineWorkOutline fontSize={32} color={useColorModeValue("black", "white")} />
+                <Heading ml={3}>Projects</Heading>
               </HStack>
             </motion.div>
           </motion.div>
           <motion.div variants={container} initial="hidden" animate="show">
             <motion.div
               variants={{
-                hidden: { opacity: 0, x: -350 },
+                hidden: { opacity: 0, x: -150 },
                 show: {
                   opacity: 1,
                   x: 0,
                   transition: {
-                    duration: 1.3,
+                    duration: 0.7,
                   },
                 },
               }}

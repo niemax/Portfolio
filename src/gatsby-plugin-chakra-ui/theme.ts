@@ -9,7 +9,7 @@ export const Heading = {
       fontWeight: 700,
       textDecoration: "underline",
       textUnderlineOffset: 13,
-      textDecorationColor: "gray.300",
+      textDecorationColor: "gray.600",
       textDecorationThickness: "2px",
       marginBottom: 2,
     },

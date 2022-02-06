@@ -8,6 +8,7 @@ import {
   Box,
   useColorModeValue,
   IconButton,
+  Text,
 } from "@chakra-ui/react";
 import { MBox } from "../../motion/MotionBox";
 import { container, fromDownToUpItem, item, otherItem } from "../../motion/transitions";
@@ -34,6 +35,7 @@ interface IProjectCardProps {
   animation?: Y | Scale;
   mb?: number;
   opacity?: number;
+  bg?: string;
 }
 
 export const ProjectCards = (props: IProjectCardProps) => {
@@ -67,71 +69,70 @@ export const ProjectCards = (props: IProjectCardProps) => {
               border={props.border}
             >
               <motion.div variants={otherItem}>
-                <MBox maxW={450} height="auto" animation={{ scale: 1.2 }} shadow="2xl">
+                <MBox maxW={450} height="auto" animation={{ scale: 1.1 }} shadow="dark-lg">
                   <GatsbyImage image={image} imgStyle={{ borderRadius: 10 }} />
                 </MBox>
               </motion.div>
               <motion.div variants={fromDownToUpItem}>
+                <Link to={resolvePathToSlug(props.slug, node.slug)}>
+                  <Heading
+                    textDecor="none"
+                    mb={2}
+                    size={props.headingSize}
+                    fontWeight={props.headingWeight}
+                  >
+                    {node.name}
+                  </Heading>
+                </Link>
                 <Box
                   h={props.height}
-                  p={3}
+                  px={2}
+                  py={1}
                   maxW={[450, 450, 360, 370]}
                   rounded="lg"
                   shadow={props.shadow || "lg"}
-                  bg={useColorModeValue("light", "boxes")}
+                  bg={props.bg || useColorModeValue("gray.100", "gray.800")}
                 >
-                  <Link to={resolvePathToSlug(props.slug, node.slug)}>
-                    <Heading
-                      textDecor="none"
-                      mb={1}
-                      size={props.headingSize}
-                      fontWeight={props.headingWeight}
-                    >
-                      {node.name}
-                    </Heading>
-                  </Link>
                   <Box mt={3}>
-                    <Heading size="sm" color={props.textColor}>
-                      {node.description}
-                    </Heading>
+                    <Text fontSize="sm">{node.description.toUpperCase()}</Text>
                   </Box>
-                  <HStack mt={props.mt || 5} mb={2}>
-                    {node.tech.map((itm: any, idx: string) => (
-                      <i>
-                        <Heading
-                          key={idx}
-                          size="sm"
-                          color={useColorModeValue("black", "white")}
-                          opacity={0.8}
-                          fontWeight={700}
-                        >
-                          {itm}
-                        </Heading>
-                      </i>
-                    ))}
-                  </HStack>
-                  <Box align={index % 2 !== 0 && "right"}>
-                    <Tooltip
-                      placement="auto"
-                      bg={useColorModeValue("black", "white")}
-                      color={useColorModeValue("white", "black")}
-                      aria-label="Project link"
-                      label="GitHub link"
-                    >
-                      <IconButton
-                        mt={3}
-                        isRound={true}
-                        size="md"
-                        onClick={() => windowOpen(node.url)}
-                        variant="outline"
-                        colorScheme="whatsapp"
-                        aria-label="project link"
-                        fontSize={20}
-                        shadow="md"
-                        icon={<RiShareBoxFill />}
-                      />
-                    </Tooltip>
-                  </Box>
+                </Box>
+                <HStack mt={props.mt || 5} mb={2}>
+                  {node.tech.map((itm: any, idx: string) => (
+                    <i>
+                      <Text
+                        key={idx}
+                        fontSize="sm"
+                        color={useColorModeValue("black", "white")}
+                        opacity={0.8}
+                        fontWeight={700}
+                      >
+                        {itm}
+                      </Text>
+                    </i>
+                  ))}
+                </HStack>
+                <Box align={index % 2 !== 0 && "right"}>
+                  <Tooltip
+                    placement="auto"
+                    bg={useColorModeValue("black", "white")}
+                    color={useColorModeValue("white", "black")}
+                    aria-label="Project link"
+                    label="GitHub link"
+                  >
+                    <IconButton
+                      mt={3}
+                      isRound={true}
+                      size="md"
+                      onClick={() => windowOpen(node.url)}
+                      variant="outline"
+                      colorScheme="orange"
+                      aria-label="project link"
+                      fontSize={20}
+                      shadow="md"
+                      icon={<RiShareBoxFill />}
+                    />
+                  </Tooltip>
                 </Box>
               </motion.div>
             </Stack>

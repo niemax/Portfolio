@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Heading, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import {
   FaBriefcase,
   FaTools,
@@ -11,10 +11,7 @@ import {
   FaReact,
   FaCheck,
   FaFlagCheckered,
-  FaArchive,
   FaDatabase,
-  FaSpider,
-  FaWeebly,
 } from "react-icons/fa";
 import Timeline from "./Timeline";
 import { Link } from "gatsby";
@@ -27,16 +24,16 @@ const StoryItem: React.FC = () => {
       </Box>
       {/* 2022 */}
       <Box mb={8}>
-        <Text fontSize="x-large" fontWeight={600}>
+        <Text fontSize="x-large" fontWeight={600} color="orange">
           2022
         </Text>
       </Box>
       <Timeline icon={FaBriefcase}>
         <Text fontSize="large">
-          Landed a job as a <strong>Software Engineer</strong> at{" "}
+          Landed a job as a <strong style={{ color: "orange" }}>Software Engineer</strong> at{" "}
           <a href="https://qvik.com/">
             {" "}
-            <strong>Qvik</strong>
+            <strong style={{ color: "orange" }}>Qvik</strong>
           </a>{" "}
           ❤️
         </Text>
@@ -45,7 +42,7 @@ const StoryItem: React.FC = () => {
         <Text fontSize="large">
           Published{" "}
           <Link to="/projects/habitio-details">
-            <strong>Habitio</strong>
+            <strong style={{ color: "orange" }}>Habitio</strong>
           </Link>{" "}
           to App Store ️
         </Text>
@@ -54,13 +51,13 @@ const StoryItem: React.FC = () => {
         <Text fontSize="large">
           Finished{" "}
           <Link to="/projects/habitio-details">
-            <strong>Habitio</strong>
+            <strong style={{ color: "orange" }}>Habitio</strong>
           </Link>
         </Text>
       </Timeline>
       {/* 2021 */}
       <Box mb={8} mt={8}>
-        <Text fontSize="x-large" fontWeight={600}>
+        <Text fontSize="x-large" fontWeight={600} color="orange">
           2021
         </Text>
       </Box>
@@ -73,7 +70,7 @@ const StoryItem: React.FC = () => {
         <Text fontSize="large">
           Started building{" "}
           <Link to="/projects/habitio-details">
-            <strong>Habitio</strong>
+            <strong style={{ color: "orange" }}>Habitio</strong>
           </Link>
         </Text>
       </Timeline>
@@ -84,7 +81,7 @@ const StoryItem: React.FC = () => {
         <Text fontSize="large">
           Finished{" "}
           <Link to="/projects/gotrain-mobile-details">
-            <strong>GoTrain</strong>
+            <strong style={{ color: "orange" }}>GoTrain</strong>
           </Link>{" "}
           as my first ever mobile (<strong>React-Native</strong>) project for school
         </Text>
@@ -96,14 +93,14 @@ const StoryItem: React.FC = () => {
       </Timeline>
       {/* 2020 */}
       <Box mb={8} mt={8}>
-        <Text fontSize="x-large" fontWeight={600}>
+        <Text fontSize="x-large" fontWeight={600} color="orange">
           2020
         </Text>
       </Box>
       <Timeline icon={FaTools}>
         <Text fontSize="large">
-          Built <strong>GoTrain-Web</strong> with vanilla <strong>JavaScript</strong> and{" "}
-          <strong>JQuery</strong>
+          Built <strong style={{ color: "orange" }}>GoTrain-Web</strong> with vanilla{" "}
+          <strong>JavaScript</strong> and <strong>JQuery</strong>
         </Text>
       </Timeline>
       <Timeline icon={FaGraduationCap} skipTrail={true}>
@@ -113,7 +110,7 @@ const StoryItem: React.FC = () => {
       </Timeline>
       {/* 2019 */}
       <Box mb={8} mt={8}>
-        <Text fontSize="x-large" fontWeight={600}>
+        <Text fontSize="x-large" fontWeight={600} color="orange">
           2019
         </Text>
       </Box>

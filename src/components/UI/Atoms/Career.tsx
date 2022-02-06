@@ -16,7 +16,7 @@ import {
 import { MBox } from "../../motion/MotionBox";
 import { FaBriefcase } from "react-icons/fa";
 
-const Career = () => (
+const Career: React.FC = () => (
   <Box>
     <HStack mb={5}>
       <Heading>Career</Heading>
@@ -42,40 +42,41 @@ const Career = () => (
         </Center>
         <VStack align="baseline">
           <Flex justify="space-between">
-            <Box>
-              <Heading size="md" fontWeight={600}>
-                Qvik
-              </Heading>
-            </Box>
-            <Box>
-              <Text fontSize="sm" fontWeight={500}>
-                Feb 2022 - present
-              </Text>
-            </Box>
+            <HStack spacing={2}>
+              <Box>
+                <Heading size="md" fontWeight={600}>
+                  Qvik
+                </Heading>
+              </Box>
+              <Box>
+                <Text fontSize="sm" fontWeight={500} color="gray">
+                  Feb 2022 - present
+                </Text>
+              </Box>
+            </HStack>
           </Flex>
           <Text fontSize="sm" fontWeight={500}>
             Junior Software Engineer
           </Text>
-
           <HStack>
             <Wrap>
               <WrapItem>
-                <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
+                <Tag colorScheme="orange" rounded="md" size="sm" variant="subtle">
                   <TagLabel>React</TagLabel>
                 </Tag>
               </WrapItem>
               <WrapItem>
-                <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
+                <Tag colorScheme="orange" rounded="md" size="sm" variant="subtle">
                   <TagLabel>React-Native</TagLabel>
                 </Tag>
               </WrapItem>
               <WrapItem>
-                <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
+                <Tag colorScheme="orange" rounded="md" size="sm" variant="subtle">
                   <TagLabel>JavaScript</TagLabel>
                 </Tag>
               </WrapItem>
               <WrapItem>
-                <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
+                <Tag colorScheme="orange" rounded="md" size="sm" variant="subtle">
                   <TagLabel>TypeScript</TagLabel>
                 </Tag>
               </WrapItem>

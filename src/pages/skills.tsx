@@ -22,7 +22,7 @@ import { SkillsCards } from "../components/UI/Atoms/SkillsCards";
 const Skills = ({ data }: any) => {
   const skills = data.allTechStackJson.edges;
   const [skillsData, setSkillsData] = React.useState<[]>(skills);
-  const [colorScheme, setColorScheme] = React.useState<string>("whatsapp");
+  const [colorScheme, setColorScheme] = React.useState<string>("orange");
 
   const filterData = (keyword: string) => {
     const filteredData: any = skills?.filter(({ node }: any) => node.type === keyword);
@@ -48,7 +48,7 @@ const Skills = ({ data }: any) => {
               <Wrap>
                 <Tab
                   onClick={() => {
-                    setColorScheme("whatsapp");
+                    setColorScheme("mainOrange");
                     setSkillsData(skills);
                   }}
                 >
@@ -80,7 +80,7 @@ const Skills = ({ data }: any) => {
                 </Tab>
                 <Tab
                   onClick={() => {
-                    setColorScheme("orange");
+                    setColorScheme("mainOrange");
                     filterData("tools");
                   }}
                 >

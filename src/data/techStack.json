@@ -6,7 +6,7 @@
     "type": "language",
     "hearts": 3,
     "colorScheme": "yellow",
-    "image": "../images/icons8-javascript-48.png"
+    "image": "../images/icons8-javascript-256.png"
   },
   {
     "name": "Typescript",
@@ -15,7 +15,7 @@
     "type": "language",
     "hearts": 2,
     "colorScheme": "blue",
-    "image": "../images/icons8-typescript-48.png"
+    "image": "../images/icons8-typescript-240.png"
   },
   {
     "name": "Python",
@@ -24,7 +24,7 @@
     "type": "language",
     "hearts": 1,
     "colorScheme": "yellow",
-    "image": "../images/icons8-python-48.png"
+    "image": "../images/icons8-python-256.png"
   },
   {
     "name": "HTML5",
@@ -33,7 +33,7 @@
     "type": "development",
     "hearts": 3,
     "colorScheme": "orange",
-    "image": "../images/icons8-html-5-48.png"
+    "image": "../images/icons8-html-5-240.png"
   },
   {
     "name": "CSS3",
@@ -42,7 +42,7 @@
     "type": "development",
     "hearts": 3,
     "colorScheme": "blue",
-    "image": "../images/icons8-css3-48.png"
+    "image": "../images/icons8-css3-240.png"
   },
   {
     "name": "Sass",
@@ -69,7 +69,7 @@
     "type": "development",
     "hearts": 3,
     "colorScheme": "facebook",
-    "image": "../images/icons8-react-40.png"
+    "image": "../images/icons8-react-480.png"
   },
   {
     "name": "React-Native",
@@ -78,7 +78,7 @@
     "type": "development",
     "hearts": 3,
     "colorScheme": "facebook",
-    "image": "../images/icons8-react-40.png"
+    "image": "../images/icons8-react-480.png"
   },
   {
     "name": "Redux",
@@ -114,7 +114,7 @@
     "type": "tools",
     "colorScheme": "purple",
     "hearts": 3,
-    "image": "../images/icons8-visual-studio-2019-48.png"
+    "image": "../images/icons8-visual-studio-2019-240.png"
   },
   {
     "name": "Firebase",
@@ -123,7 +123,7 @@
     "type": "development",
     "hearts": 3,
     "colorScheme": "yellow",
-    "image": "../images/icons8-firebase-48.png"
+    "image": "../images/icons8-firebase-240.png"
   },
   {
     "name": "MongoDB",
@@ -132,7 +132,7 @@
     "type": "development",
     "hearts": 2,
     "colorScheme": "whatsapp",
-    "image": "../images/icons8-mongodb-48.png"
+    "image": "../images/icons8-mongodb-240.png"
   },
   {
     "name": "Heroku",
@@ -140,7 +140,7 @@
     "link": "https://www.heroku.com/#",
     "type": "tools",
     "colorScheme": "purple",
-    "image": "../images/icons8-heroku-48.png"
+    "image": "../images/icons8-heroku-240.png"
   },
   {
     "name": "Figma",
@@ -149,7 +149,7 @@
     "type": "design",
     "hearts": 2,
     "colorScheme": "red",
-    "image": "../images/icons8-figma-48.png"
+    "image": "../images/icons8-figma-240.png"
   },
   {
     "name": "Postman",
@@ -158,6 +158,6 @@
     "type": "tools",
     "hearts": 2,
     "colorScheme": "red",
-    "image": "../images/icons8-postman-api-64.png"
+    "image": "../images/icons8-postman-api-256.png"
   }
 ]

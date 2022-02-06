@@ -61,14 +61,15 @@ export const Recents = () => {
           height="full"
           backgroundColor={useColorModeValue("white", "boxes")}
           rounded="md"
-          shadow="sm"
-          padding={1}
+          shadow="none"
+          padding={2}
           headingSize="md"
           headingWeight={700}
           textColor="gray"
           border={useColorModeValue("1px solid #E2E2E2", `1px solid #2A404B`)}
           animation={{ scale: 1.04 }}
           mt={1}
+          bg="none"
         />
       </Box>
     </>

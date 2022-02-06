@@ -59,7 +59,7 @@ export const NavLink = ({ ...props }: INavLinkProps) => {
             <Link
               style={{ fontSize: 20, fontWeight: 400 }}
               activeStyle={{
-                color: colors.green,
+                color: colors.mainOrange,
               }}
               to={node.path}
             >
@@ -75,7 +75,7 @@ export const NavLink = ({ ...props }: INavLinkProps) => {
               <MenuItem>
                 <Link
                   activeStyle={{
-                    color: colors.green,
+                    color: colors.mainOrange,
                     fontWeight: 600,
                   }}
                   to={node.path}

@@ -11,6 +11,7 @@ import {
   WrapItem,
   useColorModeValue,
   VStack,
+  Text,
 } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import { RiShareBoxFill } from "react-icons/ri";
@@ -24,12 +25,12 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
   const image = getImage(frontmatter.image?.childImageSharp);
 
   return (
-    <Flex px={[2, 14, 14, 14]} align="center" justify="center">
-      <PageScaleFade>
+    <PageScaleFade>
+      <Flex direction="column" px={[2, 4, 14, 14]}>
         <Seo title={frontmatter.title} />
         {frontmatter.videoURL !== "" && (
           <Box p={2}>
-            <Box align="center" bg="green" py={6} rounded="lg" shadow="dark-lg">
+            <Box align="center" bg="mainOrange" py={6} rounded="lg" shadow="dark-lg">
               <AspectRatio maxW={640} ratio={1}>
                 <iframe
                   src={frontmatter.videoURL}
@@ -43,7 +44,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
         )}
 
         {image && (
-          <GatsbyImage alt={frontmatter.title} image={image} imgStyle={{ borderRadius: 20 }} />
+          <GatsbyImage alt={frontmatter.title} image={image} imgStyle={{ borderRadius: 10 }} />
         )}
         <Box mt={10} px={2}>
           <VStack align="left">
@@ -55,15 +56,9 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
                 {frontmatter.techStack?.map((itm: any, idx: string) => (
                   <WrapItem key={idx}>
                     <i>
-                      <Heading
-                        fontSize={14}
-                        textDecor="none"
-                        color={useColorModeValue("black", "white")}
-                        opacity={0.8}
-                        fontWeight={700}
-                      >
+                      <Text fontSize="xs" textDecor="none" opacity={0.8} fontWeight={700}>
                         {itm}
-                      </Heading>
+                      </Text>
                     </i>
                   </WrapItem>
                 ))}
@@ -77,7 +72,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
             <HStack>
               {frontmatter.demoLink && (
                 <>
-                  <Heading size="sm" color="green">
+                  <Heading size="sm" color="mainOrange">
                     Demo Link
                   </Heading>
                   <IconButton
@@ -94,7 +89,7 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
                 </>
               )}
 
-              <Heading size="sm" color="green">
+              <Heading size="sm" color="mainOrange">
                 Project Link
               </Heading>
               <IconButton
@@ -110,8 +105,8 @@ function ProjectDetailsTemplate({ data: { markdownRemark } }: any) {
           </HStack>
         </Box>
         <Box ml={2} dangerouslySetInnerHTML={{ __html: html }} />
-      </PageScaleFade>
-    </Flex>
+      </Flex>
+    </PageScaleFade>
   );
 }
 

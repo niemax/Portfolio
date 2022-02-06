@@ -11,6 +11,7 @@ import {
   TagLabel,
   Text,
   Center,
+  Flex,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { fromDownToUp, fromDownToUpItem } from "../../motion/transitions";
@@ -33,46 +34,52 @@ export const Education = () => (
           width="auto"
         >
           <HStack align="center" spacing={4} p={2}>
-            <Center
-              height="80px"
-              width="80px"
-              p={1}
-              rounded="full"
-              bg={useColorModeValue("gray.100", "gray.900")}
-            >
-              <StaticImage
-                src="../../../images/315f6f8c-0795-46b7-9c87-9f69a44a9d81.png"
-                alt="education logo"
-                placeholder="blurred"
-                layout="fixed"
-                width={110}
-                height={110}
-              />
-            </Center>
+            <Box>
+              <Center
+                height="80px"
+                width="80px"
+                p={1}
+                rounded="full"
+                bg={useColorModeValue("gray.100", "gray.900")}
+              >
+                <StaticImage
+                  src="../../../images/315f6f8c-0795-46b7-9c87-9f69a44a9d81.png"
+                  alt="education logo"
+                  placeholder="blurred"
+                  layout="fixed"
+                  width={110}
+                  height={110}
+                />
+              </Center>
+            </Box>
             <VStack align="baseline">
-              <Heading size="md" fontWeight="600">
-                Haaga-Helia UAS
-              </Heading>
+              <Flex direction="row" justify="space-between" align="center">
+                <Heading size="md" fontWeight="600">
+                  Haaga-Helia UAS
+                </Heading>
+                <Box ml={2}>
+                  <Text fontSize="sm" fontWeight={500} color="gray">
+                    2020 - present
+                  </Text>
+                </Box>
+              </Flex>
               <Text fontSize="sm" fontWeight={500}>
                 ICT and Digital Services
-              </Text>
-              <Text fontSize="sm" fontWeight={500}>
-                2020 - present
               </Text>
               <HStack>
                 <Wrap>
                   <WrapItem>
-                    <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
+                    <Tag colorScheme="orange" rounded="md" size="sm" variant="subtle">
                       <TagLabel>ICT</TagLabel>
                     </Tag>
                   </WrapItem>
                   <WrapItem>
-                    <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
+                    <Tag colorScheme="orange" rounded="md" size="sm" variant="subtle">
                       <TagLabel>Programming</TagLabel>
                     </Tag>
                   </WrapItem>
                   <WrapItem>
-                    <Tag colorScheme="whatsapp" rounded="md" size="sm" variant="subtle">
+                    <Tag colorScheme="orange" rounded="md" size="sm" variant="subtle">
                       <TagLabel>Entrepreneurship</TagLabel>
                     </Tag>
                   </WrapItem>

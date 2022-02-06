@@ -14,14 +14,14 @@ import { colors } from "../../../theme/foundations/colors";
 export const Features: React.FC = () => (
   <Box
     bg={useColorModeValue("#FFF", "boxes")}
-    borderLeft={`3px solid ${colors.green}`}
+    borderLeft={`3px solid ${colors.mainOrange}`}
     rounded="md"
     shadow="sm"
     mt={20}
     h="auto"
     p={3}
   >
-    <Heading fontSize={20} textDecor="none" color={useColorModeValue("457b9d", "green")}>
+    <Heading fontSize={20} textDecor="none" color={useColorModeValue("457b9d", "mainOrange")}>
       Features in this version
     </Heading>
     <UnorderedList>
@@ -32,10 +32,10 @@ export const Features: React.FC = () => (
               size="xs"
               color={useColorModeValue("#534436", "#fff")}
               textDecor="none"
-              _hover={{ color: "green" }}
+              _hover={{ color: "mainOrange" }}
             >
               New chat project
-              <Badge colorScheme="whatsapp" variant="subtle" ml={1}>
+              <Badge colorScheme="mainOrange" variant="subtle" ml={1}>
                 New
               </Badge>
             </Heading>
@@ -49,10 +49,10 @@ export const Features: React.FC = () => (
               size="xs"
               color={useColorModeValue("#534436", "#fff")}
               textDecor="none"
-              _hover={{ color: "green" }}
+              _hover={{ color: "mainOrange" }}
             >
               Developer story page
-              <Badge colorScheme="whatsapp" variant="subtle" ml={1}>
+              <Badge colorScheme="mainOrange" variant="subtle" ml={1}>
                 New
               </Badge>
             </Heading>
@@ -65,10 +65,10 @@ export const Features: React.FC = () => (
             size="xs"
             color={useColorModeValue("#534436", "#fff")}
             textDecor="none"
-            _hover={{ color: "green" }}
+            _hover={{ color: "mainOrange" }}
           >
             Uses system color mode as theme
-            <Badge colorScheme="whatsapp" variant="subtle" ml={1}>
+            <Badge colorScheme="mainOrange" variant="subtle" ml={1}>
               New
             </Badge>
           </Heading>

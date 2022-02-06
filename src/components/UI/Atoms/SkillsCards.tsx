@@ -39,13 +39,7 @@ export const SkillsCards = ({ skillsData }: SkillsCardsProps) => {
                       _hover={{ color: node.color }}
                     >
                       <HStack>
-                        <Heading
-                          size="md"
-                          fontSize={18}
-                          fontWeight={700}
-                          mt={2}
-                          color={colors.green}
-                        >
+                        <Heading size="md" fontSize={18} fontWeight={700} mt={2} color="mainOrange">
                           {node.name}
                         </Heading>
                       </HStack>
