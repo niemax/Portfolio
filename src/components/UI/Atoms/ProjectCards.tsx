@@ -9,6 +9,7 @@ import {
   useColorModeValue,
   IconButton,
   Text,
+  Flex,
 } from "@chakra-ui/react";
 import { MBox } from "../../motion/MotionBox";
 import { container, fromDownToUpItem, item, otherItem } from "../../motion/transitions";
@@ -76,6 +77,7 @@ export const ProjectCards = (props: IProjectCardProps) => {
               <motion.div variants={fromDownToUpItem}>
                 <Link to={resolvePathToSlug(props.slug, node.slug)}>
                   <Heading
+                    textAlign={index % 2 === 0 ? "left" : "right"}
                     textDecor="none"
                     mb={2}
                     size={props.headingSize}
@@ -87,6 +89,7 @@ export const ProjectCards = (props: IProjectCardProps) => {
                 <Box
                   h={props.height}
                   py={1}
+                  px={0.5}
                   maxW={[450, 450, 360, 370]}
                   rounded="lg"
                   shadow={props.shadow || "lg"}
