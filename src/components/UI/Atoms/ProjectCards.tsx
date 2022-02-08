@@ -9,17 +9,12 @@ import {
   useColorModeValue,
   IconButton,
   Text,
-  Flex,
 } from "@chakra-ui/react";
 import { MBox } from "../../motion/MotionBox";
 import {
   container,
-  fromDownToUpItem,
   item,
   otherItem,
-  otherTransition,
-  skillsContainer,
-  skillsItem,
   staggerProjectCardContainer,
   staggerProjectCardItem,
 } from "../../motion/transitions";
@@ -47,6 +42,7 @@ interface IProjectCardProps {
   mb?: number;
   opacity?: number;
   bg?: string;
+  descriptionPadding?: number;
 }
 
 export const ProjectCards = (props: IProjectCardProps) => {
@@ -101,14 +97,14 @@ export const ProjectCards = (props: IProjectCardProps) => {
                 <motion.div variants={staggerProjectCardItem}>
                   <Box
                     h={props.height}
-                    p={2}
+                    p={props.descriptionPadding || 3}
                     maxW={[450, 450, 360, 370]}
                     rounded="lg"
                     shadow={props.shadow || "lg"}
                     bg={props.bg || useColorModeValue("gray.100", "gray.700")}
                   >
-                    <Box mt={3}>
-                      <Text fontSize="sm">{node.description.toUpperCase()}</Text>
+                    <Box>
+                      <Text fontSize="sm">{node.description}</Text>
                     </Box>
                   </Box>
                 </motion.div>

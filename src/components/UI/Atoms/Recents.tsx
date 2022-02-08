@@ -51,6 +51,7 @@ export const Recents = () => {
           rounded="md"
           shadow="none"
           padding={2}
+          descriptionPadding={0}
           headingSize="md"
           headingWeight={700}
           textColor="gray"

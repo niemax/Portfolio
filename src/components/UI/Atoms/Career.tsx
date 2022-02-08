@@ -18,7 +18,7 @@ import { MBox } from "../../motion/MotionBox";
 import { FaBriefcase } from "react-icons/fa";
 import { StaticImage } from "gatsby-plugin-image";
 
-const Career: React.FC = () => (
+const Career = () => (
   <Box>
     <HStack mb={5}>
       <Heading>Career</Heading>
@@ -47,7 +47,9 @@ const Career: React.FC = () => (
             <HStack spacing={2}>
               <Box>
                 <Heading size="md" fontWeight={600}>
-                  Qvik
+                  <a href="https://qvik.com/" style={{ fontWeight: 800 }}>
+                    Qvik
+                  </a>
                 </Heading>
               </Box>
               <Box>

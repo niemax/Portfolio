@@ -1,12 +1,10 @@
 import React from "react";
-import { container, otherTransition, PageScaleFade } from "../../components/motion/transitions";
-import { Heading, Flex, Box, HStack, useColorModeValue } from "@chakra-ui/react";
+import { PageScaleFade } from "../../components/motion/transitions";
+import { Heading, Flex, Box, HStack } from "@chakra-ui/react";
 import Seo from "../../components/seo";
 import { ProjectCards } from "../../components/UI/Atoms/ProjectCards";
 import { graphql, useStaticQuery } from "gatsby";
 import { AllProjectsJson } from "../../types";
-import { MdOutlineWorkOutline } from "react-icons/md";
-import { motion } from "framer-motion";
 
 const Projects = () => {
   const { allProjectsJson } = useStaticQuery<AllProjectsJson>(

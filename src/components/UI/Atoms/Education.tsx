@@ -50,7 +50,7 @@ export const Education = () => (
         </Box>
         <VStack align="baseline">
           <Flex direction="row" justify="space-between" align="center">
-            <Heading size="md" fontWeight="600">
+            <Heading size="md" fontWeight="800">
               Haaga-Helia UAS
             </Heading>
             <Box ml={2}>
