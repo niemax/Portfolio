@@ -36,7 +36,7 @@ export const Education = () => (
             width="80px"
             p={1}
             rounded="full"
-            bg={useColorModeValue("gray.100", "gray.900")}
+            bg={useColorModeValue("gray.50", "gray.600")}
           >
             <StaticImage
               src="../../../images/315f6f8c-0795-46b7-9c87-9f69a44a9d81.png"

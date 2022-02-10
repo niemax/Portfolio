@@ -39,7 +39,7 @@ const Projects = () => {
   return (
     <PageScaleFade>
       <Seo title="Projects" />
-      <Flex px={[2, 6, 0, 0]}>
+      <Flex px={[2, 6, 2, 0]}>
         <Box>
           <HStack justify="center">
             <Heading ml={3}>Projects</Heading>
